@@ -5,10 +5,12 @@ importers:
   .:
     specifiers:
       eslint: ^8.36.0
+      markdown-table: ^3.0.3
       prettier: ^2.8.4
       turbo: ^1.8.3
     dependencies:
       eslint: 8.36.0
+      markdown-table: 3.0.3
       turbo: 1.8.3
     devDependencies:
       prettier: 2.8.4
@@ -929,6 +931,10 @@ packages:
 
   /lodash.merge/4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
+    dev: false
+
+  /markdown-table/3.0.3:
+    resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
     dev: false
 
   /minimatch/3.1.2:

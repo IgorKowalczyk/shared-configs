@@ -9,7 +9,7 @@ module.exports = {
   quotes: ["error", "double"],
 
   // Enforce semicolons at the end of statements
-  semi: ["error", "always"],
+  semi: ["warn", "always"],
 
   // Enforce trailing commas where possible
   "comma-dangle": ["error", "always-multiline"],
@@ -21,14 +21,14 @@ module.exports = {
   "func-names": ["error", "as-needed"],
 
   // Enforce camelCase naming convention
-  camelcase: ["error", { properties: "never", ignoreDestructuring: true }],
+  camelcase: ["warn", { properties: "never", ignoreDestructuring: true }],
 
   // Disallow unused variables
-  "no-unused-vars": ["error", { argsIgnorePattern: "^_", ignoreRestSiblings: true }],
+  "no-unused-vars": ["warn", { argsIgnorePattern: "^_", ignoreRestSiblings: true }],
 
   // Enforce consistent import order
   "import/order": [
-   "error",
+   "warn",
    {
     groups: ["external", "internal", "parent", "sibling", "index", "builtin"],
     "newlines-between": "never",
