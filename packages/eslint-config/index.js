@@ -1,6 +1,10 @@
 module.exports = {
  extends: ["eslint:recommended", "plugin:prettier/recommended"],
  plugins: ["import"],
+ ignorePatterns: ["dist/", "coverage/"],
+ parserOptions: {
+  ecmaVersion: "latest",
+ },
  rules: {
   // Enforce consistent line breaks
   "linebreak-style": ["error", "unix"],
@@ -12,7 +16,16 @@ module.exports = {
   semi: ["warn", "always"],
 
   // Enforce trailing commas where possible
-  "comma-dangle": ["error", "always-multiline"],
+  "comma-dangle": [
+   "error",
+   {
+    arrays: "always-multiline",
+    objects: "always-multiline",
+    imports: "always-multiline",
+    exports: "always-multiline",
+    functions: "always-multiline",
+   },
+  ],
 
   // Disallow the use of eval()
   "no-eval": "error",
@@ -84,5 +97,53 @@ module.exports = {
 
   // Enforce consistent spacing inside computed properties
   "computed-property-spacing": ["error", "never"],
+
+  // disallow use of variables before they are defined
+  "no-use-before-define": ["error", { functions: true, classes: true, variables: true }],
+
+  // Disallow the var keyword
+  "no-label-var": "error",
+
+  // Disallow the use of undeclared variables unless mentioned in /*global */ comments
+  "no-undef": "error",
+
+  // Disallow the use of undefined as an identifier
+  "no-undefined": "off",
+
+  // Limit cyclomatic complexity
+  complexity: ["warn", 20],
+
+  // Disallow the use of alert, confirm, and prompt
+  "no-alert": "error",
+
+  // Do not require await in async function
+  "require-await": "off",
+
+  // Disallow Yoda conditions
+  yoda: "error",
+
+  // disallow empty statements
+  "no-empty": "error",
+
+  // disallow unnecessary semicolons
+  "no-extra-semi": "error",
+
+  // ensure that the results of typeof are compared against a valid string
+  "valid-typeof": ["error", { requireStringLiterals: true }],
+
+  // Prefer double quotes for JSX attributes
+  "jsx-quotes": ["off", "prefer-double"],
+
+  // Disable the Unicode Byte Order Mark
+  "unicode-bom": ["error", "never"],
+
+  // disallow use of process.env
+  "no-process-env": "off",
+
+  // disallow process.exit()
+  "no-process-exit": "off",
+
+  // require all requires be top-level
+  "global-require": "error",
  },
 };

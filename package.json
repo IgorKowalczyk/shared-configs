@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/sharable-configs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My sharable ESlint and Prettier configs",
   "private": true,
   "scripts": {
