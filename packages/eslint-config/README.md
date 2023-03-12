@@ -20,6 +20,7 @@ module.exports = {
 ### ⚙️ Rules overview
 
 <!--START_SECTION:eslint-->
+
 | Rule                          | Style                                                                      | Type          | Documentation                                                              |
 | ----------------------------- | -------------------------------------------------------------------------- | ------------- | -------------------------------------------------------------------------- |
 | `linebreak-style`             | Unix                                                                       | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/linebreak-style)             |
@@ -60,4 +61,5 @@ module.exports = {
 | `no-process-env`              | Off                                                                        | 💡 `Disabled` | [Documentation](https://eslint.org/docs/rules/no-process-env)              |
 | `no-process-exit`             | Off                                                                        | 💡 `Disabled` | [Documentation](https://eslint.org/docs/rules/no-process-exit)             |
 | `global-require`              | Error                                                                      | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/global-require)              |
+
 <!--END_SECTION:eslint-->

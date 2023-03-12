@@ -20,6 +20,7 @@ module.exports = {
 ### ⚙️ Rules overview
 
 <!--START_SECTION:prettier-->
+
 | Rule                         | Style       | Documentation                                                                        |
 | ---------------------------- | ----------- | ------------------------------------------------------------------------------------ |
 | `arrowParens`                | `always`    | [Documentation](https://prettier.io/docs/en/options.html#arrowParens)                |
@@ -37,4 +38,5 @@ module.exports = {
 | `tabWidth`                   | `1`         | [Documentation](https://prettier.io/docs/en/options.html#tabWidth)                   |
 | `trailingComma`              | `es5`       | [Documentation](https://prettier.io/docs/en/options.html#trailingComma)              |
 | `useTabs`                    | `false`     | [Documentation](https://prettier.io/docs/en/options.html#useTabs)                    |
+
 <!--END_SECTION:prettier-->
