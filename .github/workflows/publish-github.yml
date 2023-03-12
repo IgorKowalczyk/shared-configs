@@ -1,0 +1,35 @@
+name: Publish [Github]
+on:
+ release:
+  types: [created]
+
+jobs:
+ publish:
+  runs-on: ubuntu-latest
+  permissions:
+   contents: read
+   packages: write
+  strategy:
+   fail-fast: false
+   matrix:
+    language: ["javascript"]
+    node: ["16.x"]
+  steps:
+   - name: 🧱 Checkout repository
+     uses: actions/checkout@v3
+   - name: 🔩 Setup PNPM
+     uses: pnpm/action-setup@v2
+     with:
+      version: 7
+   - name: 🔩 Setup Node ${{ matrix.node }}
+     uses: actions/setup-node@v3
+     with:
+      node-version: ${{ matrix.node }}
+      registry-url: "https://npm.pkg.github.com"
+      cache: "pnpm"
+   - name: 🚀 Install dependencies
+     run: pnpm install
+   - name: 🚀 Publish package
+     run: pnpm run publish-packages
+     env:
+      NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}

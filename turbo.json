@@ -3,6 +3,7 @@
  "pipeline": {
   "lint": {},
   "format": {},
-  "format:check": {}
+  "format:check": {},
+  "publish": {}
  }
 }

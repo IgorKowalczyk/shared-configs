@@ -5,7 +5,8 @@
  "main": "index.js",
  "scripts": {
   "format": "prettier --write --cache --ignore-unknown .",
-  "format:check": "prettier --check --ignore-unknown ."
+  "format:check": "prettier --check --ignore-unknown .",
+  "publish": "pnpm publish --access public --no-git-checks"
  },
  "publishConfig": {
   "access": "public"
