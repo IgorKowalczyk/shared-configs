@@ -1,4 +1,26 @@
-### [`@igorkowalczyk/eslint-config`](https://www.npmjs.com/package/@igorkowalczyk/eslint-config)
+# Shared configs
+> This repository contains shared configs for my projects. It's a monorepo managed by [TurboRepo](https://turbo.build/repo).
+
+# 📦 [`@igorkowalczyk/eslint-config`](https://www.npmjs.com/package/@igorkowalczyk/eslint-config)
+
+### 📥 Installation
+
+```bash
+npm install --save-dev @igorkowalczyk/eslint-config
+yarn add --dev @igorkowalczyk/eslint-config
+pnpm install --save-dev @igorkowalczyk/eslint-config
+```
+
+### 🔩 Usage
+
+```js
+// .eslintrc.js
+module.exports = {
+  extends: ['@igorkowalczyk/eslint-config'],
+};
+```
+
+### ⚙️ Rules overview
 
 <!--START_SECTION:eslint-->
 | Rule                          | Style                                                                      | Type         | Documentation                                                              |
@@ -27,7 +49,28 @@
 | `computed-property-spacing`   | Never                                                                      | 🚫 `Error`   | [Documentation](https://eslint.org/docs/rules/computed-property-spacing)   |
 <!--END_SECTION:eslint-->
 
-### [`@igorkowalczyk/prettier-config`](https://www.npmjs.com/package/@igorkowalczyk/prettier-config)
+---
+
+# 📦 [`@igorkowalczyk/prettier-config`](https://www.npmjs.com/package/@igorkowalczyk/prettier-config)
+
+### 📥 Installation
+
+```bash
+npm install --save-dev @igorkowalczyk/prettier-config
+yarn add --dev @igorkowalczyk/prettier-config
+pnpm install --save-dev @igorkowalczyk/prettier-config
+```
+
+### 🔩 Usage
+
+```js
+// .prettierrc.js
+module.exports = {
+  ...require('@igorkowalczyk/prettier-config'),
+};
+```
+
+### ⚙️ Rules overview
 
 <!--START_SECTION:prettier-->
 | Rule                         | Style       | Documentation                                                                        |
