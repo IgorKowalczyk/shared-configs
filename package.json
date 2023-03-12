@@ -1,0 +1,39 @@
+{
+  "name": "@igorkowalczyk/sharable-configs",
+  "version": "1.0.0",
+  "description": "My sharable ESlint and Prettier configs",
+  "private": true,
+  "scripts": {
+    "format": "turbo run format --color",
+    "format:check": "turbo run format:check --color",
+    "int": "prettier --write . --cache --ignore-unknown",
+    "int:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgorKowalczyk/shared-configs.git"
+  },
+  "keywords": [
+    "eslint",
+    "shared-configs",
+    "prettier",
+    "prettier-config",
+    "javascript",
+    "config",
+    "styleguide"
+  ],
+  "author": "Igor Kowalczyk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IgorKowalczyk/shared-configs/issues"
+  },
+  "homepage": "https://github.com/IgorKowalczyk/shared-configs#readme",
+  "dependencies": {
+    "eslint": "^8.36.0",
+    "turbo": "^1.8.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.4"
+  },
+  "packageManager": "pnpm@7.29.1"
+}

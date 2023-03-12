@@ -1,0 +1,41 @@
+{
+ "name": "@igorkowalczyk/eslint-config",
+ "version": "1.0.0",
+ "description": "My sharable ESlint config",
+ "main": "index.js",
+ "scripts": {
+  "format": "prettier --write --cache --ignore-unknown .",
+  "format:check": "prettier --check --ignore-unknown ."
+ },
+ "publishConfig": {
+  "access": "public"
+ },
+ "files": [
+  "index.js"
+ ],
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/igorkowalczyk/shared-configs.git"
+ },
+ "keywords": [
+  "eslint",
+  "eslint-config",
+  "javascript",
+  "config",
+  "styleguide"
+ ],
+ "author": "Igor Kowalczyk",
+ "license": "MIT",
+ "bugs": {
+  "url": "https://github.com/igorkowalczyk/shared-configs/issues"
+ },
+ "homepage": "https://github.com/igorkowalczyk/shared-configs#readme",
+ "devDependencies": {
+  "prettier": "^2.8.4"
+ },
+ "dependencies": {
+  "eslint": "^8.36.0",
+  "eslint-plugin-import": "^2.27.5",
+  "eslint-plugin-prettier": "^4.2.1"
+ }
+}
