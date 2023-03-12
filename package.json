@@ -6,7 +6,7 @@
   "scripts": {
     "format": "turbo run format --color",
     "format:check": "turbo run format:check --color",
-    "publish-packages": "turbo run publish --color",
+    "publish-packages": "turbo run publish-packages --color",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "int": "prettier --write . --cache --ignore-unknown",
     "int:check": "prettier --check ."
