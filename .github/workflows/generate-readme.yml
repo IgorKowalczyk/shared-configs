@@ -27,7 +27,7 @@ jobs:
    - name: 🚀 Generate README
      run: node src/generateDocs.mjs
    - name: 📤 Commit changes
-     uses: EndBug/add-and-commit@v7
+     uses: EndBug/add-and-commit@v9
      with:
       message: ${{ github.event.head_commit.message }} | Generated README.md docs
       add: "README.md"
