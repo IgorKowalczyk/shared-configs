@@ -17,7 +17,8 @@
  ],
  "repository": {
   "type": "git",
-  "url": "git+https://github.com/igorkowalczyk/shared-configs.git"
+  "url": "git+https://github.com/igorkowalczyk/shared-configs.git",
+  "directory": "packages/prettier-config"
  },
  "keywords": [
   "prettier",
