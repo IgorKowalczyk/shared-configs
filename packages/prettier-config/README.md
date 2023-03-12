@@ -20,7 +20,6 @@ module.exports = {
 ### ⚙️ Rules overview
 
 <!--START_SECTION:prettier-->
-
 | Rule                         | Style       | Documentation                                                                        |
 | ---------------------------- | ----------- | ------------------------------------------------------------------------------------ |
 | `arrowParens`                | `always`    | [Documentation](https://prettier.io/docs/en/options.html#arrowParens)                |
@@ -28,7 +27,6 @@ module.exports = {
 | `embeddedLanguageFormatting` | `auto`      | [Documentation](https://prettier.io/docs/en/options.html#embeddedLanguageFormatting) |
 | `htmlWhitespaceSensitivity`  | `css`       | [Documentation](https://prettier.io/docs/en/options.html#htmlWhitespaceSensitivity)  |
 | `jsxSingleQuote`             | `false`     | [Documentation](https://prettier.io/docs/en/options.html#jsxSingleQuote)             |
-| `jsxBracketSameLine`         | `true`      | [Documentation](https://prettier.io/docs/en/options.html#jsxBracketSameLine)         |
 | `printWidth`                 | `200000`    | [Documentation](https://prettier.io/docs/en/options.html#printWidth)                 |
 | `proseWrap`                  | `preserve`  | [Documentation](https://prettier.io/docs/en/options.html#proseWrap)                  |
 | `quoteProps`                 | `as-needed` | [Documentation](https://prettier.io/docs/en/options.html#quoteProps)                 |
@@ -38,5 +36,4 @@ module.exports = {
 | `tabWidth`                   | `1`         | [Documentation](https://prettier.io/docs/en/options.html#tabWidth)                   |
 | `trailingComma`              | `es5`       | [Documentation](https://prettier.io/docs/en/options.html#trailingComma)              |
 | `useTabs`                    | `false`     | [Documentation](https://prettier.io/docs/en/options.html#useTabs)                    |
-
 <!--END_SECTION:prettier-->

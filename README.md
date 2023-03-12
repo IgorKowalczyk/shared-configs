@@ -96,7 +96,6 @@ module.exports = {
 | `embeddedLanguageFormatting` | `auto`      | [Documentation](https://prettier.io/docs/en/options.html#embeddedLanguageFormatting) |
 | `htmlWhitespaceSensitivity`  | `css`       | [Documentation](https://prettier.io/docs/en/options.html#htmlWhitespaceSensitivity)  |
 | `jsxSingleQuote`             | `false`     | [Documentation](https://prettier.io/docs/en/options.html#jsxSingleQuote)             |
-| `jsxBracketSameLine`         | `true`      | [Documentation](https://prettier.io/docs/en/options.html#jsxBracketSameLine)         |
 | `printWidth`                 | `200000`    | [Documentation](https://prettier.io/docs/en/options.html#printWidth)                 |
 | `proseWrap`                  | `preserve`  | [Documentation](https://prettier.io/docs/en/options.html#proseWrap)                  |
 | `quoteProps`                 | `as-needed` | [Documentation](https://prettier.io/docs/en/options.html#quoteProps)                 |
