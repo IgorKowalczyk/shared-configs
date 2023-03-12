@@ -4,6 +4,7 @@ module.exports = {
  embeddedLanguageFormatting: "auto",
  htmlWhitespaceSensitivity: "css",
  jsxSingleQuote: false,
+ jsxBracketSameLine: true,
  printWidth: 200000,
  proseWrap: "preserve",
  quoteProps: "as-needed",

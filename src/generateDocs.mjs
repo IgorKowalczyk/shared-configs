@@ -7,10 +7,16 @@ console.log("Generating documentation...");
 const time = Date.now();
 
 const readmePath = "./README.md";
+const eslintPath = "./packages/eslint-config/README.md";
+const prettierPath = "./packages/prettier-config/README.md";
+
 const readmeContent = readFileSync(readmePath, "utf8");
+const eslintReadme = readFileSync(eslintPath, "utf8");
+const prettierReadme = readFileSync(prettierPath, "utf8");
 
 const startESlintMarker = "<!--START_SECTION:eslint-->";
 const endESlintMarker = "<!--END_SECTION:eslint-->";
+
 const startPrettierMarker = "<!--START_SECTION:prettier-->";
 const endPrettierMarker = "<!--END_SECTION:prettier-->";
 
@@ -57,5 +63,11 @@ const PrettierTable = markdownTable([
 const ESlintDocs = readmeContent.slice(0, readmeContent.indexOf(startESlintMarker) + startESlintMarker.length) + "\n" + ESlintTable + "\n" + readmeContent.slice(readmeContent.indexOf(endESlintMarker));
 const PrettierDocs = ESlintDocs.slice(0, ESlintDocs.indexOf(startPrettierMarker) + startPrettierMarker.length) + "\n" + PrettierTable + "\n" + ESlintDocs.slice(ESlintDocs.indexOf(endPrettierMarker));
 
+const ESlintPackageDocs = eslintReadme.slice(0, eslintReadme.indexOf(startESlintMarker) + startESlintMarker.length) + "\n" + ESlintTable + "\n" + eslintReadme.slice(eslintReadme.indexOf(endESlintMarker));
+const PrettierPackageDocs = prettierReadme.slice(0, prettierReadme.indexOf(startPrettierMarker) + startPrettierMarker.length) + "\n" + PrettierTable + "\n" + prettierReadme.slice(prettierReadme.indexOf(endPrettierMarker));
+
+writeFileSync(eslintPath, ESlintPackageDocs);
+writeFileSync(prettierPath, PrettierPackageDocs);
 writeFileSync(readmePath, PrettierDocs);
+
 console.log(`Done in ${Date.now() - time}ms.`);

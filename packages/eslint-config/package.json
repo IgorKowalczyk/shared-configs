@@ -1,7 +1,7 @@
 {
  "name": "@igorkowalczyk/eslint-config",
- "version": "1.0.1",
- "description": "My sharable ESlint config",
+ "version": "1.0.2",
+ "description": "☔ My sharable ESlint config",
  "main": "index.js",
  "scripts": {
   "format": "prettier --write --cache --ignore-unknown .",
@@ -12,7 +12,8 @@
   "access": "public"
  },
  "files": [
-  "index.js"
+  "index.js",
+  "README.md"
  ],
  "repository": {
   "type": "git",
