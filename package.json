@@ -7,6 +7,7 @@
     "format": "turbo run format --color",
     "format:check": "turbo run format:check --color",
     "publish-packages": "turbo run publish --color",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "int": "prettier --write . --cache --ignore-unknown",
     "int:check": "prettier --check ."
   },
@@ -23,6 +24,16 @@
     "config",
     "styleguide"
   ],
+  "eslintConfig": {
+    "root": false,
+    "parserOptions": {
+      "ecmaVersion": "latest"
+    },
+    "env": {
+      "node": true
+    },
+    "extends": ["./packages/eslint-config/index.js"]
+  },
   "author": "Igor Kowalczyk",
   "license": "MIT",
   "bugs": {

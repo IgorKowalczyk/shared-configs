@@ -20,9 +20,6 @@ module.exports = {
   // Enforce consistent function names
   "func-names": ["error", "as-needed"],
 
-  // Enforce the use of strict mode
-  strict: ["error", "global"],
-
   // Enforce camelCase naming convention
   camelcase: ["error", { properties: "never", ignoreDestructuring: true }],
 
