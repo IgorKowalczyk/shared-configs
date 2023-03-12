@@ -41,7 +41,7 @@ const ESlintTable = markdownTable([
    off: "Disabled",
   }[ruleType];
 
-  return [`\`${ruleName}\``, Capitalize(description), `${typeEmoji} \`${typeText}\``, docs];
+  return [`\`${ruleName}\``, Capitalize(description.toString()), `${typeEmoji} \`${typeText}\``, docs];
  }),
 ]);
 
