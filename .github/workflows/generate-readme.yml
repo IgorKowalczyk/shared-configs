@@ -27,13 +27,11 @@ jobs:
    - name: 🚀 Generate README
      run: node src/generateDocs.mjs
    - name: 📤 Commit changes
-     uses: EndBug/add-and-commit@v7
-     with:
-      message: ${{ github.event.head_commit.message }} | Generated README.md docs
-      add: "README.md"
-      author_name: "GitHub Actions"
-      author_email: "41898282+github-actions[bot]@users.noreply.github.com"
-      committer_name: "GitHub Actions"
-      committer_email: "41898282+github-actions[bot]@users.noreply.github.com"
-      push: true
-      branch: ${{ github.ref }}
+     run: |
+      if [[ "$(git status --porcelain)" != "" ]]; then
+      git config user.name GitHub Actions
+      git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      git add .
+      git commit -m ${{ github.event.head_commit.message }} | Generated README.md docs
+      git push -f
+      fi
