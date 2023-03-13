@@ -1,3 +1,4 @@
 package.json
 pnpm-lock.yaml
 README.md
+packages/*/README.md
