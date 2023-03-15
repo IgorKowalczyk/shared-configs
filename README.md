@@ -106,3 +106,15 @@ module.exports = {
 | `trailingComma`              | `es5`       | [Documentation](https://prettier.io/docs/en/options.html#trailingComma)              |
 | `useTabs`                    | `false`     | [Documentation](https://prettier.io/docs/en/options.html#useTabs)                    |
 <!--END_SECTION:prettier-->
+
+# 📝 [`@igorkowalczyk/renovate-config`](/packages/renovate-config/)
+
+> **Warning**: **This is not a package - it is a configuration preset!**
+
+### 🔩 Usage
+- In your `renovate.json` file, add the following:
+```json
+{
+ "extends": ["github>igorkowalczyk/shared-configs//packages/renovate-config/index.json"]
+}
+```
