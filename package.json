@@ -44,12 +44,12 @@
   },
   "homepage": "https://github.com/IgorKowalczyk/shared-configs#readme",
   "dependencies": {
-    "eslint": "^8.36.0",
-    "markdown-table": "^3.0.3",
-    "turbo": "^1.8.3"
+    "eslint": "8.36.0",
+    "markdown-table": "3.0.3",
+    "turbo": "1.8.3"
   },
   "devDependencies": {
-    "prettier": "^2.8.4"
+    "prettier": "2.8.4"
   },
   "packageManager": "pnpm@7.29.3"
 }

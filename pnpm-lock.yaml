@@ -4,10 +4,10 @@ importers:
 
   .:
     specifiers:
-      eslint: ^8.36.0
-      markdown-table: ^3.0.3
-      prettier: ^2.8.4
-      turbo: ^1.8.3
+      eslint: 8.36.0
+      markdown-table: 3.0.3
+      prettier: 2.8.4
+      turbo: 1.8.3
     dependencies:
       eslint: 8.36.0
       markdown-table: 3.0.3
@@ -17,11 +17,11 @@ importers:
 
   packages/eslint-config:
     specifiers:
-      eslint: ^8.36.0
-      eslint-config-prettier: ^8.7.0
-      eslint-plugin-import: ^2.27.5
-      eslint-plugin-prettier: ^4.2.1
-      prettier: ^2.8.4
+      eslint: 8.36.0
+      eslint-config-prettier: 8.7.0
+      eslint-plugin-import: 2.27.5
+      eslint-plugin-prettier: 4.2.1
+      prettier: 2.8.4
     dependencies:
       eslint: 8.36.0
       eslint-config-prettier: 8.7.0_eslint@8.36.0
@@ -32,7 +32,7 @@ importers:
 
   packages/prettier-config:
     specifiers:
-      prettier: ^2.8.4
+      prettier: 2.8.4
     dependencies:
       prettier: 2.8.4
 
