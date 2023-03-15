@@ -1,39 +1,39 @@
 {
- "name": "@igorkowalczyk/prettier-config",
- "version": "1.0.3",
- "description": "☔ My sharable Prettier config",
- "main": "index.js",
- "scripts": {
-  "format": "prettier --write --cache --ignore-unknown .",
-  "format:check": "prettier --check --ignore-unknown .",
-  "publish-packages": "pnpm publish --access public --no-git-checks"
- },
- "publishConfig": {
-  "access": "public"
- },
- "files": [
-  "index.js",
-  "README.md"
- ],
- "repository": {
-  "type": "git",
-  "url": "git+https://github.com/igorkowalczyk/shared-configs.git",
-  "directory": "packages/prettier-config"
- },
- "keywords": [
-  "prettier",
-  "prettier-config",
-  "javascript",
-  "config",
-  "styleguide"
- ],
- "author": "Igor Kowalczyk",
- "license": "MIT",
- "bugs": {
-  "url": "https://github.com/igorkowalczyk/shared-configs/issues"
- },
- "homepage": "https://github.com/igorkowalczyk/shared-configs#readme",
- "dependencies": {
-  "prettier": "2.8.4"
- }
+  "name": "@igorkowalczyk/prettier-config",
+  "version": "1.0.3",
+  "description": "☔ My sharable Prettier config",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write --cache --ignore-unknown .",
+    "format:check": "prettier --check --ignore-unknown .",
+    "publish-packages": "pnpm publish --access public --no-git-checks"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igorkowalczyk/shared-configs.git",
+    "directory": "packages/prettier-config"
+  },
+  "keywords": [
+    "prettier",
+    "prettier-config",
+    "javascript",
+    "config",
+    "styleguide"
+  ],
+  "author": "Igor Kowalczyk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igorkowalczyk/shared-configs/issues"
+  },
+  "homepage": "https://github.com/igorkowalczyk/shared-configs#readme",
+  "dependencies": {
+    "prettier": "2.8.3"
+  }
 }
