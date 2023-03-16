@@ -20,20 +20,20 @@ module.exports = {
 ### ⚙️ Rules overview
 
 <!--START_SECTION:prettier-->
-| Rule                         | Style       | Documentation                                                                        |
-| ---------------------------- | ----------- | ------------------------------------------------------------------------------------ |
-| `arrowParens`                | `always`    | [Documentation](https://prettier.io/docs/en/options.html#arrowParens)                |
-| `bracketSpacing`             | `true`      | [Documentation](https://prettier.io/docs/en/options.html#bracketSpacing)             |
-| `embeddedLanguageFormatting` | `auto`      | [Documentation](https://prettier.io/docs/en/options.html#embeddedLanguageFormatting) |
-| `htmlWhitespaceSensitivity`  | `css`       | [Documentation](https://prettier.io/docs/en/options.html#htmlWhitespaceSensitivity)  |
-| `jsxSingleQuote`             | `false`     | [Documentation](https://prettier.io/docs/en/options.html#jsxSingleQuote)             |
-| `printWidth`                 | `200000`    | [Documentation](https://prettier.io/docs/en/options.html#printWidth)                 |
-| `proseWrap`                  | `preserve`  | [Documentation](https://prettier.io/docs/en/options.html#proseWrap)                  |
-| `quoteProps`                 | `as-needed` | [Documentation](https://prettier.io/docs/en/options.html#quoteProps)                 |
-| `requirePragma`              | `false`     | [Documentation](https://prettier.io/docs/en/options.html#requirePragma)              |
-| `semi`                       | `true`      | [Documentation](https://prettier.io/docs/en/options.html#semi)                       |
-| `singleQuote`                | `false`     | [Documentation](https://prettier.io/docs/en/options.html#singleQuote)                |
-| `tabWidth`                   | `1`         | [Documentation](https://prettier.io/docs/en/options.html#tabWidth)                   |
-| `trailingComma`              | `es5`       | [Documentation](https://prettier.io/docs/en/options.html#trailingComma)              |
-| `useTabs`                    | `false`     | [Documentation](https://prettier.io/docs/en/options.html#useTabs)                    |
+| Rule                         | Style       | Documentation                                                                          |
+| ---------------------------- | ----------- | -------------------------------------------------------------------------------------- |
+| `arrowParens`                | `always`    | [Documentation](https://prettier.io/docs/en/options.html#arrow-parens)                 |
+| `bracketSpacing`             | `true`      | [Documentation](https://prettier.io/docs/en/options.html#bracket-spacing)              |
+| `embeddedLanguageFormatting` | `auto`      | [Documentation](https://prettier.io/docs/en/options.html#embedded-language-formatting) |
+| `htmlWhitespaceSensitivity`  | `css`       | [Documentation](https://prettier.io/docs/en/options.html#html-whitespace-sensitivity)  |
+| `jsxSingleQuote`             | `false`     | [Documentation](https://prettier.io/docs/en/options.html#jsx-single-quote)             |
+| `printWidth`                 | `200000`    | [Documentation](https://prettier.io/docs/en/options.html#print-width)                  |
+| `proseWrap`                  | `preserve`  | [Documentation](https://prettier.io/docs/en/options.html#prose-wrap)                   |
+| `quoteProps`                 | `as-needed` | [Documentation](https://prettier.io/docs/en/options.html#quote-props)                  |
+| `requirePragma`              | `false`     | [Documentation](https://prettier.io/docs/en/options.html#require-pragma)               |
+| `semi`                       | `true`      | [Documentation](https://prettier.io/docs/en/options.html#semi)                         |
+| `singleQuote`                | `false`     | [Documentation](https://prettier.io/docs/en/options.html#single-quote)                 |
+| `tabWidth`                   | `1`         | [Documentation](https://prettier.io/docs/en/options.html#tab-width)                    |
+| `trailingComma`              | `es5`       | [Documentation](https://prettier.io/docs/en/options.html#trailing-comma)               |
+| `useTabs`                    | `false`     | [Documentation](https://prettier.io/docs/en/options.html#use-tabs)                     |
 <!--END_SECTION:prettier-->

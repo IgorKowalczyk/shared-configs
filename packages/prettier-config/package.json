@@ -32,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/igorkowalczyk/shared-configs/issues"
   },
-  "homepage": "https://github.com/igorkowalczyk/shared-configs#readme",
+  "homepage": "https://github.com/igorkowalczyk/shared-configs/tree/main/packages/prettier-config#readme",
   "dependencies": {
     "prettier": "2.8.4"
   }

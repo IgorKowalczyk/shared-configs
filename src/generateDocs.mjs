@@ -54,7 +54,7 @@ const ESlintTable = markdownTable([
 const PrettierTable = markdownTable([
  ["Rule", "Style", "Documentation"],
  ...Object.entries(PrettierConfig.default).map(([ruleName, ruleConfig]) => {
-  const description = ruleName.toString().includes("/") ? "-" : `[Documentation](https://prettier.io/docs/en/options.html#${ruleName})`;
+  const description = ruleName.toString().includes("/") ? "-" : `[Documentation](https://prettier.io/docs/en/options.html#${ruleName.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase()})`;
 
   return [`\`${ruleName}\``, `\`${ruleConfig}\``, description];
  }),
