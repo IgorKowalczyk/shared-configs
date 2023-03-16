@@ -1,7 +1,7 @@
 # Shared configs
 > This repository contains shared configs for my projects. It's a monorepo managed by [TurboRepo by Vercel](https://turbo.build/repo).
 
-## ♻️ Sharable configs
+## ♻️ Shareable configs
 
 | **Package** | **Version** | **Downloads** | **Documentation** |
 | - | - | - | - |
