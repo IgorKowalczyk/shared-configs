@@ -49,7 +49,7 @@
     "turbo": "1.8.4"
   },
   "devDependencies": {
-    "prettier": "2.8.5"
+    "prettier": "2.8.6"
   },
   "packageManager": "pnpm@7.30.0"
 }
