@@ -40,6 +40,7 @@ module.exports = {
 | Rule                          | Style                                                                      | Type          | Documentation                                                              |
 | ----------------------------- | -------------------------------------------------------------------------- | ------------- | -------------------------------------------------------------------------- |
 | `linebreak-style`             | Unix                                                                       | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/linebreak-style)             |
+| `prettier/prettier`           | Warn                                                                       | ⚠️ `Warning`  | External rule                                                              |
 | `quotes`                      | Double                                                                     | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/quotes)                      |
 | `semi`                        | Always                                                                     | ⚠️ `Warning`  | [Documentation](https://eslint.org/docs/rules/semi)                        |
 | `comma-dangle`                | [Documentation](https://eslint.org/docs/rules/comma-dangle)                | 🚫 `Error`    | [Documentation](https://eslint.org/docs/rules/comma-dangle)                |

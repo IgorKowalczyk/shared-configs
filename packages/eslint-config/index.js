@@ -9,6 +9,9 @@ module.exports = {
   // Enforce consistent line breaks
   "linebreak-style": ["error", "unix"],
 
+  // Enforce prettier formatting rules
+  "prettier/prettier": "warn",
+
   // Enforce consistent quotes
   quotes: ["error", "double"],
 
