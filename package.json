@@ -44,7 +44,7 @@
   },
   "homepage": "https://github.com/IgorKowalczyk/shared-configs#readme",
   "dependencies": {
-    "eslint": "8.38.0",
+    "eslint": "8.39.0",
     "markdown-table": "3.0.3",
     "turbo": "1.9.3"
   },
