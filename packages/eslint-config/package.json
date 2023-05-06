@@ -4,14 +4,15 @@
  "description": "☔ My sharable ESlint config",
  "author": "Igor Kowalczyk",
  "license": "MIT",
- "repository": "igorkowalczyk/shared-configs",
+ "repository": "IgorKowalczyk/shared-configs",
  "bugs": "https://github.com/igorkowalczyk/shared-configs/issues",
  "homepage": "https://github.com/igorkowalczyk/shared-configs/tree/main/packages/eslint-config#readme",
  "main": "index.js",
  "scripts": {
   "format": "prettier --write --cache --ignore-unknown .",
   "format:check": "prettier --check --ignore-unknown .",
-  "publish-packages": "pnpm publish --access public --no-git-checks --provenance"
+  "publish-packages": "pnpm publish --access public --no-git-checks --provenance",
+  "test:publish-packages": "pnpm publish --access public --no-git-checks --provenance --dry-run"
  },
  "publishConfig": {
   "access": "public",

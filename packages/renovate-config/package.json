@@ -4,7 +4,7 @@
  "description": "☔ My sharable Renovate config",
  "author": "Igor Kowalczyk",
  "license": "MIT",
- "repository": "igorkowalczyk/shared-configs",
+ "repository": "IgorKowalczyk/shared-configs",
  "bugs": "https://github.com/igorkowalczyk/shared-configs/issues",
  "homepage": "https://github.com/igorkowalczyk/shared-configs/tree/main/packages/renovate-config#readme",
  "main": "index.json",

@@ -4,7 +4,7 @@
   "description": "☔ My sharable ESlint and Prettier configs",
   "author": "Igor Kowalczyk",
   "license": "MIT",
-  "repository": "igorkowalczyk/shared-configs",
+  "repository": "IgorKowalczyk/shared-configs",
   "bugs": "https://github.com/IgorKowalczyk/shared-configs/issues",
   "homepage": "https://github.com/IgorKowalczyk/shared-configs#readme",
   "private": true,
@@ -12,6 +12,7 @@
     "format": "turbo run format --color",
     "format:check": "turbo run format:check --color",
     "publish-packages": "turbo run publish-packages --color",
+    "test:publish-packages": "turbo run test:publish-packages --color",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "int": "prettier --write . --cache --ignore-unknown",
     "int:check": "prettier --check ."

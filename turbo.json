@@ -4,6 +4,7 @@
   "lint": {},
   "format": {},
   "format:check": {},
-  "publish-packages": {}
+  "publish-packages": {},
+  "test:publish-packages": {}
  }
 }
