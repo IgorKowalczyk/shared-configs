@@ -18,7 +18,7 @@
  ],
  "repository": {
   "type": "git",
-  "url": "git+https://github.com/igorkowalczyk/shared-configs.git",
+  "url": "git+https://github.com/igorkowalczyk/shared-configs",
   "directory": "packages/eslint-config"
  },
  "keywords": [
