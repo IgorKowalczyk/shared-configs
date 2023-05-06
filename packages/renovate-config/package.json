@@ -2,6 +2,11 @@
  "name": "@igorkowalczyk/renovate-config",
  "version": "1.3.2",
  "description": "☔ My sharable Renovate config",
+ "author": "Igor Kowalczyk",
+ "license": "MIT",
+ "repository": "igorkowalczyk/shared-configs",
+ "bugs": "https://github.com/igorkowalczyk/shared-configs/issues",
+ "homepage": "https://github.com/igorkowalczyk/shared-configs/tree/main/packages/renovate-config#readme",
  "main": "index.json",
  "scripts": {
   "format": "prettier --write --cache --ignore-unknown .",
@@ -11,11 +16,6 @@
   "index.json",
   "README.md"
  ],
- "repository": {
-  "type": "git",
-  "url": "git+https://github.com/igorkowalczyk/shared-configs",
-  "directory": "packages/renovate-config"
- },
  "keywords": [
   "renovate",
   "renovate-config",
@@ -24,11 +24,5 @@
   "update",
   "dependency"
  ],
- "author": "Igor Kowalczyk",
- "license": "MIT",
- "bugs": {
-  "url": "https://github.com/igorkowalczyk/shared-configs/issues"
- },
- "homepage": "https://github.com/igorkowalczyk/shared-configs/tree/main/packages/renovate-config#readme",
  "packageManager": "pnpm@8.4.0"
 }

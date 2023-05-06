@@ -2,6 +2,11 @@
   "name": "@igorkowalczyk/prettier-config",
   "version": "1.3.2",
   "description": "☔ My sharable Prettier config",
+  "author": "Igor Kowalczyk",
+  "license": "MIT",
+  "repository": "igorkowalczyk/shared-configs",
+  "bugs": "https://github.com/igorkowalczyk/shared-configs/issues",
+  "homepage": "https://github.com/igorkowalczyk/shared-configs/tree/main/packages/prettier-config#readme",
   "main": "index.js",
   "scripts": {
     "format": "prettier --write --cache --ignore-unknown .",
@@ -16,11 +21,6 @@
     "index.js",
     "README.md"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/igorkowalczyk/shared-configs",
-    "directory": "packages/prettier-config"
-  },
   "keywords": [
     "prettier",
     "prettier-config",
@@ -28,12 +28,6 @@
     "config",
     "styleguide"
   ],
-  "author": "Igor Kowalczyk",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/igorkowalczyk/shared-configs/issues"
-  },
-  "homepage": "https://github.com/igorkowalczyk/shared-configs/tree/main/packages/prettier-config#readme",
   "dependencies": {
     "prettier": "2.8.8"
   },

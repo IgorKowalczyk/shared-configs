@@ -2,6 +2,11 @@
   "name": "@igorkowalczyk/sharable-configs",
   "version": "1.3.1",
   "description": "☔ My sharable ESlint and Prettier configs",
+  "author": "Igor Kowalczyk",
+  "license": "MIT",
+  "repository": "igorkowalczyk/shared-configs",
+  "bugs": "https://github.com/IgorKowalczyk/shared-configs/issues",
+  "homepage": "https://github.com/IgorKowalczyk/shared-configs#readme",
   "private": true,
   "scripts": {
     "format": "turbo run format --color",
@@ -10,10 +15,6 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "int": "prettier --write . --cache --ignore-unknown",
     "int:check": "prettier --check ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/IgorKowalczyk/shared-configs"
   },
   "keywords": [
     "eslint",
@@ -37,12 +38,6 @@
       "./packages/eslint-config/index.js"
     ]
   },
-  "author": "Igor Kowalczyk",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/IgorKowalczyk/shared-configs/issues"
-  },
-  "homepage": "https://github.com/IgorKowalczyk/shared-configs#readme",
   "dependencies": {
     "eslint": "8.40.0",
     "markdown-table": "3.0.3",
