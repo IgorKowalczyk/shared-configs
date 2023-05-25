@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/prettier-config",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "☔ My sharable Prettier config",
   "author": "Igor Kowalczyk",
   "license": "MIT",
@@ -31,6 +31,9 @@
   ],
   "dependencies": {
     "prettier": "2.8.8"
+  },
+  "peerDependencies": {
+    "prettier": ">=2.0.0"
   },
   "packageManager": "pnpm@8.5.1"
 }

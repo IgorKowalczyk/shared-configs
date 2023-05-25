@@ -27,7 +27,7 @@ jobs:
    - name: 🚀 Install dependencies
      run: pnpm install
    - name: 🚀 Generate README
-     run: node src/generateDocs.mjs
+     run: pnpm run generate-docs
    - name: 📤 Commit changes
      run: |
       if [[ "$(git status --porcelain)" != "" ]]; then

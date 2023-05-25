@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/sharable-configs",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "description": "☔ My sharable ESlint and Prettier configs",
   "author": "Igor Kowalczyk",
   "license": "MIT",
@@ -15,7 +15,8 @@
     "test:publish-packages": "turbo run test:publish-packages --color",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "int": "prettier --write . --cache --ignore-unknown",
-    "int:check": "prettier --check ."
+    "int:check": "prettier --check .",
+    "generate-docs": "node src/generateDocs.mjs"
   },
   "keywords": [
     "eslint",
@@ -39,6 +40,7 @@
       "./packages/eslint-config/index.js"
     ]
   },
+  "prettier": "./packages/prettier-config/index.js",
   "dependencies": {
     "eslint": "8.41.0",
     "markdown-table": "3.0.3",
