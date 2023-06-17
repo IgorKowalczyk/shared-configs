@@ -42,7 +42,7 @@
   },
   "prettier": "./packages/prettier-config/index.js",
   "dependencies": {
-    "eslint": "8.42.0",
+    "eslint": "8.43.0",
     "markdown-table": "3.0.3",
     "turbo": "1.10.3"
   },
