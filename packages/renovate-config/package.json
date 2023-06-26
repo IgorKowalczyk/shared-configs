@@ -24,5 +24,5 @@
   "update",
   "dependency"
  ],
- "packageManager": "pnpm@8.6.4"
+ "packageManager": "pnpm@8.6.5"
 }
