@@ -7,5 +7,11 @@
  "prHourlyLimit": 0,
  "prConcurrentLimit": 0,
  "prFooter": "",
- "prBodyTemplate": "{{{table}}}{{{warnings}}}{{{notes}}}{{{changelogs}}}{{{controls}}}{{{footer}}}"
+ "prBodyTemplate": "{{{table}}}{{{warnings}}}{{{notes}}}{{{changelogs}}}{{{controls}}}{{{footer}}}",
+ "packageRules": [
+  {
+   "matchPackagePatterns": ["contentlayer"],
+   "groupName": "contentlayer"
+  }
+ ]
 }
