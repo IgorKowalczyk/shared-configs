@@ -5,6 +5,8 @@ jobs:
  generate-readme:
   name: Generate README
   runs-on: ubuntu-latest
+  env:
+   BODY: ${{ github.event.head_commit.message }}
   permissions:
    contents: write
   strategy:
@@ -36,7 +38,7 @@ jobs:
       git add .
 
       # Sanitize the input by removing special characters and escaping double quotes
-      sanitized_message=$(echo "${{ github.event.head_commit.message }}" | sed 's/[^A-Za-z0-9._-]/_/g' | sed 's/"/\\"/g')
+      sanitized_message=$(echo "${{ env.BODY }}" | sed 's/[^A-Za-z0-9._-]/_/g' | sed 's/"/\\"/g')
       commit_message="${sanitized_message} | Generated README.md docs"
 
       git commit -m "$commit_message"
