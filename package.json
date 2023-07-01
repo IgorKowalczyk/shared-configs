@@ -44,7 +44,7 @@
   "dependencies": {
     "eslint": "8.43.0",
     "markdown-table": "3.0.3",
-    "turbo": "1.10.6"
+    "turbo": "1.10.7"
   },
   "devDependencies": {
     "prettier": "2.8.8"
