@@ -7,7 +7,7 @@ export default {
    compact: true,
   },
   {
-   file: "dist/cjs/index.js",
+   file: "dist/cjs/index.cjs",
    format: "cjs",
    compact: true,
   },
