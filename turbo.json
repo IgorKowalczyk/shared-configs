@@ -4,7 +4,21 @@
   "lint": {},
   "format": {},
   "format:check": {},
-  "publish-packages": {},
-  "test:publish-packages": {}
+  "build": {
+   "dependsOn": [
+    "lint",
+    "format:check"
+   ]
+  },
+  "publish-packages": {
+   "dependsOn": [
+    "build"
+   ]
+  },
+  "test:publish-packages": {
+   "dependsOn": [
+    "build"
+   ]
+  }
  }
 }

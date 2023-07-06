@@ -1,16 +1,21 @@
 {
   "name": "@igorkowalczyk/prettier-config",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "description": "☔ My sharable Prettier config",
   "author": "Igor Kowalczyk",
   "license": "MIT",
   "repository": "IgorKowalczyk/shared-configs",
   "bugs": "https://github.com/igorkowalczyk/shared-configs/issues",
   "homepage": "https://github.com/igorkowalczyk/shared-configs/tree/main/packages/prettier-config#readme",
-  "main": "index.js",
+  "type": "module",
+  "exports": {
+    "import": "./dist/mjs/index.js",
+    "require": "./dist/cjs/index.js"
+  },
   "scripts": {
     "format": "prettier --write --cache --ignore-unknown .",
     "format:check": "prettier --check --ignore-unknown .",
+    "build": "rollup -c",
     "publish-packages": "pnpm publish --access public --no-git-checks --provenance",
     "test:publish-packages": "pnpm publish --access public --no-git-checks --provenance --dry-run"
   },
@@ -19,8 +24,8 @@
     "provenance": true
   },
   "files": [
-    "index.js",
-    "README.md"
+    "README.md",
+    "dist"
   ],
   "keywords": [
     "prettier",
@@ -30,10 +35,13 @@
     "styleguide"
   ],
   "dependencies": {
-    "prettier": "2.8.8"
+    "prettier": "3.0.0"
   },
   "peerDependencies": {
     "prettier": ">=2.0.0"
   },
-  "packageManager": "pnpm@8.6.6"
+  "packageManager": "pnpm@8.6.6",
+  "devDependencies": {
+    "rollup": "3.26.2"
+  }
 }

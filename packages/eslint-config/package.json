@@ -1,6 +1,6 @@
 {
  "name": "@igorkowalczyk/eslint-config",
- "version": "1.4.2",
+ "version": "1.5.0",
  "description": "☔ My sharable ESlint config",
  "author": "Igor Kowalczyk",
  "license": "MIT",
@@ -30,13 +30,12 @@
   "styleguide"
  ],
  "devDependencies": {
-  "prettier": "2.8.8"
+  "prettier": "3.0.0"
  },
  "dependencies": {
   "eslint": "8.44.0",
-  "eslint-config-prettier": "8.8.0",
   "eslint-plugin-import": "2.27.5",
-  "eslint-plugin-prettier": "4.2.1"
+  "eslint-plugin-prettier": "5.0.0-alpha.1"
  },
  "peerDependencies": {
   "eslint": ">=7.0.0"

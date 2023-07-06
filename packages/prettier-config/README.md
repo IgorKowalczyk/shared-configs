@@ -17,6 +17,21 @@ module.exports = {
 };
 ```
 
+```js
+// prettier.config.js
+import prettierConfig from "@igorkowalczyk/prettier-config";
+
+export default {
+  ...prettierConfig,
+};
+```
+
+```json
+{
+  "extends": "@igorkowalczyk/prettier-config"
+}
+```
+
 ### ⚙️ Rules overview
 
 <!--START_SECTION:prettier-->

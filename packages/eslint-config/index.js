@@ -1,6 +1,6 @@
 module.exports = {
- extends: ["eslint:recommended", "plugin:prettier/recommended"],
- plugins: ["import"],
+ extends: ["eslint:recommended"],
+ plugins: ["import", "prettier"],
  ignorePatterns: ["dist/", "coverage/"],
  parserOptions: {
   ecmaVersion: "latest",
