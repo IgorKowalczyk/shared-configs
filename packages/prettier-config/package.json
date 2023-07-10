@@ -40,7 +40,7 @@
   "peerDependencies": {
     "prettier": ">=2.0.0"
   },
-  "packageManager": "pnpm@8.6.6",
+  "packageManager": "pnpm@8.6.7",
   "devDependencies": {
     "rollup": "3.26.2"
   }
