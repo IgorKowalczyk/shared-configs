@@ -13,11 +13,11 @@
     "require": "./dist/cjs/index.cjs"
   },
   "scripts": {
-    "format": "prettier --write --cache --ignore-unknown .",
-    "format:check": "prettier --check --ignore-unknown .",
     "build": "rollup -c",
     "publish-packages": "pnpm publish --access public --no-git-checks --provenance",
-    "test:publish-packages": "pnpm publish --access public --no-git-checks --provenance --dry-run"
+    "test:publish-packages": "pnpm publish --access public --no-git-checks --provenance --dry-run",
+    "format": "prettier . --write --cache --ignore-unknown",
+    "format:check": "prettier . --check --ignore-unknown"
   },
   "publishConfig": {
     "access": "public",

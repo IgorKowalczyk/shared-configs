@@ -9,10 +9,10 @@
  "homepage": "https://github.com/igorkowalczyk/shared-configs/tree/main/packages/eslint-config#readme",
  "main": "index.js",
  "scripts": {
-  "format": "prettier --write --cache --ignore-unknown .",
-  "format:check": "prettier --check --ignore-unknown .",
   "publish-packages": "pnpm publish --access public --no-git-checks --provenance",
-  "test:publish-packages": "pnpm publish --access public --no-git-checks --provenance --dry-run"
+  "test:publish-packages": "pnpm publish --access public --no-git-checks --provenance --dry-run",
+  "format": "prettier . --write --cache --ignore-unknown",
+  "format:check": "prettier . --check --ignore-unknown"
  },
  "publishConfig": {
   "access": "public",
