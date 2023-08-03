@@ -30,7 +30,7 @@
     "styleguide"
   ],
   "devDependencies": {
-    "prettier": "3.0.0"
+    "prettier": "3.0.1"
   },
   "dependencies": {
     "eslint": "8.46.0",
