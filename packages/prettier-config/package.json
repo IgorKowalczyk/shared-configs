@@ -42,6 +42,6 @@
   },
   "packageManager": "pnpm@8.6.11",
   "devDependencies": {
-    "rollup": "3.27.1"
+    "rollup": "3.27.2"
   }
 }
