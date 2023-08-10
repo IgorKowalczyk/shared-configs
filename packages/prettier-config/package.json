@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/prettier-config",
-  "version": "1.5.5",
+  "version": "1.6.0",
   "description": "☔ My sharable Prettier config",
   "author": "Igor Kowalczyk",
   "license": "MIT",
@@ -19,6 +19,12 @@
     "format": "prettier . --write --cache --ignore-unknown",
     "format:check": "prettier . --check --ignore-unknown"
   },
+  "peerDependencies": {
+    "prettier": "^3.0"
+  },
+  "devDependencies": {
+    "rollup": "3.28.0"
+  },
   "publishConfig": {
     "access": "public",
     "provenance": true
@@ -34,14 +40,5 @@
     "config",
     "styleguide"
   ],
-  "dependencies": {
-    "prettier": "3.0.1"
-  },
-  "peerDependencies": {
-    "prettier": ">=2.0.0"
-  },
-  "packageManager": "pnpm@8.6.12",
-  "devDependencies": {
-    "rollup": "3.28.0"
-  }
+  "packageManager": "pnpm@8.6.12"
 }
