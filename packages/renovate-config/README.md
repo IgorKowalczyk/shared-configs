@@ -1,6 +1,7 @@
 # 📝 [`@igorkowalczyk/renovate-config`](/packages/renovate-config/)
 
-> **Warning**: **This is not a package - it is a configuration preset!**
+> [!WARNING]
+> This is not a package - it is a configuration preset!
 
 #### 🔩 Usage
 

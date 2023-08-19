@@ -9,7 +9,7 @@
 | 📦 [`@igorkowalczyk/prettier-config`](https://npmjs.com/package/@igorkowalczyk/prettier-config) | ![](https://img.shields.io/npm/v/%40igorkowalczyk%2Fprettier-config/latest.svg) | [![](https://img.shields.io/npm/dw/@igorkowalczyk/prettier-config)](https://npmjs.com/package/@igorkowalczyk/prettier-config) | [Documentation](/packages/prettier-config/README.md) |
 | 📝 [`@igorkowalczyk/renovate-config`](https://npmjs.com/package/@igorkowalczyk/prettier-config) | ![](https://img.shields.io/github/package-json/v/igorkowalczyk/shared-configs?filename=packages%2Frenovate-config%2Fpackage.json&label=github%40latest) | - | [Documentation](/packages/renovate-config/README.md) |
 
-> **Note**:
+> [!NOTE]
 > 📦: Package **|** 📝: Configuration file
 
 ---
@@ -138,7 +138,8 @@ export default {
 
 # 📝 [`@igorkowalczyk/renovate-config`](/packages/renovate-config/)
 
-> **Warning**: **This is not a package - it is a configuration preset!**
+> [!WARNING]
+> This is not a package - it is a configuration preset!
 
 ### 🔩 Usage
 - In your `renovate.json` file, add the following:
