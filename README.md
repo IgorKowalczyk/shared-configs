@@ -10,7 +10,7 @@
 | 📝 [`@igorkowalczyk/renovate-config`](https://npmjs.com/package/@igorkowalczyk/prettier-config) | ![](https://img.shields.io/github/package-json/v/igorkowalczyk/shared-configs?filename=packages%2Frenovate-config%2Fpackage.json&label=github%40latest) | - | [Documentation](/packages/renovate-config/README.md) |
 
 > [!NOTE]
-> 📦 - Package
+> 📦 - Package\n
 > 📝 - Configuration file
 
 ---
