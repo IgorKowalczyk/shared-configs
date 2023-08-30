@@ -1,5 +1,4 @@
-# Shared configs
-> This repository contains shared configs for my projects. It's a monorepo managed by [TurboRepo by Vercel](https://turbo.build/repo).
+![Shared Configs](https://github.com/IgorKowalczyk/shared-configs/assets/49127376/2601c027-e41e-439e-ab59-51f83aa1e35e)
 
 ## ♻️ Shareable configs
 
@@ -10,8 +9,7 @@
 | 📝 [`@igorkowalczyk/renovate-config`](https://npmjs.com/package/@igorkowalczyk/prettier-config) | ![](https://img.shields.io/github/package-json/v/igorkowalczyk/shared-configs?filename=packages%2Frenovate-config%2Fpackage.json&label=github%40latest) | - | [Documentation](/packages/renovate-config/README.md) |
 
 > [!NOTE]
-> 📦 - Package
->
+> 📦 - Package  
 > 📝 - Configuration file
 
 ---

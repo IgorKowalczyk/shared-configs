@@ -1,4 +1,4 @@
-# 📦 [`@igorkowalczyk/prettier-config`](https://www.npmjs.com/package/@igorkowalczyk/prettier-config)
+![Prettier config](https://github.com/IgorKowalczyk/shared-configs/assets/49127376/323f15c6-83ac-4219-97ed-8fbbb502442c)
 
 ### 📥 Installation
 
