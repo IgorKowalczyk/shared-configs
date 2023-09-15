@@ -41,8 +41,8 @@ importers:
         version: 3.0.1
     devDependencies:
       rollup:
-        specifier: 3.29.1
-        version: 3.29.1
+        specifier: 3.29.2
+        version: 3.29.2
 
   packages/renovate-config: {}
 
@@ -1430,8 +1430,8 @@ packages:
     dependencies:
       glob: 7.2.3
 
-  /rollup@3.29.1:
-    resolution: {integrity: sha512-c+ebvQz0VIH4KhhCpDsI+Bik0eT8ZFEVZEYw0cGMVqIP8zc+gnwl7iXCamTw7vzv2MeuZFZfdx5JJIq+ehzDlg==}
+  /rollup@3.29.2:
+    resolution: {integrity: sha512-CJouHoZ27v6siztc21eEQGo0kIcE5D1gVPA571ez0mMYb25LGYGKnVNXpEj5MGlepmDWGXNjDB5q7uNiPHC11A==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
