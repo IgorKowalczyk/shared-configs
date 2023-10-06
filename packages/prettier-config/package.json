@@ -24,7 +24,7 @@
     "prettier": "^3.0"
   },
   "devDependencies": {
-    "rollup": "4.0.1"
+    "rollup": "4.0.2"
   },
   "publishConfig": {
     "access": "public",
