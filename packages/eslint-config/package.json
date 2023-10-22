@@ -12,13 +12,13 @@
   "exports": {
     "./flat": {
       "import": "./dist/mjs/flat.js",
-      "require": "./dist/cjs/flat.js",
+      "require": "./dist/cjs/flat.cjs",
       "default": "./dist/cjs/flat.js"
     },
     "./legacy": {
       "import": "./dist/mjs/legacy.js",
-      "require": "./dist/cjs/legacy.js",
-      "default": "./dist/cjs/legacy.js"
+      "require": "./dist/cjs/legacy.cjs",
+      "default": "./dist/cjs/legacy.cjs"
     }
   },
   "scripts": {

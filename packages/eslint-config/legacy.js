@@ -1,4 +1,4 @@
-module.exports = {
+export default {
  extends: ["eslint:recommended"],
  plugins: ["import", "prettier"],
  ignorePatterns: ["build/", "dist/", "coverage/", "tmp/"],
