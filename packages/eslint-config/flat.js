@@ -20,7 +20,7 @@ export default {
  },
  ignores: ["build/**", "dist/**", "coverage/**", "tmp/**"],
  rules: {
-  // ESlint recommended rules
+  // ESLint recommended rules
   ...js.configs.recommended.rules,
 
   // Disallow lonely 'if' statements

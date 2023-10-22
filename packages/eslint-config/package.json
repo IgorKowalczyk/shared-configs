@@ -1,7 +1,7 @@
 {
   "name": "@igorkowalczyk/eslint-config",
   "version": "2.0.0",
-  "description": "☔ My sharable ESlint config",
+  "description": "☔ My sharable ESLint config",
   "author": "Igor Kowalczyk",
   "license": "MIT",
   "repository": "IgorKowalczyk/shared-configs",

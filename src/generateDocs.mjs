@@ -1,5 +1,5 @@
 import { markdownTable } from "markdown-table";
-import * as ESlintConfig from "../packages/eslint-config/flat.js";
+import * as ESLintConfig from "../packages/eslint-config/flat.js";
 import * as PrettierConfig from "../packages/prettier-config/index.js";
 import { readFileSync, writeFileSync } from "fs";
 
@@ -14,8 +14,8 @@ const readmeContent = readFileSync(readmePath, "utf8");
 const eslintReadme = readFileSync(eslintPath, "utf8");
 const prettierReadme = readFileSync(prettierPath, "utf8");
 
-const startESlintMarker = "<!--START_SECTION:eslint-->";
-const endESlintMarker = "<!--END_SECTION:eslint-->";
+const startESLintMarker = "<!--START_SECTION:eslint-->";
+const endESLintMarker = "<!--END_SECTION:eslint-->";
 
 const startPrettierMarker = "<!--START_SECTION:prettier-->";
 const endPrettierMarker = "<!--END_SECTION:prettier-->";
@@ -24,9 +24,9 @@ export function Capitalize(str) {
  return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-const ESlintTable = markdownTable([
+const ESLintTable = markdownTable([
  ["Rule", "Style", "Type", "Documentation"],
- ...Object.entries(ESlintConfig.default.rules).map(([ruleName, ruleConfig]) => {
+ ...Object.entries(ESLintConfig.default.rules).map(([ruleName, ruleConfig]) => {
   const ruleType = Array.isArray(ruleConfig) ? ruleConfig[0] : ruleConfig;
   let description = Array.isArray(ruleConfig) ? ruleConfig[1] : ruleConfig;
   const docs = ruleName.toString().includes("/") ? "External rule" : `[Documentation](https://eslint.org/docs/rules/${ruleName})`;
@@ -60,13 +60,13 @@ const PrettierTable = markdownTable([
  }),
 ]);
 
-const ESlintDocs = readmeContent.slice(0, readmeContent.indexOf(startESlintMarker) + startESlintMarker.length) + "\n" + ESlintTable + "\n" + readmeContent.slice(readmeContent.indexOf(endESlintMarker));
-const PrettierDocs = ESlintDocs.slice(0, ESlintDocs.indexOf(startPrettierMarker) + startPrettierMarker.length) + "\n" + PrettierTable + "\n" + ESlintDocs.slice(ESlintDocs.indexOf(endPrettierMarker));
+const ESLintDocs = readmeContent.slice(0, readmeContent.indexOf(startESLintMarker) + startESLintMarker.length) + "\n" + ESLintTable + "\n" + readmeContent.slice(readmeContent.indexOf(endESLintMarker));
+const PrettierDocs = ESLintDocs.slice(0, ESLintDocs.indexOf(startPrettierMarker) + startPrettierMarker.length) + "\n" + PrettierTable + "\n" + ESLintDocs.slice(ESLintDocs.indexOf(endPrettierMarker));
 
-const ESlintPackageDocs = eslintReadme.slice(0, eslintReadme.indexOf(startESlintMarker) + startESlintMarker.length) + "\n" + ESlintTable + "\n" + eslintReadme.slice(eslintReadme.indexOf(endESlintMarker));
+const ESLintPackageDocs = eslintReadme.slice(0, eslintReadme.indexOf(startESLintMarker) + startESLintMarker.length) + "\n" + ESLintTable + "\n" + eslintReadme.slice(eslintReadme.indexOf(endESLintMarker));
 const PrettierPackageDocs = prettierReadme.slice(0, prettierReadme.indexOf(startPrettierMarker) + startPrettierMarker.length) + "\n" + PrettierTable + "\n" + prettierReadme.slice(prettierReadme.indexOf(endPrettierMarker));
 
-writeFileSync(eslintPath, ESlintPackageDocs);
+writeFileSync(eslintPath, ESLintPackageDocs);
 writeFileSync(prettierPath, PrettierPackageDocs);
 writeFileSync(readmePath, PrettierDocs);
 
