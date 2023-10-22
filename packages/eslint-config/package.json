@@ -47,11 +47,11 @@
     "eslint-plugin-prettier": "5.0.1",
     "globals": "13.23.0"
   },
+  "devDependencies": {
+    "rollup": "4.1.4"
+  },
   "peerDependencies": {
     "eslint": ">=8.0.0"
   },
-  "packageManager": "pnpm@8.9.2",
-  "devDependencies": {
-    "rollup": "4.1.4"
-  }
+  "packageManager": "pnpm@8.9.2"
 }
