@@ -1,6 +1,6 @@
 {
  "name": "@igorkowalczyk/renovate-config",
- "version": "1.5.6",
+ "version": "2.0.0",
  "description": "☔ My sharable Renovate config",
  "author": "Igor Kowalczyk",
  "license": "MIT",

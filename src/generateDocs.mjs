@@ -1,5 +1,5 @@
 import { markdownTable } from "markdown-table";
-import * as ESlintConfig from "../packages/eslint-config/index.js";
+import * as ESlintConfig from "../packages/eslint-config/flat.js";
 import * as PrettierConfig from "../packages/prettier-config/index.js";
 import { readFileSync, writeFileSync } from "fs";
 

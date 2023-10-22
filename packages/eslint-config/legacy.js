@@ -1,7 +1,7 @@
 module.exports = {
  extends: ["eslint:recommended"],
  plugins: ["import", "prettier"],
- ignorePatterns: ["dist/", "coverage/"],
+ ignorePatterns: ["build/", "dist/", "coverage/", "tmp/"],
  parserOptions: {
   ecmaVersion: "latest",
  },

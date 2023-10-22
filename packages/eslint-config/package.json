@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/eslint-config",
-  "version": "1.5.6",
+  "version": "2.0.0",
   "description": "☔ My sharable ESlint config",
   "author": "Igor Kowalczyk",
   "license": "MIT",
@@ -8,8 +8,19 @@
   "funding": "https://github.com/sponsors/igorkowalczyk",
   "bugs": "https://github.com/igorkowalczyk/shared-configs/issues",
   "homepage": "https://github.com/igorkowalczyk/shared-configs/tree/main/packages/eslint-config#readme",
-  "main": "index.js",
+  "type": "module",
+  "exports": {
+    "./flat": {
+      "import": "./dist/mjs/flat.js",
+      "require": "./dist/cjs/flat.js"
+    },
+    "./legacy": {
+      "import": "./dist/mjs/legacy.js",
+      "require": "./dist/cjs/legacy.js"
+    }
+  },
   "scripts": {
+    "build": "rollup -c",
     "publish-packages": "pnpm publish --access public --no-git-checks --provenance",
     "test:publish-packages": "pnpm publish --access public --no-git-checks --provenance --dry-run",
     "format": "prettier . --write --cache --ignore-unknown",
@@ -20,7 +31,7 @@
     "provenance": true
   },
   "files": [
-    "index.js",
+    "dist",
     "README.md"
   ],
   "keywords": [
@@ -31,8 +42,10 @@
     "styleguide"
   ],
   "dependencies": {
+    "@eslint/js": "8.52.0",
     "eslint-plugin-import": "2.28.1",
-    "eslint-plugin-prettier": "5.0.1"
+    "eslint-plugin-prettier": "5.0.1",
+    "globals": "13.23.0"
   },
   "peerDependencies": {
     "eslint": ">=8.0.0"
