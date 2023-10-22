@@ -9,15 +9,19 @@
   "bugs": "https://github.com/IgorKowalczyk/shared-configs/issues",
   "homepage": "https://github.com/IgorKowalczyk/shared-configs#readme",
   "private": true,
+  "type": "module",
   "scripts": {
     "format": "turbo run format --color",
     "format:check": "turbo run format:check --color",
     "build": "turbo run build --color",
     "publish-packages": "turbo run publish-packages --color",
     "test:publish-packages": "turbo run test:publish-packages --color",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "turbo run lint --color",
+    "lint:fix": "turbo run lint:fix --color",
     "int": "prettier --write . --cache --ignore-unknown",
+    "int-lint": "eslint --fix .",
     "int:check": "prettier --check .",
+    "int-lint:check": "eslint .",
     "generate-docs": "node src/generateDocs.mjs"
   },
   "keywords": [
@@ -29,19 +33,6 @@
     "config",
     "styleguide"
   ],
-  "eslintConfig": {
-    "root": false,
-    "parserOptions": {
-      "ecmaVersion": "latest",
-      "sourceType": "module"
-    },
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "./packages/eslint-config/index.js"
-    ]
-  },
   "prettier": "./packages/prettier-config/index.js",
   "dependencies": {
     "markdown-table": "3.0.3",

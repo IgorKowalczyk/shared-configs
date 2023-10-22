@@ -1,7 +1,7 @@
+import js from "@eslint/js";
 import importRules from "eslint-plugin-import";
 import prettierRules from "eslint-plugin-prettier";
 import globals from "globals";
-import js from "@eslint/js";
 
 export default {
  plugins: {
