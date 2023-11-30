@@ -52,7 +52,7 @@
     "globals": "13.23.0"
   },
   "devDependencies": {
-    "rollup": "4.6.0"
+    "rollup": "4.6.1"
   },
   "peerDependencies": {
     "eslint": ">=8.0.0"
