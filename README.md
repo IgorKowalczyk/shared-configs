@@ -14,6 +14,63 @@
 
 ---
 
+## 📦 [`@igorkowalczyk/prettier-config`](https://www.npmjs.com/package/@igorkowalczyk/prettier-config)
+
+### 📥 Installation
+
+```bash
+npm install --save-dev @igorkowalczyk/prettier-config
+yarn add --dev @igorkowalczyk/prettier-config
+pnpm install --save-dev @igorkowalczyk/prettier-config
+```
+
+### 🔩 Usage
+
+```js
+// .prettierrc.js
+module.exports = {
+  ...require('@igorkowalczyk/prettier-config'),
+};
+```
+
+```js
+// prettier.config.js
+import prettierConfig from "@igorkowalczyk/prettier-config";
+
+export default {
+  ...prettierConfig,
+};
+```
+
+```json
+{
+  "extends": "@igorkowalczyk/prettier-config"
+}
+```
+
+### ⚙️ Rules overview
+
+<!--START_SECTION:prettier-->
+| Rule                         | Style       | Documentation                                                                          |
+| ---------------------------- | ----------- | -------------------------------------------------------------------------------------- |
+| `arrowParens`                | `always`    | [Documentation](https://prettier.io/docs/en/options.html#arrow-parens)                 |
+| `bracketSpacing`             | `true`      | [Documentation](https://prettier.io/docs/en/options.html#bracket-spacing)              |
+| `embeddedLanguageFormatting` | `auto`      | [Documentation](https://prettier.io/docs/en/options.html#embedded-language-formatting) |
+| `htmlWhitespaceSensitivity`  | `css`       | [Documentation](https://prettier.io/docs/en/options.html#html-whitespace-sensitivity)  |
+| `jsxSingleQuote`             | `false`     | [Documentation](https://prettier.io/docs/en/options.html#jsx-single-quote)             |
+| `printWidth`                 | `200000`    | [Documentation](https://prettier.io/docs/en/options.html#print-width)                  |
+| `proseWrap`                  | `preserve`  | [Documentation](https://prettier.io/docs/en/options.html#prose-wrap)                   |
+| `quoteProps`                 | `as-needed` | [Documentation](https://prettier.io/docs/en/options.html#quote-props)                  |
+| `requirePragma`              | `false`     | [Documentation](https://prettier.io/docs/en/options.html#require-pragma)               |
+| `semi`                       | `true`      | [Documentation](https://prettier.io/docs/en/options.html#semi)                         |
+| `singleQuote`                | `false`     | [Documentation](https://prettier.io/docs/en/options.html#single-quote)                 |
+| `tabWidth`                   | `1`         | [Documentation](https://prettier.io/docs/en/options.html#tab-width)                    |
+| `trailingComma`              | `es5`       | [Documentation](https://prettier.io/docs/en/options.html#trailing-comma)               |
+| `useTabs`                    | `false`     | [Documentation](https://prettier.io/docs/en/options.html#use-tabs)                     |
+<!--END_SECTION:prettier-->
+
+---
+
 ## 📦 [`@igorkowalczyk/eslint-config`](https://www.npmjs.com/package/@igorkowalczyk/eslint-config)
 
 ### 📥 Installation
@@ -44,10 +101,8 @@ module.exports = {
 import eslintConfig from "@igorkowalczyk/eslint-config/flat";
 
 export default [
-  {
-    ...eslintConfig,
-  }
-]
+ ...eslintConfig
+];
 ```
 
 ### ⚙️ Rules overview
@@ -116,16 +171,19 @@ export default [
 | `require-yield`                 | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/require-yield)                 |
 | `use-isnan`                     | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/use-isnan)                     |
 | `valid-typeof`                  | [Documentation](https://eslint.org/docs/rules/valid-typeof)                | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/valid-typeof)                  |
+| `import/order`                  | -                                                                          | `⚠️ Warning`  | External rule                                                                |
+| `import/no-duplicates`          | Warn                                                                       | `⚠️ Warning`  | External rule                                                                |
+| `import/named`                  | Error                                                                      | `🚫 Error`    | External rule                                                                |
+| `import/export`                 | Error                                                                      | `🚫 Error`    | External rule                                                                |
+| `prettier/prettier`             | Warn                                                                       | `⚠️ Warning`  | External rule                                                                |
 | `no-lonely-if`                  | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/no-lonely-if)                  |
 | `linebreak-style`               | Unix                                                                       | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/linebreak-style)               |
-| `prettier/prettier`             | Warn                                                                       | `⚠️ Warning`  | External rule                                                                |
 | `quotes`                        | Double                                                                     | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/quotes)                        |
 | `semi`                          | Always                                                                     | `⚠️ Warning`  | [Documentation](https://eslint.org/docs/rules/semi)                          |
 | `comma-dangle`                  | [Documentation](https://eslint.org/docs/rules/comma-dangle)                | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/comma-dangle)                  |
 | `no-eval`                       | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/no-eval)                       |
 | `func-names`                    | As-needed                                                                  | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/func-names)                    |
 | `camelcase`                     | [Documentation](https://eslint.org/docs/rules/camelcase)                   | `⚠️ Warning`  | [Documentation](https://eslint.org/docs/rules/camelcase)                     |
-| `import/order`                  | -                                                                          | `⚠️ Warning`  | External rule                                                                |
 | `prefer-arrow-callback`         | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/prefer-arrow-callback)         |
 | `block-spacing`                 | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/block-spacing)                 |
 | `comma-spacing`                 | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/comma-spacing)                 |
@@ -155,62 +213,7 @@ export default [
 
 ---
 
-## 📦 [`@igorkowalczyk/prettier-config`](https://www.npmjs.com/package/@igorkowalczyk/prettier-config)
-
-### 📥 Installation
-
-```bash
-npm install --save-dev @igorkowalczyk/prettier-config
-yarn add --dev @igorkowalczyk/prettier-config
-pnpm install --save-dev @igorkowalczyk/prettier-config
-```
-
-### 🔩 Usage
-
-```js
-// .prettierrc.js
-module.exports = {
-  ...require('@igorkowalczyk/prettier-config'),
-};
-```
-
-```js
-// prettier.config.js
-import prettierConfig from "@igorkowalczyk/prettier-config";
-
-export default {
-  ...prettierConfig,
-};
-```
-
-```json
-{
-  "extends": "@igorkowalczyk/prettier-config"
-}
-```
-
-### ⚙️ Rules overview
-
-<!--START_SECTION:prettier-->
-| Rule                         | Style       | Documentation                                                                          |
-| ---------------------------- | ----------- | -------------------------------------------------------------------------------------- |
-| `arrowParens`                | `always`    | [Documentation](https://prettier.io/docs/en/options.html#arrow-parens)                 |
-| `bracketSpacing`             | `true`      | [Documentation](https://prettier.io/docs/en/options.html#bracket-spacing)              |
-| `embeddedLanguageFormatting` | `auto`      | [Documentation](https://prettier.io/docs/en/options.html#embedded-language-formatting) |
-| `htmlWhitespaceSensitivity`  | `css`       | [Documentation](https://prettier.io/docs/en/options.html#html-whitespace-sensitivity)  |
-| `jsxSingleQuote`             | `false`     | [Documentation](https://prettier.io/docs/en/options.html#jsx-single-quote)             |
-| `printWidth`                 | `200000`    | [Documentation](https://prettier.io/docs/en/options.html#print-width)                  |
-| `proseWrap`                  | `preserve`  | [Documentation](https://prettier.io/docs/en/options.html#prose-wrap)                   |
-| `quoteProps`                 | `as-needed` | [Documentation](https://prettier.io/docs/en/options.html#quote-props)                  |
-| `requirePragma`              | `false`     | [Documentation](https://prettier.io/docs/en/options.html#require-pragma)               |
-| `semi`                       | `true`      | [Documentation](https://prettier.io/docs/en/options.html#semi)                         |
-| `singleQuote`                | `false`     | [Documentation](https://prettier.io/docs/en/options.html#single-quote)                 |
-| `tabWidth`                   | `1`         | [Documentation](https://prettier.io/docs/en/options.html#tab-width)                    |
-| `trailingComma`              | `es5`       | [Documentation](https://prettier.io/docs/en/options.html#trailing-comma)               |
-| `useTabs`                    | `false`     | [Documentation](https://prettier.io/docs/en/options.html#use-tabs)                     |
-<!--END_SECTION:prettier-->
-
-# 📝 [`@igorkowalczyk/renovate-config`](/packages/renovate-config/)
+## 📝 [`@igorkowalczyk/renovate-config`](/packages/renovate-config/)
 
 > [!WARNING]
 > This is not a package - it is a configuration preset!

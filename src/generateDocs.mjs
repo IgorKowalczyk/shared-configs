@@ -68,7 +68,15 @@ const globalReadmeContent = readFileSync(readmePath, "utf8");
 const eslintReadmeContent = readFileSync(eslintPath, "utf8");
 const prettierReadmeContent = readFileSync(prettierPath, "utf8");
 
-const ESLintTable = generateESLintTable(ESLintConfig.default.rules);
+// get all the rules from all the objects in the array and merge them into one object
+const mergedESLintConfig = ESLintConfig.default.reduce((acc, cur) => {
+ if (cur.rules) {
+  Object.assign(acc, cur.rules);
+ }
+ return acc;
+}, {});
+
+const ESLintTable = generateESLintTable(mergedESLintConfig);
 const PrettierTable = generatePrettierTable(PrettierConfig.default);
 
 const ESLintDocs = updateDocs(globalReadmeContent, startESLintMarker, endESLintMarker, ESLintTable);
