@@ -3,9 +3,9 @@
 > [!WARNING]
 > This is not a package - it is a configuration preset!
 
-#### 🔩 Usage
+### 🔩 Usage
 
-- In your `renovate.json` file, add the following:
+In your `renovate.json` file, add the following:
 
 ```json
 {

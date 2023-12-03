@@ -1,7 +1,7 @@
+import { readFileSync, writeFileSync } from "node:fs";
 import { markdownTable } from "markdown-table";
 import * as ESLintConfig from "../packages/eslint-config/flat.js";
 import * as PrettierConfig from "../packages/prettier-config/index.js";
-import { readFileSync, writeFileSync } from "node:fs";
 
 function capitalize(str) {
  return str.charAt(0).toUpperCase() + str.slice(1);
