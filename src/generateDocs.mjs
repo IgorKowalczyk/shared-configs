@@ -4,6 +4,7 @@ import * as ESLintConfig from "../packages/eslint-config/flat.js";
 import * as PrettierConfig from "../packages/prettier-config/index.js";
 
 function capitalize(str) {
+ if (typeof str !== "string" || str.length === 0) return str;
  return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
@@ -29,7 +30,7 @@ function generateESLintTable(config) {
     off: "Disabled",
    }[ruleType];
 
-   return [`\`${ruleName}\``, capitalize(description.toString()), `\`${typeEmoji} ${typeText}\``, docs];
+   return [`\`${ruleName}\``, capitalize(description?.toString()), `\`${typeEmoji} ${typeText}\``, docs];
   }),
  ]);
 }

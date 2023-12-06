@@ -35,9 +35,9 @@ export default [
      },
     },
    ],
-   "import/no-duplicates": "warn",
-   "import/named": "error",
-   "import/export": "error",
+   // "import/no-duplicates": "warn",
+   // "import/named": "error",
+   // "import/export": "error",
   },
  },
  {
@@ -90,8 +90,17 @@ export default [
    // Enforce consistent spacing before and after keywords
    "prefer-arrow-callback": "error",
 
+   // Require const declarations for variables that are never reassigned after declared
+   "prefer-const": "error",
+
+   // Require method and property shorthand syntax for object literals
+   "object-shorthand": ["error", "always"],
+
    // Enforce consistent spacing around blocks
    "block-spacing": "error",
+
+   // Disallow calls to the Object constructor without an argument
+   "no-object-constructor": "error",
 
    // Enforce consistent spacing around commas
    "comma-spacing": "error",
@@ -145,14 +154,26 @@ export default [
    // Allow or disallow the use of 'undefined' as an identifier
    "no-undefined": "off",
 
-   // Limit cyclomatic complexity to 20
-   complexity: ["warn", 20],
+   // Limit cyclomatic complexity to 50
+   complexity: ["warn", 50],
 
    // Disallow the use of 'alert', 'confirm', and 'prompt'
-   "no-alert": "error",
+   "no-alert": "warn",
+
+   // Require quotes around object literal property names
+   "quote-props": ["error", "as-needed"],
 
    // Allow or disallow the use of 'await' in async functions
    "require-await": "off",
+
+   // Disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead
+   "prefer-object-spread": "error",
+
+   // Require destructuring from arrays and/or objects
+   "prefer-destructuring": "error",
+
+   // Enforce return statements in callbacks of array methods
+   "array-callback-return": "error",
 
    // Disallow Yoda conditions
    yoda: "error",

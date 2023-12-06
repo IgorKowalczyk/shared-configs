@@ -98,9 +98,6 @@ export default [
 | `use-isnan`                     | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/use-isnan)                     |
 | `valid-typeof`                  | [Documentation](https://eslint.org/docs/rules/valid-typeof)                | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/valid-typeof)                  |
 | `import/order`                  | -                                                                          | `⚠️ Warning`  | External rule                                                                |
-| `import/no-duplicates`          | Warn                                                                       | `⚠️ Warning`  | External rule                                                                |
-| `import/named`                  | Error                                                                      | `🚫 Error`    | External rule                                                                |
-| `import/export`                 | Error                                                                      | `🚫 Error`    | External rule                                                                |
 | `prettier/prettier`             | Warn                                                                       | `⚠️ Warning`  | External rule                                                                |
 | `no-lonely-if`                  | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/no-lonely-if)                  |
 | `linebreak-style`               | Unix                                                                       | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/linebreak-style)               |
@@ -111,7 +108,10 @@ export default [
 | `func-names`                    | As-needed                                                                  | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/func-names)                    |
 | `camelcase`                     | [Documentation](https://eslint.org/docs/rules/camelcase)                   | `⚠️ Warning`  | [Documentation](https://eslint.org/docs/rules/camelcase)                     |
 | `prefer-arrow-callback`         | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/prefer-arrow-callback)         |
+| `prefer-const`                  | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/prefer-const)                  |
+| `object-shorthand`              | Always                                                                     | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/object-shorthand)              |
 | `block-spacing`                 | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/block-spacing)                 |
+| `no-object-constructor`         | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/no-object-constructor)         |
 | `comma-spacing`                 | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/comma-spacing)                 |
 | `keyword-spacing`               | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/keyword-spacing)               |
 | `space-infix-ops`               | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/space-infix-ops)               |
@@ -126,9 +126,13 @@ export default [
 | `no-use-before-define`          | [Documentation](https://eslint.org/docs/rules/no-use-before-define)        | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/no-use-before-define)          |
 | `no-label-var`                  | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/no-label-var)                  |
 | `no-undefined`                  | Off                                                                        | `💡 Disabled` | [Documentation](https://eslint.org/docs/rules/no-undefined)                  |
-| `complexity`                    | 20                                                                         | `⚠️ Warning`  | [Documentation](https://eslint.org/docs/rules/complexity)                    |
-| `no-alert`                      | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/no-alert)                      |
+| `complexity`                    | 50                                                                         | `⚠️ Warning`  | [Documentation](https://eslint.org/docs/rules/complexity)                    |
+| `no-alert`                      | Warn                                                                       | `⚠️ Warning`  | [Documentation](https://eslint.org/docs/rules/no-alert)                      |
+| `quote-props`                   | As-needed                                                                  | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/quote-props)                   |
 | `require-await`                 | Off                                                                        | `💡 Disabled` | [Documentation](https://eslint.org/docs/rules/require-await)                 |
+| `prefer-object-spread`          | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/prefer-object-spread)          |
+| `prefer-destructuring`          | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/prefer-destructuring)          |
+| `array-callback-return`         | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/array-callback-return)         |
 | `yoda`                          | Error                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/yoda)                          |
 | `jsx-quotes`                    | Prefer-double                                                              | `💡 Disabled` | [Documentation](https://eslint.org/docs/rules/jsx-quotes)                    |
 | `unicode-bom`                   | Never                                                                      | `🚫 Error`    | [Documentation](https://eslint.org/docs/rules/unicode-bom)                   |
