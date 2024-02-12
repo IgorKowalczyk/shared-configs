@@ -37,8 +37,8 @@ importers:
         specifier: ^5.0.1
         version: 5.0.1(eslint@8.55.0)(prettier@3.2.5)
       globals:
-        specifier: 13.24.0
-        version: 13.24.0
+        specifier: 14.0.0
+        version: 14.0.0
     devDependencies:
       rollup:
         specifier: 4.10.0
@@ -1000,6 +1000,11 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       type-fest: 0.20.2
+
+  /globals@14.0.0:
+    resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
+    engines: {node: '>=18'}
+    dev: false
 
   /globalthis@1.0.3:
     resolution: {integrity: sha512-sFdI5LyBiNTHjRd7cGPWapiHWMOXKyuBNX/cWJ3NfzrZQVa8GI/8cofCl74AOVqq9W5kNmguTIzJ/1s2gyI9wA==}
