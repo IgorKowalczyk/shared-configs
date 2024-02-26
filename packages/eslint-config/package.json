@@ -28,7 +28,9 @@
     "format": "prettier . --write --cache --ignore-unknown",
     "format:check": "prettier . --check --ignore-unknown",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+  "lint:eslint-docs": "pnpm run update:eslint-docs && git diff --exit-code",
+  "update:eslint-docs": "eslint-doc-generator && pnpm run format"
   },
   "publishConfig": {
     "access": "public",
@@ -48,6 +50,7 @@
   "dependencies": {
     "@eslint/js": "^8.52.0",
     "eslint-config-prettier": "9.1.0",
+    "eslint-doc-generator": "1.6.2",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-prettier": "^5.0.1",
     "globals": "14.0.0"
