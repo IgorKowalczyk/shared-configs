@@ -191,5 +191,5 @@ export default [
    "global-require": "error",
   },
  },
- ...prettierRecommendedConfig,
+ prettierRecommendedConfig,
 ];

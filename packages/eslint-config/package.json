@@ -47,6 +47,7 @@
   ],
   "dependencies": {
     "@eslint/js": "^8.52.0",
+    "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-prettier": "^5.0.1",
     "globals": "14.0.0"
