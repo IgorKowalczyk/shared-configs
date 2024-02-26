@@ -1,6 +1,6 @@
 import js from "@eslint/js";
 import importPlugin from "eslint-plugin-import";
-import prettierPlugin from "eslint-plugin-prettier";
+import prettierRecommendedConfig from "eslint-plugin-prettier/recommended";
 import globals from "globals";
 
 export default [
@@ -41,106 +41,12 @@ export default [
   },
  },
  {
-  plugins: {
-   prettier: prettierPlugin,
-  },
-  rules: {
-   // Enforce consistent code formatting using Prettier
-   "prettier/prettier": "warn",
-  },
- },
- {
   rules: {
    // Disallow lonely 'if' statements
    "no-lonely-if": "error",
 
-   // Enforce consistent line breaks
-   "linebreak-style": ["error", "unix"],
-
-   // Enforce the use of double quotes for consistency
-   quotes: ["error", "double"],
-
-   // Enforce semicolons at the end of statements
-   semi: ["warn", "always"],
-
-   // Enforce trailing commas in specific scenarios
-   "comma-dangle": [
-    "error",
-    {
-     arrays: "always-multiline",
-     objects: "always-multiline",
-     imports: "always-multiline",
-     exports: "always-multiline",
-     functions: "never",
-    },
-   ],
-
-   // Disallow the use of eval()
-   "no-eval": "error",
-
-   // Enforce consistent function names, but allow anonymous functions
-   "func-names": ["error", "as-needed"],
-
-   // Enforce camelCase naming convention, except for destructuring
-   camelcase: ["warn", { properties: "never", ignoreDestructuring: true }],
-
-   // Warn about unused variables, ignoring variables starting with "_"
-   "no-unused-vars": ["warn", { argsIgnorePattern: "^_", ignoreRestSiblings: true }],
-
-   // Enforce consistent spacing before and after keywords
-   "prefer-arrow-callback": "error",
-
-   // Require const declarations for variables that are never reassigned after declared
-   "prefer-const": "error",
-
-   // Require method and property shorthand syntax for object literals
-   "object-shorthand": ["error", "always"],
-
-   // Enforce consistent spacing around blocks
-   "block-spacing": "error",
-
    // Disallow calls to the Object constructor without an argument
    "no-object-constructor": "error",
-
-   // Enforce consistent spacing around commas
-   "comma-spacing": "error",
-
-   // Enforce consistent spacing before and after keywords
-   "keyword-spacing": "error",
-
-   // Enforce consistent spacing before and after operators
-   "space-infix-ops": "error",
-
-   // Enforce consistent spacing before and after unary operators
-   "space-unary-ops": "error",
-
-   // Enforce consistent brace style for blocks
-   "brace-style": "error",
-
-   // Enforce consistent spacing inside braces
-   "object-curly-spacing": ["error", "always"],
-
-   // Enforce consistent spacing before function parentheses
-   "space-before-function-paren": [
-    "error",
-    {
-     anonymous: "never",
-     named: "never",
-     asyncArrow: "always",
-    },
-   ],
-
-   // Enforce consistent spacing inside parentheses
-   "space-in-parens": ["error", "never"],
-
-   // Enforce consistent spacing inside array brackets
-   "array-bracket-spacing": ["error", "never"],
-
-   // Enforce consistent spacing inside template literals
-   "template-curly-spacing": ["error", "never"],
-
-   // Enforce consistent spacing inside computed properties
-   "computed-property-spacing": ["error", "never"],
 
    // Disallow the use of variables before they are defined
    "no-use-before-define": ["error", { functions: true, classes: true, variables: true }],
@@ -160,11 +66,8 @@ export default [
    // Disallow the use of 'alert', 'confirm', and 'prompt'
    "no-alert": "warn",
 
-   // Require quotes around object literal property names
-   "quote-props": ["error", "as-needed"],
-
    // Allow or disallow the use of 'await' in async functions
-   "require-await": "off",
+   "require-await": "error",
 
    // Disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead
    "prefer-object-spread": "error",
@@ -181,14 +84,8 @@ export default [
    // Disallow empty statements
    "no-empty": "error",
 
-   // Disallow unnecessary semicolons
-   "no-extra-semi": "error",
-
    // Ensure that the results of 'typeof' are compared against a valid string
    "valid-typeof": ["error", { requireStringLiterals: true }],
-
-   // Prefer double quotes for JSX attributes
-   "jsx-quotes": ["off", "prefer-double"],
 
    // Disable the Unicode Byte Order Mark (BOM)
    "unicode-bom": ["error", "never"],
@@ -196,11 +93,103 @@ export default [
    // Allow or disallow the use of 'process.env'
    "no-process-env": "off",
 
-   // Allow or disallow the use of 'process.exit()'
+   // Disallow the use of eval()
+   "no-eval": "error",
+
+   // Enforce consistent function names, but allow anonymous functions
+   "func-names": ["error", "as-needed"],
+
+   // Enforce camelCase naming convention, except for destructuring
+   camelcase: ["warn", { properties: "never", ignoreDestructuring: true }],
+
+   // Warn about unused variables, ignoring variables starting with "_"
+   "no-unused-vars": ["warn", { argsIgnorePattern: "^_", ignoreRestSiblings: true }],
+
+   // Require const declarations for variables that are never reassigned after declared
+   "prefer-const": "error",
+
+   // Require method and property shorthand syntax for object literals
+   "object-shorthand": ["error", "always"],
+
+   // Enforce consistent line breaks [DEPRECATED]
+   "linebreak-style": ["error", "unix"],
+
+   // Enforce the use of double quotes for consistency [DEPRECATED]
+   quotes: ["error", "double"],
+
+   // Enforce semicolons at the end of statements [DEPRECATED]
+   semi: ["warn", "always"],
+
+   // Enforce trailing commas in specific scenarios [DEPRECATED]
+   "comma-dangle": [
+    "error",
+    {
+     arrays: "always-multiline",
+     objects: "always-multiline",
+     imports: "always-multiline",
+     exports: "always-multiline",
+     functions: "never",
+    },
+   ],
+
+   // Enforce consistent spacing around blocks [DEPRECATED]
+   "block-spacing": "error",
+
+   // Enforce consistent spacing around commas [DEPRECATED]
+   "comma-spacing": "error",
+
+   // Enforce consistent spacing before and after keywords [DEPRECATED]
+   "keyword-spacing": "error",
+
+   // Enforce consistent spacing before and after operators [DEPRECATED]
+   "space-infix-ops": "error",
+
+   // Enforce consistent spacing before and after unary operators [DEPRECATED]
+   "space-unary-ops": "error",
+
+   // Enforce consistent brace style for blocks [DEPRECATED]
+   "brace-style": "error",
+
+   // Enforce consistent spacing inside braces [DEPRECATED]
+   "object-curly-spacing": ["error", "always"],
+
+   // Enforce consistent spacing before function parentheses [DEPRECATED]
+   "space-before-function-paren": [
+    "error",
+    {
+     anonymous: "never",
+     named: "never",
+     asyncArrow: "always",
+    },
+   ],
+
+   // Enforce consistent spacing inside parentheses [DEPRECATED]
+   "space-in-parens": ["error", "never"],
+
+   // Enforce consistent spacing inside array brackets [DEPRECATED]
+   "array-bracket-spacing": ["error", "never"],
+
+   // Enforce consistent spacing inside template literals [DEPRECATED]
+   "template-curly-spacing": ["error", "never"],
+
+   // Enforce consistent spacing inside computed properties [DEPRECATED]
+   "computed-property-spacing": ["error", "never"],
+
+   // Require quotes around object literal property names [DEPRECATED]
+   "quote-props": ["error", "as-needed"],
+
+   // Disallow unnecessary semicolons [DEPRECATED]
+   "no-extra-semi": "error",
+
+   // Prefer double quotes for JSX attributes [DEPRECATED]
+   "jsx-quotes": ["off", "prefer-double"],
+
+   // Allow or disallow the use of 'process.exit()' [DEPRECATED]
    "no-process-exit": "off",
 
-   // Enforce 'require' statements to be top-level
+   // Enforce 'require' statements to be top-level [DEPRECATED]
    "global-require": "error",
   },
  },
+ ...prettierRecommendedConfig,
 ];
