@@ -1,4 +1,5 @@
 import js from "@eslint/js";
+import stylistic from "@stylistic/eslint-plugin";
 import importPlugin from "eslint-plugin-import";
 import prettierRecommendedConfig from "eslint-plugin-prettier/recommended";
 import globals from "globals";
@@ -38,6 +39,85 @@ export default [
    // "import/no-duplicates": "warn",
    // "import/named": "error",
    // "import/export": "error",
+  },
+ },
+ {
+  plugins: {
+   "@stylistic": stylistic,
+  },
+  rules: {
+   // Enforce consistent line breaks
+   "@stylistic/linebreak-style": ["error", "unix"],
+
+   // Enforce the use of double quotes for consistency
+   "@stylistic/quotes": ["error", "double"],
+
+   // Enforce semicolons at the end of statements
+   "@stylistic/semi": ["warn", "always"],
+
+   // Enforce trailing commas in specific scenarios
+   "@stylistic/comma-dangle": [
+    "error",
+    {
+     arrays: "always-multiline",
+     objects: "always-multiline",
+     imports: "always-multiline",
+     exports: "always-multiline",
+     functions: "never",
+    },
+   ],
+
+   // Enforce consistent spacing around blocks
+   "@stylistic/block-spacing": "error",
+
+   // Enforce consistent spacing around commas
+   "@stylistic/comma-spacing": "error",
+
+   // Enforce consistent spacing before and after keywords
+   "@stylistic/keyword-spacing": "error",
+
+   // Enforce consistent spacing before and after operators
+   "@stylistic/space-infix-ops": "error",
+
+   // Enforce consistent spacing before and after unary operators
+   "@stylistic/space-unary-ops": "error",
+
+   // Enforce consistent brace style for blocks
+   "@stylistic/brace-style": "error",
+
+   // Enforce consistent spacing inside braces
+   "@stylistic/object-curly-spacing": ["error", "always"],
+
+   // Enforce consistent spacing before function parentheses
+   "@stylistic/space-before-function-paren": [
+    "error",
+    {
+     anonymous: "never",
+     named: "never",
+     asyncArrow: "always",
+    },
+   ],
+
+   // Enforce consistent spacing inside parentheses
+   "@stylistic/space-in-parens": ["error", "never"],
+
+   // Enforce consistent spacing inside array brackets
+   "@stylistic/array-bracket-spacing": ["error", "never"],
+
+   // Enforce consistent spacing inside template literals
+   "@stylistic/template-curly-spacing": ["error", "never"],
+
+   // Enforce consistent spacing inside computed properties
+   "@stylistic/computed-property-spacing": ["error", "never"],
+
+   // Require quotes around object literal property names
+   "@stylistic/quote-props": ["error", "as-needed"],
+
+   // Disallow unnecessary semicolons
+   "@stylistic/no-extra-semi": "error",
+
+   // Prefer double quotes for JSX attributes
+   "@stylistic/jsx-quotes": ["error", "prefer-double"],
   },
  },
  {
@@ -110,79 +190,6 @@ export default [
 
    // Require method and property shorthand syntax for object literals
    "object-shorthand": ["error", "always"],
-
-   // Enforce consistent line breaks [DEPRECATED]
-   "linebreak-style": ["error", "unix"],
-
-   // Enforce the use of double quotes for consistency [DEPRECATED]
-   quotes: ["error", "double"],
-
-   // Enforce semicolons at the end of statements [DEPRECATED]
-   semi: ["warn", "always"],
-
-   // Enforce trailing commas in specific scenarios [DEPRECATED]
-   "comma-dangle": [
-    "error",
-    {
-     arrays: "always-multiline",
-     objects: "always-multiline",
-     imports: "always-multiline",
-     exports: "always-multiline",
-     functions: "never",
-    },
-   ],
-
-   // Enforce consistent spacing around blocks [DEPRECATED]
-   "block-spacing": "error",
-
-   // Enforce consistent spacing around commas [DEPRECATED]
-   "comma-spacing": "error",
-
-   // Enforce consistent spacing before and after keywords [DEPRECATED]
-   "keyword-spacing": "error",
-
-   // Enforce consistent spacing before and after operators [DEPRECATED]
-   "space-infix-ops": "error",
-
-   // Enforce consistent spacing before and after unary operators [DEPRECATED]
-   "space-unary-ops": "error",
-
-   // Enforce consistent brace style for blocks [DEPRECATED]
-   "brace-style": "error",
-
-   // Enforce consistent spacing inside braces [DEPRECATED]
-   "object-curly-spacing": ["error", "always"],
-
-   // Enforce consistent spacing before function parentheses [DEPRECATED]
-   "space-before-function-paren": [
-    "error",
-    {
-     anonymous: "never",
-     named: "never",
-     asyncArrow: "always",
-    },
-   ],
-
-   // Enforce consistent spacing inside parentheses [DEPRECATED]
-   "space-in-parens": ["error", "never"],
-
-   // Enforce consistent spacing inside array brackets [DEPRECATED]
-   "array-bracket-spacing": ["error", "never"],
-
-   // Enforce consistent spacing inside template literals [DEPRECATED]
-   "template-curly-spacing": ["error", "never"],
-
-   // Enforce consistent spacing inside computed properties [DEPRECATED]
-   "computed-property-spacing": ["error", "never"],
-
-   // Require quotes around object literal property names [DEPRECATED]
-   "quote-props": ["error", "as-needed"],
-
-   // Disallow unnecessary semicolons [DEPRECATED]
-   "no-extra-semi": "error",
-
-   // Prefer double quotes for JSX attributes [DEPRECATED]
-   "jsx-quotes": ["off", "prefer-double"],
 
    // Allow or disallow the use of 'process.exit()' [DEPRECATED]
    "no-process-exit": "off",

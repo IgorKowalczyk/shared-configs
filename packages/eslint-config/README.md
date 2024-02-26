@@ -32,8 +32,5 @@ export default [
 ```
 <!-- ### ⚙️ Rules overview -->
 
-<!--D-START_SECTION:eslint-->
-<!--D-END_SECTION:eslint-->
-
-<!-- begin auto-generated rules list -->
-<!-- end auto-generated rules list -->
+<!--START_SECTION:eslint-->
+<!--END_SECTION:eslint-->
