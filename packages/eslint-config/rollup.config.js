@@ -1,10 +1,10 @@
 const defaultConfig = {
- external: ["eslint-plugin-import", "eslint-plugin-prettier", "globals", "@eslint/js"],
+ external: ["eslint-plugin-n", "eslint-plugin-prettier/recommended", "eslint-plugin-import", "eslint-plugin-react", "eslint-plugin-react-hooks", "eslint-plugin-next", "globals", "@eslint/js", "globals", "@stylistic/eslint-plugin"],
 };
 
 export default [
  {
-  input: "flat.js",
+  input: "configs/flat/index.js",
   output: [
    {
     file: "dist/mjs/flat.js",
@@ -21,7 +21,7 @@ export default [
  },
 
  {
-  input: "legacy.js",
+  input: "configs/legacy/index.js",
   output: [
    {
     file: "dist/mjs/legacy.js",

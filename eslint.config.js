@@ -1,8 +1,3 @@
-import eslintConfig from "./packages/eslint-config/flat.js";
+import eslintConfig from "./packages/eslint-config/configs/flat/index.js";
 
-export default [
- ...eslintConfig,
- {
-  files: ["**/*.{js,mjs}"],
- },
-];
+export default [...eslintConfig.base, ...eslintConfig.node];

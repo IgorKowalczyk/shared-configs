@@ -1,3 +1,5 @@
+// WARNING: Legacy configuration is going to be deprecated in the future releases! Use the flat configuration instead.
+
 export default {
  extends: ["eslint:recommended"],
  plugins: ["import", "prettier"],
