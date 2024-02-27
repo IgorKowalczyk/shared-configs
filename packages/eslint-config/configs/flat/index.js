@@ -1,8 +1,8 @@
-import flatConfigBase from "./base";
-import flatConfigNode from "./node";
-import flatConfigNext from "./next";
+import flatConfigBase from "./base.js";
+import flatConfigNext from "./next.js";
+import flatConfigNode from "./node.js";
 
-export const configs = {
+const configs = {
  base: flatConfigBase,
  next: flatConfigNext,
  node: flatConfigNode,
@@ -11,3 +11,5 @@ export const configs = {
  // typescript: flatConfigTypescript,
  // tailwindcss: flatConfigTailwindcss
 };
+
+export default configs;

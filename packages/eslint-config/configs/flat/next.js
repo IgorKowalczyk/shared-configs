@@ -1,9 +1,9 @@
-import globals from "globals";
+import nextPlugin from "@next/eslint-plugin-next";
 import reactPlugin from "eslint-plugin-react";
 import hooksPlugin from "eslint-plugin-react-hooks";
-import nextPlugin from "eslint-plugin-next";
+import globals from "globals";
 
-export default [
+export default Object.freeze([
  {
   files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
   plugins: {
@@ -26,4 +26,4 @@ export default [
    },
   },
  },
-];
+]);

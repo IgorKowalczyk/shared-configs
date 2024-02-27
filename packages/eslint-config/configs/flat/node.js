@@ -1,6 +1,7 @@
 import nodePluginRecommendedConfig from "eslint-plugin-n";
+import globals from "globals";
 
-export default [
+export default Object.freeze([
  nodePluginRecommendedConfig.configs["flat/recommended"],
  {
   rules: {
@@ -12,4 +13,4 @@ export default [
    },
   },
  },
-];
+]);

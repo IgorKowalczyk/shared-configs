@@ -4,7 +4,7 @@ import importPlugin from "eslint-plugin-import";
 import prettierRecommendedConfig from "eslint-plugin-prettier/recommended";
 import globals from "globals";
 
-export default [
+export default Object.freeze([
  js.configs.recommended,
  {
   languageOptions: {
@@ -188,4 +188,4 @@ export default [
   },
  },
  prettierRecommendedConfig,
-];
+]);
