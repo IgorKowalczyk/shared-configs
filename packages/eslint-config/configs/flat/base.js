@@ -10,8 +10,6 @@ export default [
   languageOptions: {
    ecmaVersion: "latest",
    globals: {
-    ...globals.browser,
-    ...globals.node,
     ...globals.es2021,
     ...globals.commonjs,
    },
@@ -36,9 +34,6 @@ export default [
      },
     },
    ],
-   // "import/no-duplicates": "warn",
-   // "import/named": "error",
-   // "import/export": "error",
   },
  },
  {
@@ -190,12 +185,6 @@ export default [
 
    // Require method and property shorthand syntax for object literals
    "object-shorthand": ["error", "always"],
-
-   // Allow or disallow the use of 'process.exit()' [DEPRECATED]
-   "no-process-exit": "off",
-
-   // Enforce 'require' statements to be top-level [DEPRECATED]
-   "global-require": "error",
   },
  },
  prettierRecommendedConfig,

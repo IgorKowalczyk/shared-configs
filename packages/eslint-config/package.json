@@ -47,9 +47,14 @@
   ],
   "dependencies": {
     "@eslint/js": "^8.57.0",
+    "@next/eslint-plugin-next": "^14.1.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "16.6.2",
+    "eslint-plugin-next": "^0.0.0",
     "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "globals": "14.0.0"
   },
   "devDependencies": {
