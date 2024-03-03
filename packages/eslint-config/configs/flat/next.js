@@ -13,9 +13,10 @@ export default Object.freeze([
   },
   rules: {
    ...reactPlugin.configs["jsx-runtime"].rules,
-   ...hooksPlugin.configs.recommended.rules,
-   ...nextPlugin.configs.recommended.rules,
+   ...hooksPlugin.configs["recommended"].rules,
+   ...nextPlugin.configs["recommended"].rules,
    ...nextPlugin.configs["core-web-vitals"].rules,
+
    "@next/next/no-img-element": "error",
    "@next/next/no-html-link-for-pages": "off",
    "react/no-unescaped-entities": "off",
