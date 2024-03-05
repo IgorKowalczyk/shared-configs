@@ -11,14 +11,24 @@
   "type": "module",
   "exports": {
     "./flat": {
-      "import": "./dist/mjs/flat.js",
-      "require": "./dist/cjs/flat.cjs",
-      "default": "./dist/cjs/flat.js"
+      "import": "./dist/esm/flat/index.js",
+      "require": "./dist/cjs/flat/index.cjs"
+    },
+    "./flat/base": {
+      "import": "./dist/esm/flat/configs/base.js",
+      "require": "./dist/cjs/flat/configs/base.cjs"
+    },
+    "./flat/next": {
+      "import": "./dist/esm/flat/configs/next.js",
+      "require": "./dist/cjs/flat/configs/next.cjs"
+    },
+    "./legacy/node": {
+      "import": "./dist/esm/legacy/configs/node.js",
+      "require": "./dist/cjs/legacy/configs/node.cjs"
     },
     "./legacy": {
-      "import": "./dist/mjs/legacy.js",
-      "require": "./dist/cjs/legacy.cjs",
-      "default": "./dist/cjs/legacy.cjs"
+      "import": "./dist/esm/legacy/index.js",
+      "require": "./dist/cjs/legacy/index.cjs"
     }
   },
   "scripts": {
@@ -45,21 +55,10 @@
     "config",
     "styleguide"
   ],
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "25.0.7",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-typescript": "11.1.6",
-    "@types/eslint__js": "^8.42.3",
-    "@types/node": "20.11.24",
-    "@types/rollup-plugin-auto-external": "2.0.5",
-    "rollup": "4.12.0",
-    "rollup-plugin-auto-external": "^2.0.0"
-  },
-  "peerDependencies": {
+  "dependencies": {
     "@eslint/js": ">=8.0.0",
-    "@next/eslint-plugin-next": "^14.1.0",
-    "@stylistic/eslint-plugin": "^1.6.2",
-    "eslint": ">=8.0.0",
+    "@next/eslint-plugin-next": "14.1.0",
+    "@stylistic/eslint-plugin": "1.6.2",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-n": "^16.6.2",
@@ -67,7 +66,20 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "globals": "^14.0.0",
+    "globals": "^14.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "25.0.7",
+    "@rollup/plugin-node-resolve": "15.2.3",
+    "@rollup/plugin-typescript": "11.1.6",
+    "@types/eslint__js": "8.42.3",
+    "@types/node": "20.11.24",
+    "@types/rollup-plugin-auto-external": "2.0.5",
+    "rollup": "4.12.0",
+    "rollup-plugin-auto-external": "2.0.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.0.0",
     "prettier": ">=2.0.0"
   },
   "packageManager": "pnpm@8.15.3"

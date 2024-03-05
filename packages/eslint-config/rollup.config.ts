@@ -4,7 +4,7 @@ import rollupPluginTypescript from "@rollup/plugin-typescript";
 import rollupPluginCommonjs from "@rollup/plugin-commonjs";
 import rollupPluginAutoExternal from "rollup-plugin-auto-external";
 import { readdirSync } from "node:fs";
-import path, { join } from "node:path";
+import { join, dirname, basename } from "node:path";
 
 const configDir = "./configs/";
 const types = ["flat", "legacy"];
@@ -43,15 +43,17 @@ const defaultConfig: Partial<RollupOptions> = {
 };
 
 function getConfig(filename: string): RollupOptions {
- const name = path.basename(filename, ".ts");
- const directory = path.dirname(filename);
+ const name = basename(filename, ".ts");
+ const configDirname = dirname(filename);
+ const directory = name === "index" ? configDirname : `${configDirname}/configs`;
+
  return {
   ...defaultConfig,
   input: `${configDir}${filename}`,
   output: [
    {
     ...defaultConfig.output,
-    entryFileNames: `esm/${directory}/${name}.mjs`,
+    entryFileNames: `esm/${directory}/${name}.js`,
     format: "esm",
    },
    {
