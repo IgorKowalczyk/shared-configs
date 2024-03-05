@@ -1,8 +1,9 @@
-import flatConfigBase from "./base.js";
-import flatConfigNext from "./next.js";
-import flatConfigNode from "./node.js";
+import { type Linter } from "eslint";
+import flatConfigBase from "./base";
+import flatConfigNext from "./next";
+import flatConfigNode from "./node";
 
-const configs = {
+const configs: Record<string, Linter.FlatConfig> = {
  base: flatConfigBase,
  next: flatConfigNext,
  node: flatConfigNode,

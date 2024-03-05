@@ -1,3 +1,5 @@
+import { type Linter } from "eslint";
+
 // WARNING: Legacy configuration is going to be deprecated in the future releases! Use the flat configuration instead.
 
 export default {
@@ -151,4 +153,4 @@ export default {
   // require all requires be top-level
   "global-require": "error",
  },
-};
+} as Linter.Config;

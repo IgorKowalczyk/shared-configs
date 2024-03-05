@@ -1,7 +1,11 @@
+/* @ts-expect-error-next-line Waiting for types to be updated */
 import nextPlugin from "@next/eslint-plugin-next";
+/* @ts-expect-error-next-line Waiting for types to be updated */
 import reactPlugin from "eslint-plugin-react";
+/* @ts-expect-error-next-line Waiting for types to be updated */
 import hooksPlugin from "eslint-plugin-react-hooks";
 import globals from "globals";
+import { type Linter } from "eslint";
 
 export default Object.freeze([
  {
@@ -27,4 +31,4 @@ export default Object.freeze([
    },
   },
  },
-]);
+]) as Linter.FlatConfig;

@@ -1,5 +1,7 @@
 import js from "@eslint/js";
+import { type Linter } from "eslint";
 import stylistic from "@stylistic/eslint-plugin";
+/* @ts-expect-error-next-line Waiting for types to be updated */
 import importPlugin from "eslint-plugin-import";
 import prettierRecommendedConfig from "eslint-plugin-prettier/recommended";
 import globals from "globals";
@@ -15,7 +17,7 @@ export default Object.freeze([
    },
    sourceType: "module",
   },
-  ignores: ["build/**", "dist/**", "coverage/**", "tmp/**"],
+  ignores: ["build/*", "dist/*", "coverage/*"],
  },
  {
   plugins: {
@@ -188,4 +190,4 @@ export default Object.freeze([
   },
  },
  prettierRecommendedConfig,
-]);
+]) as Linter.FlatConfig;
