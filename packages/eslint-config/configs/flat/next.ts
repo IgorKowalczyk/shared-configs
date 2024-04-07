@@ -1,29 +1,19 @@
 /* @ts-expect-error-next-line Waiting for types to be updated */
 import nextPlugin from "@next/eslint-plugin-next";
-/* @ts-expect-error-next-line Waiting for types to be updated */
-import reactPlugin from "eslint-plugin-react";
-/* @ts-expect-error-next-line Waiting for types to be updated */
-import hooksPlugin from "eslint-plugin-react-hooks";
 import globals from "globals";
 import { type Linter } from "eslint";
 
-export default Object.freeze([
+export default [
  {
   files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
   plugins: {
-   react: reactPlugin,
-   "react-hooks": hooksPlugin,
    "@next/next": nextPlugin,
   },
   rules: {
-   ...reactPlugin.configs["jsx-runtime"].rules,
-   ...hooksPlugin.configs["recommended"].rules,
    ...nextPlugin.configs["recommended"].rules,
    ...nextPlugin.configs["core-web-vitals"].rules,
-
    "@next/next/no-img-element": "error",
    "@next/next/no-html-link-for-pages": "off",
-   "react/no-unescaped-entities": "off",
   },
   languageOptions: {
    globals: {
@@ -31,4 +21,4 @@ export default Object.freeze([
    },
   },
  },
-]) as Linter.FlatConfig;
+] as Linter.FlatConfig[];

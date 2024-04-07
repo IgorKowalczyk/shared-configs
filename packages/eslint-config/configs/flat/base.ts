@@ -6,7 +6,7 @@ import importPlugin from "eslint-plugin-import";
 import prettierRecommendedConfig from "eslint-plugin-prettier/recommended";
 import globals from "globals";
 
-export default Object.freeze([
+export default [
  js.configs.recommended,
  {
   languageOptions: {
@@ -190,4 +190,4 @@ export default Object.freeze([
   },
  },
  prettierRecommendedConfig,
-]) as Linter.FlatConfig;
+] as Linter.FlatConfig[];

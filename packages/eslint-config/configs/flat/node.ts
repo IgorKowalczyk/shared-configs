@@ -3,7 +3,7 @@ import nodePluginRecommendedConfig from "eslint-plugin-n";
 import globals from "globals";
 import { type Linter } from "eslint";
 
-export default Object.freeze([
+export default [
  nodePluginRecommendedConfig.configs["flat/recommended"],
  {
   languageOptions: {
@@ -19,4 +19,4 @@ export default Object.freeze([
    "n/no-unpublished-import": "off",
   },
  },
-]) as Linter.FlatConfig;
+] as Linter.FlatConfig[];
