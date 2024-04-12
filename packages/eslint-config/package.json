@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@stylistic/eslint-plugin": "1.7.0",
-    "rollup": "4.14.1"
+    "rollup": "4.14.2"
   },
   "peerDependencies": {
     "eslint": ">=8.0.0"
