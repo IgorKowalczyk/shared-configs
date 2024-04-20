@@ -1,9 +1,9 @@
+import eslintReact from "@eslint-react/eslint-plugin";
+import { Linter } from "eslint";
+import { composer } from "eslint-flat-config-utils";
 /* @ts-expect-error-next-line Waiting for types to be updated */
 import jsxa11y from "eslint-plugin-jsx-a11y";
 import globals from "globals";
-import { composer } from "eslint-flat-config-utils";
-import eslintReact from "@eslint-react/eslint-plugin";
-import { Linter } from "eslint";
 
 export default await composer(
  {

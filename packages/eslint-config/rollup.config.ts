@@ -1,10 +1,10 @@
-import { RollupOptions } from "rollup";
+import { readdirSync } from "node:fs";
+import { basename } from "node:path";
+import rollupPluginCommonjs from "@rollup/plugin-commonjs";
 import rollupPluginNodeResolve from "@rollup/plugin-node-resolve";
 import rollupPluginTypescript from "@rollup/plugin-typescript";
-import rollupPluginCommonjs from "@rollup/plugin-commonjs";
+import { RollupOptions } from "rollup";
 import rollupPluginAutoExternal from "rollup-plugin-auto-external";
-import { basename } from "node:path";
-import { readdirSync } from "node:fs";
 
 const configDir = "configs/";
 const files = readdirSync(configDir);

@@ -1,11 +1,11 @@
 import js from "@eslint/js";
-import { type Linter } from "eslint";
 import stylistic from "@stylistic/eslint-plugin";
+import { type Linter } from "eslint";
+import gitignore from "eslint-config-flat-gitignore";
 /* @ts-expect-error-next-line Waiting for types to be updated */
 import importPlugin from "eslint-plugin-import";
 import prettierRecommendedConfig from "eslint-plugin-prettier/recommended";
 import globals from "globals";
-import gitignore from "eslint-config-flat-gitignore";
 
 export default [
  gitignore({

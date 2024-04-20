@@ -1,6 +1,6 @@
-import tseslint from "typescript-eslint";
-import { composer } from "eslint-flat-config-utils";
 import { type Linter } from "eslint";
+import { composer } from "eslint-flat-config-utils";
+import tseslint from "typescript-eslint";
 
 const typescriptConfigs = tseslint.configs.recommended as Linter.FlatConfig[];
 

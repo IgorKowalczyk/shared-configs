@@ -1,7 +1,7 @@
 /* @ts-expect-error-next-line Waiting for types to be updated */
 import nextPlugin from "@next/eslint-plugin-next";
-import globals from "globals";
 import { composer } from "eslint-flat-config-utils";
+import globals from "globals";
 
 export default await composer({
  name: "@igorkowalczyk/eslint-config/next",
