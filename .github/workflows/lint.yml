@@ -9,7 +9,7 @@ jobs:
    fail-fast: false
    matrix:
     language: ["javascript"]
-    node: ["18.x"]
+    node: ["lts/*"]
   steps:
    - name: 🧱 Checkout repository
      uses: actions/checkout@v4
