@@ -7,8 +7,10 @@ import prettierRecommendedConfig from "eslint-plugin-prettier/recommended";
 import globals from "globals";
 
 export default [
- js.configs.recommended,
  {
+  name: "@igorkowalczyk/eslint-config/flat/base",
+  ignores: ["build/", "dist/", "coverage/"],
+  files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.mjs"],
   languageOptions: {
    ecmaVersion: "latest",
    globals: {
@@ -17,9 +19,83 @@ export default [
    },
    sourceType: "module",
   },
-  ignores: ["build/*", "dist/*", "coverage/*"],
+  rules: {
+   // Disallow lonely 'if' statements
+   "no-lonely-if": "error",
+
+   // Disallow calls to the Object constructor without an argument
+   "no-object-constructor": "error",
+
+   // Disallow the use of variables before they are defined
+   "no-use-before-define": ["error", { functions: true, classes: true, variables: true }],
+
+   // Disallow the use of 'var' keyword
+   "no-label-var": "error",
+
+   // Disallow the use of undeclared variables unless mentioned in /*global */ comments
+   "no-undef": "error",
+
+   // Allow or disallow the use of 'undefined' as an identifier
+   "no-undefined": "off",
+
+   // Limit cyclomatic complexity to 50
+   complexity: ["warn", 50],
+
+   // Disallow the use of 'alert', 'confirm', and 'prompt'
+   "no-alert": "warn",
+
+   // Allow or disallow the use of 'await' in async functions
+   "require-await": "error",
+
+   // Disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead
+   "prefer-object-spread": "error",
+
+   // Require destructuring from arrays and/or objects
+   "prefer-destructuring": "error",
+
+   // Enforce return statements in callbacks of array methods
+   "array-callback-return": "error",
+
+   // Disallow Yoda conditions
+   yoda: "error",
+
+   // Disallow empty statements
+   "no-empty": "error",
+
+   // Ensure that the results of 'typeof' are compared against a valid string
+   "valid-typeof": ["error", { requireStringLiterals: true }],
+
+   // Disable the Unicode Byte Order Mark (BOM)
+   "unicode-bom": ["error", "never"],
+
+   // Allow or disallow the use of 'process.env'
+   "no-process-env": "off",
+
+   // Disallow the use of eval()
+   "no-eval": "error",
+
+   // Enforce consistent function names, but allow anonymous functions
+   "func-names": ["error", "as-needed"],
+
+   // Enforce camelCase naming convention, except for destructuring
+   camelcase: ["warn", { properties: "never", ignoreDestructuring: true }],
+
+   // Warn about unused variables, ignoring variables starting with "_"
+   "no-unused-vars": ["warn", { argsIgnorePattern: "^_", ignoreRestSiblings: true }],
+
+   // Require const declarations for variables that are never reassigned after declared
+   "prefer-const": "error",
+
+   // Require method and property shorthand syntax for object literals
+   "object-shorthand": ["error", "always"],
+  },
  },
  {
+  name: "@igorkowalczyk/eslint-config/flat/base/javascript",
+  ...js.configs.recommended,
+ },
+ {
+  name: "@igorkowalczyk/eslint-config/flat/base/import",
   plugins: {
    import: importPlugin,
   },
@@ -39,6 +115,7 @@ export default [
   },
  },
  {
+  name: "@igorkowalczyk/eslint-config/flat/base/stylistic",
   plugins: {
    "@stylistic": stylistic,
   },
@@ -118,76 +195,7 @@ export default [
   },
  },
  {
-  rules: {
-   // Disallow lonely 'if' statements
-   "no-lonely-if": "error",
-
-   // Disallow calls to the Object constructor without an argument
-   "no-object-constructor": "error",
-
-   // Disallow the use of variables before they are defined
-   "no-use-before-define": ["error", { functions: true, classes: true, variables: true }],
-
-   // Disallow the use of 'var' keyword
-   "no-label-var": "error",
-
-   // Disallow the use of undeclared variables unless mentioned in /*global */ comments
-   "no-undef": "error",
-
-   // Allow or disallow the use of 'undefined' as an identifier
-   "no-undefined": "off",
-
-   // Limit cyclomatic complexity to 50
-   complexity: ["warn", 50],
-
-   // Disallow the use of 'alert', 'confirm', and 'prompt'
-   "no-alert": "warn",
-
-   // Allow or disallow the use of 'await' in async functions
-   "require-await": "error",
-
-   // Disallow using Object.assign with an object literal as the first argument and prefer the use of object spread instead
-   "prefer-object-spread": "error",
-
-   // Require destructuring from arrays and/or objects
-   "prefer-destructuring": "error",
-
-   // Enforce return statements in callbacks of array methods
-   "array-callback-return": "error",
-
-   // Disallow Yoda conditions
-   yoda: "error",
-
-   // Disallow empty statements
-   "no-empty": "error",
-
-   // Ensure that the results of 'typeof' are compared against a valid string
-   "valid-typeof": ["error", { requireStringLiterals: true }],
-
-   // Disable the Unicode Byte Order Mark (BOM)
-   "unicode-bom": ["error", "never"],
-
-   // Allow or disallow the use of 'process.env'
-   "no-process-env": "off",
-
-   // Disallow the use of eval()
-   "no-eval": "error",
-
-   // Enforce consistent function names, but allow anonymous functions
-   "func-names": ["error", "as-needed"],
-
-   // Enforce camelCase naming convention, except for destructuring
-   camelcase: ["warn", { properties: "never", ignoreDestructuring: true }],
-
-   // Warn about unused variables, ignoring variables starting with "_"
-   "no-unused-vars": ["warn", { argsIgnorePattern: "^_", ignoreRestSiblings: true }],
-
-   // Require const declarations for variables that are never reassigned after declared
-   "prefer-const": "error",
-
-   // Require method and property shorthand syntax for object literals
-   "object-shorthand": ["error", "always"],
-  },
+  name: "@igorkowalczyk/eslint-config/flat/base/prettier",
+  ...prettierRecommendedConfig,
  },
- prettierRecommendedConfig,
 ] as Linter.FlatConfig[];

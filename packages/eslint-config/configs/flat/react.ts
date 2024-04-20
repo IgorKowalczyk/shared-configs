@@ -9,6 +9,7 @@ import { type Linter } from "eslint";
 
 export default [
  {
+  name: "@igorkowalczyk/eslint-config/flat/react",
   files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
   plugins: {
    react: reactPlugin,

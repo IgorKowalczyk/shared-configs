@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/eslint-config",
-  "version": "2.3.0",
+  "version": "3.0.0",
   "description": "☔ My sharable ESLint config",
   "author": "Igor Kowalczyk",
   "license": "MIT",
@@ -56,35 +56,35 @@
     "styleguide"
   ],
   "dependencies": {
-    "@eslint/js": "^9.0.0",
-    "@next/eslint-plugin-next": "14.1.4",
-    "@stylistic/eslint-plugin": "1.7.0",
+    "@eslint/js": "^9.1.0",
+    "@next/eslint-plugin-next": "14.2.2",
+    "@stylistic/eslint-plugin": "1.7.2",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "0.34.0",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-n": "^17.0.0",
+    "eslint-plugin-n": "^17.2.1",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-tailwindcss": "^3.15.1",
     "globals": "^15.0.0",
-    "typ": "^0.6.3",
-    "typescript-eslint": "^7.6.0"
+    "typescript-eslint": "^7.7.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "25.0.7",
     "@rollup/plugin-node-resolve": "15.2.3",
     "@rollup/plugin-typescript": "11.1.6",
     "@types/eslint__js": "8.42.3",
-    "@types/node": "20.12.5",
+    "@types/eslint": "8.56.10",
+    "@types/node": "20.12.7",
     "@types/rollup-plugin-auto-external": "2.0.5",
-    "rollup": "4.14.1",
+    "rollup": "4.15.0",
     "rollup-plugin-auto-external": "2.0.0"
   },
   "peerDependencies": {
     "eslint": "^9.0.0",
     "prettier": "^3.0.0"
   },
-  "packageManager": "pnpm@8.15.3"
+  "packageManager": "pnpm@9.0.4"
 }

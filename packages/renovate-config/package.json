@@ -1,6 +1,6 @@
 {
  "name": "@igorkowalczyk/renovate-config",
- "version": "2.3.0",
+ "version": "3.0.0",
  "description": "☔ My sharable Renovate config",
  "author": "Igor Kowalczyk",
  "license": "MIT",
@@ -25,5 +25,5 @@
   "update",
   "dependency"
  ],
- "packageManager": "pnpm@8.15.3"
+ "packageManager": "pnpm@9.0.4"
 }

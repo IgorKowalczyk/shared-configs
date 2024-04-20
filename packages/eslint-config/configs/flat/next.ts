@@ -5,6 +5,7 @@ import { type Linter } from "eslint";
 
 export default [
  {
+  name: "@igorkowalczyk/eslint-config/flat/next",
   files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
   plugins: {
    "@next/next": nextPlugin,
