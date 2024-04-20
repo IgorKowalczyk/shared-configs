@@ -5,11 +5,14 @@ import stylistic from "@stylistic/eslint-plugin";
 import importPlugin from "eslint-plugin-import";
 import prettierRecommendedConfig from "eslint-plugin-prettier/recommended";
 import globals from "globals";
+import gitignore from "eslint-config-flat-gitignore";
 
 export default [
+ gitignore({
+  name: "@igorkowalczyk/eslint-config/base/gitignore",
+ }),
  {
-  name: "@igorkowalczyk/eslint-config/flat/base",
-  ignores: ["build/", "dist/", "coverage/"],
+  name: "@igorkowalczyk/eslint-config/base",
   files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.mjs"],
   languageOptions: {
    ecmaVersion: "latest",
@@ -91,11 +94,11 @@ export default [
   },
  },
  {
-  name: "@igorkowalczyk/eslint-config/flat/base/javascript",
+  name: "@igorkowalczyk/eslint-config/base/javascript",
   ...js.configs.recommended,
  },
  {
-  name: "@igorkowalczyk/eslint-config/flat/base/import",
+  name: "@igorkowalczyk/eslint-config/base/import",
   plugins: {
    import: importPlugin,
   },
@@ -115,7 +118,7 @@ export default [
   },
  },
  {
-  name: "@igorkowalczyk/eslint-config/flat/base/stylistic",
+  name: "@igorkowalczyk/eslint-config/base/stylistic",
   plugins: {
    "@stylistic": stylistic,
   },
@@ -195,7 +198,7 @@ export default [
   },
  },
  {
-  name: "@igorkowalczyk/eslint-config/flat/base/prettier",
+  name: "@igorkowalczyk/eslint-config/base/prettier",
   ...prettierRecommendedConfig,
  },
 ] as Linter.FlatConfig[];

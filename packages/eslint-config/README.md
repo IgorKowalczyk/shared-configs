@@ -10,21 +10,9 @@ pnpm install --save-dev @igorkowalczyk/eslint-config
 
 ### 🔩 Usage
 
-> [!IMPORTANT]
-> Starting from version `2.0.0` this package now includes both [`legacy`](https://eslint.org/docs/latest/use/configure/configuration-files) and [`flat`](https://eslint.org/docs/latest/use/configure/configuration-files-new) configs. This is breaking change, so please update your config files accordingly.
-
-**Legacy config:**
-```js
-// .eslintrc.js
-module.exports = {
- extends: ["@igorkowalczyk/eslint-config/legacy"],
-};
-```
-
-**Flat config:**
 ```js
 // eslint.config.js
-import eslintConfig from "@igorkowalczyk/eslint-config/flat";
+import eslintConfig from "@igorkowalczyk/eslint-config/";
 
 export default [
  ...eslintConfig

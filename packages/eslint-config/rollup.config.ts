@@ -3,19 +3,11 @@ import rollupPluginNodeResolve from "@rollup/plugin-node-resolve";
 import rollupPluginTypescript from "@rollup/plugin-typescript";
 import rollupPluginCommonjs from "@rollup/plugin-commonjs";
 import rollupPluginAutoExternal from "rollup-plugin-auto-external";
+import { basename } from "node:path";
 import { readdirSync } from "node:fs";
-import { join, dirname, basename } from "node:path";
 
-const configDir = "./configs/";
-const types = ["flat", "legacy"];
-
-let configFiles: ReadonlyArray<string> = [];
-
-types.forEach((type) => {
- const dir = join(configDir, type);
- const files = readdirSync(dir).map((file) => join(type, file));
- configFiles = [...configFiles, ...files];
-});
+const configDir = "configs/";
+const files = readdirSync(configDir);
 
 const defaultConfig: Partial<RollupOptions> = {
  output: {
@@ -44,8 +36,6 @@ const defaultConfig: Partial<RollupOptions> = {
 
 function getConfig(filename: string): RollupOptions {
  const name = basename(filename, ".ts");
- const configDirname = dirname(filename);
- const directory = name === "index" ? configDirname : `${configDirname}/configs`;
 
  return {
   ...defaultConfig,
@@ -53,16 +43,16 @@ function getConfig(filename: string): RollupOptions {
   output: [
    {
     ...defaultConfig.output,
-    entryFileNames: `esm/${directory}/${name}.js`,
+    entryFileNames: `esm/${name}.js`,
     format: "esm",
    },
-   {
-    ...defaultConfig.output,
-    entryFileNames: `cjs/${directory}/${name}.cjs`,
-    format: "cjs",
-   },
+   // {
+   //  ...defaultConfig.output,
+   //  entryFileNames: `cjs/${name}.cjs`,
+   //  format: "cjs",
+   // },
   ],
  };
 }
 
-export default configFiles.map(getConfig);
+export default files.map(getConfig);

@@ -4,7 +4,7 @@ import { type Linter } from "eslint";
 
 export default [
  {
-  name: "@igorkowalczyk/eslint-config/flat/tailwindcss",
+  name: "@igorkowalczyk/eslint-config/tailwindcss",
   plugins: {
    tailwindcss: tailwindPlugin,
   },

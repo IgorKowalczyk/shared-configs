@@ -1,4 +1,4 @@
-import eslintConfig from "./packages/eslint-config/dist/esm/flat/index.js";
+import eslintConfig from "./packages/eslint-config/dist/esm/index.js";
 
 export default [
  // Prettier
@@ -10,3 +10,15 @@ export default [
  ...eslintConfig.tailwindcss,
  ...eslintConfig.typescript,
 ];
+
+// import { antfu } from "@antfu/eslint-config";
+
+// const configg = antfu({
+//  react: true,
+//  astro: true,
+//  typescript: true,
+// });
+
+// console.log(await configg);
+
+// export default configg;
