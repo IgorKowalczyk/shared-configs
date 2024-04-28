@@ -50,7 +50,7 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-prettier": "^5.0.1",
-    "globals": "15.0.0"
+    "globals": "15.1.0"
   },
   "devDependencies": {
     "@stylistic/eslint-plugin": "1.7.2",
