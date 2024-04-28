@@ -42,6 +42,5 @@
     "javascript",
     "config",
     "styleguide"
-  ],
-  "packageManager": "pnpm@9.0.4"
+  ]
 }
