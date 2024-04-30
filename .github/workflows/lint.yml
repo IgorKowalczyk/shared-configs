@@ -8,15 +8,15 @@ jobs:
   strategy:
    fail-fast: false
    matrix:
-    language: ["javascript"]
-    node: ["18.x"]
+    node: ["lts/*"]
   steps:
    - name: 🧱 Checkout repository
      uses: actions/checkout@v4
    - name: 🔩 Setup PNPM
-     uses: pnpm/action-setup@v2
+     uses: pnpm/action-setup@v3
      with:
-      version: latest
+      version: next-9
+      standalone: true
    - name: 🔩 Setup Node ${{ matrix.node }}
      uses: actions/setup-node@v4
      with:
@@ -24,5 +24,7 @@ jobs:
       cache: "pnpm"
    - name: 🚀 Install dependencies
      run: pnpm install
+   - name: 🚀 Build
+     run: pnpm build
    - name: 🚀 Run ESLint
      run: pnpm lint

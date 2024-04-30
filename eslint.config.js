@@ -1,8 +1,12 @@
-import eslintConfig from "./packages/eslint-config/flat.js";
+import eslintConfig from "./packages/eslint-config/dist/esm/index.js";
 
 export default [
- ...eslintConfig,
- {
-  files: ["**/*.{js,mjs}"],
- },
+ // Prettier
+ ...eslintConfig.base,
+ ...eslintConfig.astro,
+ ...eslintConfig.node,
+ // ...eslintConfig.next,
+ // ...eslintConfig.react,
+ ...eslintConfig.tailwindcss,
+ ...eslintConfig.typescript,
 ];

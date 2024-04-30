@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/eslint-config",
-  "version": "2.3.0",
+  "version": "3.0.0",
   "description": "☔ My sharable ESLint config",
   "author": "Igor Kowalczyk",
   "license": "MIT",
@@ -11,24 +11,49 @@
   "type": "module",
   "exports": {
     "./flat": {
-      "import": "./dist/mjs/flat.js",
-      "require": "./dist/cjs/flat.cjs",
-      "default": "./dist/cjs/flat.js"
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs"
     },
-    "./legacy": {
-      "import": "./dist/mjs/legacy.js",
-      "require": "./dist/cjs/legacy.cjs",
-      "default": "./dist/cjs/legacy.cjs"
+    "./flat/base": {
+      "import": "./dist/esm/base.js",
+      "require": "./dist/cjs/base.cjs"
+    },
+    "./flat/astro": {
+      "import": "./dist/esm/astro.js",
+      "require": "./dist/cjs/astro.cjs"
+    },
+    "./flat/next": {
+      "import": "./dist/esm/next.js",
+      "require": "./dist/cjs/next.cjs"
+    },
+    "./flat/node": {
+      "import": "./dist/esm/node.js",
+      "require": "./dist/cjs/node.cjs"
+    },
+    "./flat/react": {
+      "import": "./dist/esm/react.js",
+      "require": "./dist/cjs/react.cjs"
+    },
+    "./flat/tailwindcss": {
+      "import": "./dist/esm/tailwindcss.js",
+      "require": "./dist/cjs/tailwindcss.cjs"
+    },
+    "./flat/typescript": {
+      "import": "./dist/esm/typescript.js",
+      "require": "./dist/cjs/typescript.cjs"
     }
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript",
     "publish-packages": "pnpm publish --access public --no-git-checks --provenance",
     "test:publish-packages": "pnpm publish --access public --no-git-checks --provenance --dry-run",
     "format": "prettier . --write --cache --ignore-unknown",
     "format:check": "prettier . --check --ignore-unknown",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "config-inspector": "pnpx @eslint/config-inspector build --files=false --config=../../eslint.config.js",
+    "config-inspector:serve": "pnpm run config-inspector && pnpx serve .eslint-config-inspector",
+    "config-inspector:dev": "pnpx @eslint/config-inspector --config=../../eslint.config.js"
   },
   "publishConfig": {
     "access": "public",
@@ -46,18 +71,36 @@
     "styleguide"
   ],
   "dependencies": {
-    "@eslint/js": "^8.57.0",
-    "eslint-config-prettier": "9.1.0",
+    "@eslint-react/eslint-plugin": "^1.5.10",
+    "@eslint/js": "^9.1.0",
+    "@next/eslint-plugin-next": "^14.2.3",
+    "@stylistic/eslint-plugin": "1.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "eslint-config-flat-gitignore": "^0.1.5",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-flat-config-utils": "^0.2.4",
+    "eslint-plugin-astro": "^1.1.1",
     "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-n": "^17.4.0",
     "eslint-plugin-prettier": "^5.0.1",
-    "globals": "15.1.0"
+    "eslint-plugin-tailwindcss": "^3.15.1",
+    "globals": "^15.1.0",
+    "typescript-eslint": "^7.8.0"
   },
   "devDependencies": {
-    "@stylistic/eslint-plugin": "1.8.0",
-    "rollup": "4.17.2"
+    "@rollup/plugin-commonjs": "25.0.7",
+    "@rollup/plugin-node-resolve": "15.2.3",
+    "@rollup/plugin-typescript": "11.1.6",
+    "@types/eslint": "8.56.10",
+    "@types/eslint__js": "8.42.3",
+    "@types/node": "20.12.7",
+    "@types/rollup-plugin-auto-external": "2.0.5",
+    "rollup": "4.17.2",
+    "rollup-plugin-auto-external": "2.0.0"
   },
   "peerDependencies": {
-    "eslint": ">=8.0.0"
-  },
-  "packageManager": "pnpm@9.0.4"
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0"
+  }
 }
