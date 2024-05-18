@@ -39,7 +39,7 @@
     "turbo": "1.13.3"
   },
   "devDependencies": {
-    "eslint": "9.2.0",
+    "eslint": "9.3.0",
     "prettier": "3.2.5"
   }
 }
