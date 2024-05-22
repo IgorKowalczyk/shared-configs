@@ -5,11 +5,6 @@ import tailwindPlugin from "eslint-plugin-tailwindcss";
 export default [
  {
   name: "@igorkowalczyk/eslint-config/tailwindcss",
-  plugins: {
-   tailwindcss: tailwindPlugin,
-  },
-  rules: {
-   ...tailwindPlugin.configs["recommended"].rules,
-  },
+  ...tailwindPlugin.configs["flat/recommended"],
  },
 ] as Linter.FlatConfig[];
