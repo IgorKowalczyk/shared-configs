@@ -1,6 +1,8 @@
-import { composer } from "eslint-flat-config-utils";
+import { mergeConfigs, composer } from "eslint-flat-config-utils";
 import eslintPluginAstro from "eslint-plugin-astro";
 
-export default await composer(eslintPluginAstro.configs["flat/recommended"]).prepend({
+const mergedAstroConfig = mergeConfigs(...eslintPluginAstro.configs["flat/recommended"]);
+
+export default await composer(mergedAstroConfig).override("astro/recommended", {
  name: "@igorkowalczyk/eslint-config/astro",
 });

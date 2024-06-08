@@ -51,9 +51,9 @@
     "format:check": "prettier . --check --ignore-unknown",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "config-inspector": "pnpx @eslint/config-inspector build --files=false --config=../../eslint.config.js",
+    "config-inspector": "pnpm run build && pnpx @eslint/config-inspector build --files=false --config=./example.js",
     "config-inspector:serve": "pnpm run config-inspector && pnpx serve .eslint-config-inspector",
-    "config-inspector:dev": "pnpx @eslint/config-inspector --config=../../eslint.config.js"
+    "config-inspector:dev": "pnpm run build && pnpx @eslint/config-inspector --config=./example.js"
   },
   "publishConfig": {
     "access": "public",

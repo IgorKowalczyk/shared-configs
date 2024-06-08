@@ -8,9 +8,6 @@ import prettierRecommendedConfig from "eslint-plugin-prettier/recommended";
 import globals from "globals";
 
 export default [
- gitignore({
-  name: "@igorkowalczyk/eslint-config/base/gitignore",
- }),
  {
   name: "@igorkowalczyk/eslint-config/base",
   files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.mjs"],
@@ -93,6 +90,9 @@ export default [
    "object-shorthand": ["error", "always"],
   },
  },
+ gitignore({
+  name: "@igorkowalczyk/eslint-config/gitignore",
+ }),
  {
   name: "@igorkowalczyk/eslint-config/base/javascript",
   ...js.configs.recommended,

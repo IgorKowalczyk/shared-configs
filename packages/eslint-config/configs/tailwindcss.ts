@@ -1,7 +1,9 @@
-import { composer } from "eslint-flat-config-utils";
+import { mergeConfigs, composer } from "eslint-flat-config-utils";
 /* @ts-expect-error-next-line Waiting for types to be updated */
 import tailwindPlugin from "eslint-plugin-tailwindcss";
 
-export default await composer(tailwindPlugin.configs["flat/recommended"]).override("tailwindcss:base", {
+const mergedTailwindConfig = mergeConfigs(...tailwindPlugin.configs["flat/recommended"]);
+
+export default await composer(mergedTailwindConfig).override("tailwindcss:rules", {
  name: "@igorkowalczyk/eslint-config/tailwindcss",
 });

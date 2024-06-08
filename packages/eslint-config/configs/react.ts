@@ -7,7 +7,7 @@ import globals from "globals";
 
 export default await composer(
  {
-  name: "@igorkowalczyk/eslint-config/react",
+  name: "@igorkowalczyk/eslint-config/react/base",
   files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
   ...(eslintReact.configs.recommended as unknown as Linter.FlatConfig[]),
   languageOptions: {
@@ -18,7 +18,6 @@ export default await composer(
  },
  {
   name: "@igorkowalczyk/eslint-config/react/jsx-a11y",
-  files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
   plugins: {
    "jsx-a11y": jsxa11y,
   },

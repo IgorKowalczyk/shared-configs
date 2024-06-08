@@ -1,21 +1,13 @@
 import { type Linter } from "eslint";
-import { composer } from "eslint-flat-config-utils";
+import { composer, mergeConfigs } from "eslint-flat-config-utils";
 import tseslint from "typescript-eslint";
 
-const typescriptConfigs = tseslint.configs.recommended as Linter.FlatConfig[];
+const mergedTypescriptConfig = mergeConfigs(...(tseslint.config(...tseslint.configs.recommended) as Linter.FlatConfig[]));
 
-const flattenedConfig = typescriptConfigs.reduce((acc, curr) => {
- const mergedConfig = { ...acc, ...curr };
-
- if (acc.rules && curr.rules) mergedConfig.rules = { ...acc.rules, ...curr.rules };
-
- return mergedConfig;
-}, {} as Linter.FlatConfig);
-
-export default await composer(flattenedConfig)
+export default await composer(mergedTypescriptConfig)
  .renamePlugins({
   "@typescript-eslint": "typescript",
  })
  .override("typescript-eslint/recommended", {
-  name: "@igorkowalczyk/eslint-config/node",
+  name: "@igorkowalczyk/eslint-config/typescript",
  });
