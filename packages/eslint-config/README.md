@@ -18,3 +18,8 @@ export default [
  ...eslintConfig
 ];
 ```
+
+
+### ⚙️ Rules overview
+
+You can find the full list of rules in the [ESLint config inspector](https://shared-configs.vercel.app/).

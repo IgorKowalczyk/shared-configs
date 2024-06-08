@@ -95,7 +95,7 @@ export default [
 
 ### ⚙️ Rules overview
 
-You can find the full list of rules in the [ESLint config inspector](https://shared-configs.igorkowalczyk.dev).
+You can find the full list of rules in the [ESLint config inspector](https://shared-configs.vercel.app/).
 
 ---
 
