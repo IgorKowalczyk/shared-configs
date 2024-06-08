@@ -177,7 +177,7 @@ export default [
 ];
 ```
 
-## 🔗 Chaining configurations
+### 🔗 Chaining configurations
 
 You can also chain multiple configurations together, for example, to use TypeScript and React configurations together.
 
