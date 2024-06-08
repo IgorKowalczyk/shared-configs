@@ -10,35 +10,35 @@
   "homepage": "https://github.com/igorkowalczyk/shared-configs/tree/main/packages/eslint-config#readme",
   "type": "module",
   "exports": {
-    "./flat": {
+    ".": {
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.cjs"
     },
-    "./flat/base": {
+    "./base": {
       "import": "./dist/esm/base.js",
       "require": "./dist/cjs/base.cjs"
     },
-    "./flat/astro": {
+    "./astro": {
       "import": "./dist/esm/astro.js",
       "require": "./dist/cjs/astro.cjs"
     },
-    "./flat/next": {
+    "./next": {
       "import": "./dist/esm/next.js",
       "require": "./dist/cjs/next.cjs"
     },
-    "./flat/node": {
+    "./node": {
       "import": "./dist/esm/node.js",
       "require": "./dist/cjs/node.cjs"
     },
-    "./flat/react": {
+    "./react": {
       "import": "./dist/esm/react.js",
       "require": "./dist/cjs/react.cjs"
     },
-    "./flat/tailwindcss": {
+    "./tailwindcss": {
       "import": "./dist/esm/tailwindcss.js",
       "require": "./dist/cjs/tailwindcss.cjs"
     },
-    "./flat/typescript": {
+    "./typescript": {
       "import": "./dist/esm/typescript.js",
       "require": "./dist/cjs/typescript.cjs"
     }
