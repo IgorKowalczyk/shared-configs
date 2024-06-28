@@ -5,8 +5,8 @@ export default [
  ...eslintConfig.base,
  ...eslintConfig.astro,
  ...eslintConfig.node,
- // ...eslintConfig.next,
- // ...eslintConfig.react,
+ //...eslintConfig.next,
+ ...eslintConfig.react,
  ...eslintConfig.tailwindcss,
  ...eslintConfig.typescript,
 ];
