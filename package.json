@@ -36,7 +36,7 @@
   "prettier": "./packages/prettier-config/index.js",
   "dependencies": {
     "markdown-table": "3.0.3",
-    "turbo": "2.0.6"
+    "turbo": "2.0.7"
   },
   "devDependencies": {
     "eslint": "9.7.0",
