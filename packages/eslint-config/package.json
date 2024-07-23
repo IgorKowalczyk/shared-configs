@@ -75,7 +75,7 @@
     "@eslint/js": "9.7.0",
     "@next/eslint-plugin-next": "14.2.5",
     "@stylistic/eslint-plugin": "2.3.0",
-    "@typescript-eslint/parser": "7.16.1",
+    "@typescript-eslint/parser": "7.17.0",
     "eslint-config-flat-gitignore": "0.1.8",
     "eslint-config-prettier": "9.1.0",
     "eslint-flat-config-utils": "0.2.5",
@@ -86,7 +86,7 @@
     "eslint-plugin-prettier": "5.2.1",
     "eslint-plugin-tailwindcss": "3.17.4",
     "globals": "15.8.0",
-    "typescript-eslint": "7.16.1"
+    "typescript-eslint": "7.17.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "26.0.1",
