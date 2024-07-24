@@ -1,18 +1,15 @@
-/* @ts-expect-error-next-line Waiting for types to be updated */
-import nextPlugin from "@next/eslint-plugin-next";
+import { fixupConfigRules } from "@eslint/compat";
+import { FlatCompat } from "@eslint/eslintrc";
 import { composer } from "eslint-flat-config-utils";
 import globals from "globals";
+
+const compat = new FlatCompat();
 
 export default await composer({
  name: "@igorkowalczyk/eslint-config/next",
  files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
- plugins: {
-  "@next/next": nextPlugin,
- },
- rules: {
-  ...nextPlugin.configs["recommended"].rules,
-  ...nextPlugin.configs["core-web-vitals"].rules,
- },
+ ignores: [".next/"],
+ ...fixupConfigRules(compat.extends("plugin:@next/next/core-web-vitals")),
  languageOptions: {
   globals: {
    ...globals.browser,

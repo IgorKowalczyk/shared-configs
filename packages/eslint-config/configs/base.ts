@@ -2,8 +2,7 @@ import js from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
 import { type Linter } from "eslint";
 import gitignore from "eslint-config-flat-gitignore";
-/* @ts-expect-error-next-line Waiting for types to be updated */
-import importPlugin from "eslint-plugin-import";
+import importPluginX from "eslint-plugin-import-x";
 import prettierRecommendedConfig from "eslint-plugin-prettier/recommended";
 import globals from "globals";
 
@@ -100,11 +99,11 @@ export default [
  {
   name: "@igorkowalczyk/eslint-config/base/import",
   plugins: {
-   import: importPlugin,
+   "import-x": importPluginX,
   },
   rules: {
    // Enforce consistent import order with specific grouping and sorting
-   "import/order": [
+   "import-x/order": [
     "warn",
     {
      groups: ["builtin", "external", "internal", "parent", "sibling", "index"],
