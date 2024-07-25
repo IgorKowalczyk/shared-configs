@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/prettier-config",
-  "version": "3.0.0",
+  "version": "3.0.0-beta.0",
   "description": "☔ My sharable Prettier config",
   "author": "Igor Kowalczyk",
   "license": "MIT",
