@@ -31,6 +31,12 @@ jobs:
    - name: 🚀 Install dependencies
      run: pnpm install
    - name: 🚀 Publish package
+     if: github.event.release.prerelease == false
      run: pnpm run publish-packages
+     env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+   - name: 🚀 Publish next package
+     if: github.event.release.prerelease == true
+     run: pnpm run publish-packages:next
      env:
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
