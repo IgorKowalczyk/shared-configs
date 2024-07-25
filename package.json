@@ -15,6 +15,7 @@
     "format:check": "turbo run format:check --color",
     "build": "turbo run build --color",
     "publish-packages": "turbo run publish-packages --color",
+    "publish-packages:next": "turbo run publish-packages:next --color",
     "test:publish-packages": "turbo run test:publish-packages --color",
     "lint": "turbo run lint --color",
     "lint:fix": "turbo run lint:fix --color",

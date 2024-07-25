@@ -1,0 +1,36 @@
+name: Publish
+on:
+ release:
+  types: [prereleased]
+
+jobs:
+ publish:
+  runs-on: ubuntu-latest
+  permissions:
+   contents: read
+   packages: write
+   id-token: write
+  strategy:
+   fail-fast: false
+   matrix:
+    node: ["lts/*"]
+  steps:
+   - name: 🧱 Checkout repository
+     uses: actions/checkout@v4
+   - name: 🔩 Setup PNPM
+     uses: pnpm/action-setup@v3
+     with:
+      version: next-9
+      standalone: true
+   - name: 🔩 Setup Node ${{ matrix.node }}
+     uses: actions/setup-node@v4
+     with:
+      node-version: ${{ matrix.node }}
+      registry-url: "https://npm.pkg.github.com"
+      cache: "pnpm"
+   - name: 🚀 Install dependencies
+     run: pnpm install
+   - name: 🚀 Publish package
+     run: pnpm run publish-packages:next
+     env:
+      NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
