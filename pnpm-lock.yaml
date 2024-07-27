@@ -58,8 +58,8 @@ importers:
         specifier: 9.1.0
         version: 9.1.0(eslint@9.8.0)
       eslint-flat-config-utils:
-        specifier: 0.2.5
-        version: 0.2.5
+        specifier: 0.3.0
+        version: 0.3.0
       eslint-plugin-astro:
         specifier: 1.2.3
         version: 1.2.3(eslint@9.8.0)(typescript@5.5.4)
@@ -834,8 +834,8 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-flat-config-utils@0.2.5:
-    resolution: {integrity: sha512-iO+yLZtC/LKgACerkpvsZ6NoRVB2sxT04mOpnNcEM1aTwKy+6TsT46PUvrML4y2uVBS6I67hRCd2JiKAPaL/Uw==}
+  eslint-flat-config-utils@0.3.0:
+    resolution: {integrity: sha512-FaFQLUunAl6YK7aU/pT23DXYVWg/cEHbSfxwAxpCGT6Su8H9RfkmzKLh1G2bba46p6dTlQeA4VTiV5//0SeToQ==}
 
   eslint-import-resolver-node@0.3.9:
     resolution: {integrity: sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g==}
@@ -2842,9 +2842,9 @@ snapshots:
     dependencies:
       eslint: 9.8.0
 
-  eslint-flat-config-utils@0.2.5:
+  eslint-flat-config-utils@0.3.0:
     dependencies:
-      '@types/eslint': 8.56.11
+      '@types/eslint': 9.6.0
       pathe: 1.1.2
 
   eslint-import-resolver-node@0.3.9:
