@@ -1,4 +1,4 @@
-name: Publish [Github]
+name: Publish packages
 on:
  release:
   types: [created]
@@ -14,6 +14,7 @@ jobs:
    fail-fast: false
    matrix:
     node: ["lts/*"]
+    registry-url: ["https://registry.npmjs.org", "https://npm.pkg.github.com"]
   steps:
    - name: 🧱 Checkout repository
      uses: actions/checkout@v4
@@ -26,7 +27,7 @@ jobs:
      uses: actions/setup-node@v4
      with:
       node-version: ${{ matrix.node }}
-      registry-url: "https://npm.pkg.github.com"
+      registry-url: ${{ matrix.registry-url }}
       cache: "pnpm"
    - name: 🚀 Install dependencies
      run: pnpm install
@@ -34,9 +35,9 @@ jobs:
      if: github.event.release.prerelease == false
      run: pnpm run publish-packages
      env:
-      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
    - name: 🚀 Publish next package
      if: github.event.release.prerelease == true
      run: pnpm run publish-packages:next
      env:
-      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
