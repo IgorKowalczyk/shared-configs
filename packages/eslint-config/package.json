@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/eslint-config",
-  "version": "3.0.0-beta.2",
+  "version": "3.0.0-beta.3",
   "description": "☔ My sharable ESLint config",
   "author": "Igor Kowalczyk",
   "license": "MIT",
@@ -52,9 +52,9 @@
     "format:check": "prettier . --check --ignore-unknown",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "config-inspector": "pnpm run build && pnpx @eslint/config-inspector build --files=false --config=./example.js",
+    "config-inspector": "pnpm run build && pnpx @eslint/config-inspector@latest build --files=false --config=./example.js",
     "config-inspector:serve": "pnpm run config-inspector && pnpx serve .eslint-config-inspector",
-    "config-inspector:dev": "pnpm run build && pnpx @eslint/config-inspector --config=./example.js"
+    "config-inspector:dev": "pnpm run build && pnpx @eslint/config-inspector@latest --config=./example.js"
   },
   "publishConfig": {
     "access": "public",

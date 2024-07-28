@@ -1,21 +1,24 @@
 import { fixupConfigRules } from "@eslint/compat";
 import { FlatCompat } from "@eslint/eslintrc";
-import { composer } from "eslint-flat-config-utils";
+import { composer, mergeConfigs } from "eslint-flat-config-utils";
 import globals from "globals";
 
 const compat = new FlatCompat();
-
-export default await composer({
- name: "@igorkowalczyk/eslint-config/next",
- files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
- ignores: [".next/"],
- ...fixupConfigRules(compat.extends("plugin:@next/next/core-web-vitals")),
- languageOptions: {
-  globals: {
-   ...globals.browser,
+const mergedConfigs = mergeConfigs(
+ {
+  name: "@igorkowalczyk/eslint-config/next",
+  files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+  ignores: [".next/"],
+  languageOptions: {
+   globals: {
+    ...globals.browser,
+   },
   },
  },
-})
+ ...fixupConfigRules(compat.extends("plugin:@next/next/core-web-vitals"))
+);
+
+export default await composer(mergedConfigs)
  .renamePlugins({
   "@next/next": "next",
  })
