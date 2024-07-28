@@ -15,6 +15,8 @@ export default [
    globals: {
     ...globals.es2021,
     ...globals.commonjs,
+    ...globals.es2025,
+    ...globals.nodeBuiltin,
    },
    sourceType: "module",
   },

@@ -14,6 +14,11 @@ export default await composer(
    globals: {
     ...globals.browser,
    },
+   parserOptions: {
+    ecmaFeatures: {
+     jsx: true,
+    },
+   },
   },
  },
  {
