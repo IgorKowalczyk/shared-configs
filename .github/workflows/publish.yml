@@ -1,4 +1,5 @@
 name: Publish packages
+
 on:
  release:
   types: [created]
@@ -16,26 +17,46 @@ jobs:
     node: ["lts/*"]
     registry-url: ["https://registry.npmjs.org", "https://npm.pkg.github.com"]
   steps:
+   # Checkout the repository
    - name: 🧱 Checkout repository
      uses: actions/checkout@v4
+
+   # Setup PNPM
    - name: 🔩 Setup PNPM
      uses: pnpm/action-setup@v3
      with:
       version: next-9
       standalone: true
+
+   # Setup Node.js
    - name: 🔩 Setup Node ${{ matrix.node }}
      uses: actions/setup-node@v4
      with:
       node-version: ${{ matrix.node }}
       registry-url: ${{ matrix.registry-url }}
       cache: "pnpm"
+
+   # Cache dependencies
+   - name: 📦 Cache dependencies
+     uses: actions/cache@v4
+     with:
+      path: ~/.pnpm-store
+      key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+      restore-keys: |
+       ${{ runner.os }}-pnpm-
+
+   # Install dependencies
    - name: 🚀 Install dependencies
      run: pnpm install
+
+   # Publish package if it's not a pre-release
    - name: 🚀 Publish package
      if: github.event.release.prerelease == false
      run: pnpm run publish-packages
      env:
       NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+   # Publish next package if it's a pre-release
    - name: 🚀 Publish next package
      if: github.event.release.prerelease == true
      run: pnpm run publish-packages:next
