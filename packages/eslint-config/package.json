@@ -77,7 +77,7 @@
     "@eslint/eslintrc": "3.1.0",
     "@eslint/js": "9.8.0",
     "@next/eslint-plugin-next": "14.2.5",
-    "@stylistic/eslint-plugin": "2.3.0",
+    "@stylistic/eslint-plugin": "2.4.0",
     "@types/eslint__eslintrc": "2.1.2",
     "@typescript-eslint/parser": "7.17.0",
     "eslint-config-flat-gitignore": "0.1.8",
