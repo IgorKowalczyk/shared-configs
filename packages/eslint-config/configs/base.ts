@@ -11,12 +11,9 @@ export default [
   name: "@igorkowalczyk/eslint-config/gitignore",
  }),
  {
-  name: "@igorkowalczyk/eslint-config/base/javascript",
-  ...js.configs.recommended,
- },
- {
   name: "@igorkowalczyk/eslint-config/base",
   files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.mjs"],
+  ...js.configs.recommended,
   languageOptions: {
    ecmaVersion: "latest",
    globals: {
@@ -43,9 +40,6 @@ export default [
 
    // Disallow the use of undeclared variables unless mentioned in /*global */ comments
    "no-undef": "error",
-
-   // Allow or disallow the use of 'undefined' as an identifier
-   "no-undefined": "off",
 
    // Limit cyclomatic complexity to 50
    complexity: ["warn", 50],
@@ -76,9 +70,6 @@ export default [
 
    // Disable the Unicode Byte Order Mark (BOM)
    "unicode-bom": ["error", "never"],
-
-   // Allow or disallow the use of 'process.env'
-   "no-process-env": "off",
 
    // Disallow the use of eval()
    "no-eval": "error",
