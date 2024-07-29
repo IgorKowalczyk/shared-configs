@@ -60,4 +60,8 @@ export default await composer(mergedReactConfigs, {
   "@eslint-react/no-unstable-default-props": "off",
   "@eslint-react/dom/no-dangerously-set-innerhtml": "off",
   "@eslint-react/no-nested-components": "off",
+  "@eslint-react/no-unstable-context-value": "off",
+  "react-a11y/click-events-have-key-events": "off",
+  "react-a11y/no-noninteractive-element-interactions": "off",
+  "react-a11y/no-static-element-interactions": "off",
  });
