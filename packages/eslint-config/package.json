@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/eslint-config",
-  "version": "3.0.0-beta.8",
+  "version": "3.0.0-beta.9",
   "description": "☔ My sharable ESLint config",
   "author": "Igor Kowalczyk",
   "license": "MIT",
@@ -105,7 +105,6 @@
     "rollup-plugin-auto-external": "2.0.0"
   },
   "peerDependencies": {
-    "eslint": "9.8.0",
-    "prettier": "3.3.3"
+    "eslint": "^9"
   }
 }

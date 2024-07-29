@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/prettier-config",
-  "version": "3.0.0-beta.8",
+  "version": "3.0.0-beta.9",
   "description": "☔ My sharable Prettier config",
   "author": "Igor Kowalczyk",
   "license": "MIT",
@@ -23,11 +23,11 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "peerDependencies": {
-    "prettier": "^3.0"
-  },
   "devDependencies": {
     "rollup": "4.19.1"
+  },
+  "peerDependencies": {
+    "prettier": "^3"
   },
   "publishConfig": {
     "access": "public",

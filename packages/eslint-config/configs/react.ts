@@ -57,5 +57,7 @@ export default await composer(mergedReactConfigs, {
   name: "@igorkowalczyk/eslint-config/react/jsx-a11y",
  })
  .overrideRules({
-  "react/no-unescaped-entities": "off",
+  "@eslint-react/no-unstable-default-props": "off",
+  "@eslint-react/dom/no-dangerously-set-innerhtml": "off",
+  "@eslint-react/no-nested-components": "off",
  });

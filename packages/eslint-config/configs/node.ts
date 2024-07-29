@@ -19,4 +19,6 @@ export default await composer({
  .overrideRules({
   "n/no-unsupported-features/node-builtins": "off",
   "n/no-missing-import": "off",
+  "n/no-extraneous-import": "off",
+  "n/no-unpublished-import": "off",
  });
