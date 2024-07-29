@@ -7,6 +7,13 @@ import prettierRecommendedConfig from "eslint-plugin-prettier/recommended";
 import globals from "globals";
 
 export default [
+ gitignore({
+  name: "@igorkowalczyk/eslint-config/gitignore",
+ }),
+ {
+  name: "@igorkowalczyk/eslint-config/base/javascript",
+  ...js.configs.recommended,
+ },
  {
   name: "@igorkowalczyk/eslint-config/base",
   files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.mjs"],
@@ -14,8 +21,9 @@ export default [
    ecmaVersion: "latest",
    globals: {
     ...globals.es2021,
-    ...globals.commonjs,
     ...globals.es2025,
+    ...globals.commonjs,
+    ...globals.node,
     ...globals.nodeBuiltin,
    },
    sourceType: "module",
@@ -90,13 +98,6 @@ export default [
    // Require method and property shorthand syntax for object literals
    "object-shorthand": ["error", "always"],
   },
- },
- gitignore({
-  name: "@igorkowalczyk/eslint-config/gitignore",
- }),
- {
-  name: "@igorkowalczyk/eslint-config/base/javascript",
-  ...js.configs.recommended,
  },
  {
   name: "@igorkowalczyk/eslint-config/base/import",

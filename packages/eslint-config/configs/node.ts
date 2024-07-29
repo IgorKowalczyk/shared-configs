@@ -12,6 +12,10 @@ export default await composer({
   },
   sourceType: "module",
  },
-}).renamePlugins({
- n: "node",
-});
+})
+ .renamePlugins({
+  n: "node",
+ })
+ .overrideRules({
+  "n/no-unsupported-features/node-builtins": "off",
+ });
