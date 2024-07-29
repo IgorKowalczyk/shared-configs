@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/eslint-config",
-  "version": "3.0.0-beta.6",
+  "version": "3.0.0-beta.7",
   "description": "☔ My sharable ESLint config",
   "author": "Igor Kowalczyk",
   "license": "MIT",
@@ -88,6 +88,7 @@
     "eslint-plugin-jsx-a11y": "6.9.0",
     "eslint-plugin-n": "17.10.1",
     "eslint-plugin-prettier": "5.2.1",
+    "eslint-plugin-react": "7.35.0",
     "eslint-plugin-tailwindcss": "3.17.4",
     "globals": "15.8.0",
     "typescript-eslint": "7.17.0"

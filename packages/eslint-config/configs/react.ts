@@ -1,11 +1,13 @@
 import eslintReact from "@eslint-react/eslint-plugin";
 import { Linter } from "eslint";
-import { composer } from "eslint-flat-config-utils";
+import { composer, mergeConfigs } from "eslint-flat-config-utils";
 /* @ts-expect-error-next-line Waiting for types to be updated */
 import jsxa11y from "eslint-plugin-jsx-a11y";
+/* @ts-expect-error-next-line Waiting for types to be updated */
+import eslintReactOld from "eslint-plugin-react";
 import globals from "globals";
 
-export default await composer(
+const mergedReactConfigs = mergeConfigs(
  {
   name: "@igorkowalczyk/eslint-config/react/base",
   files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
@@ -23,19 +25,23 @@ export default await composer(
   },
  },
  {
-  plugins: {
-   "jsx-a11y": jsxa11y,
-  },
-  ...jsxa11y.flatConfigs.recommended,
-  languageOptions: {
-   ...jsxa11y.flatConfigs.recommended.languageOptions,
-   globals: {
-    ...globals.serviceworker,
-    ...globals.browser,
-   },
-  },
+  ...eslintReactOld.configs.flat["recommended"],
  }
-)
+);
+
+export default await composer(mergedReactConfigs, {
+ plugins: {
+  "jsx-a11y": jsxa11y,
+ },
+ ...jsxa11y.flatConfigs.recommended,
+ languageOptions: {
+  ...jsxa11y.flatConfigs.recommended.languageOptions,
+  globals: {
+   ...globals.serviceworker,
+   ...globals.browser,
+  },
+ },
+})
  .renamePlugins({
   "jsx-a11y": "react-a11y",
  })
