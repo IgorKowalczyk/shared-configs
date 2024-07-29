@@ -25,7 +25,15 @@ const mergedReactConfigs = mergeConfigs(
   },
  },
  {
-  ...eslintReactOld.configs.flat["recommended"],
+  plugins: {
+   react: eslintReactOld,
+  },
+  rules: {
+   "react/jsx-no-undef": 2,
+   "react/jsx-uses-react": 2,
+   "react/jsx-uses-vars": 2,
+   "react/no-find-dom-node": 2,
+  },
  }
 );
 
