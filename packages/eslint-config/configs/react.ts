@@ -9,9 +9,10 @@ export default await composer(
  {
   name: "@igorkowalczyk/eslint-config/react/base",
   files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
-  ...(eslintReact.configs.recommended as unknown as Linter.FlatConfig[]),
+  ...(eslintReact.configs.recommended as unknown as Linter.Config[]),
   languageOptions: {
    globals: {
+    ...globals.serviceworker,
     ...globals.browser,
    },
    parserOptions: {
@@ -22,17 +23,24 @@ export default await composer(
   },
  },
  {
-  name: "@igorkowalczyk/eslint-config/react/jsx-a11y",
   plugins: {
    "jsx-a11y": jsxa11y,
   },
-  rules: {
-   ...jsxa11y.configs["recommended"].rules,
+  ...jsxa11y.flatConfigs.recommended,
+  languageOptions: {
+   ...jsxa11y.flatConfigs.recommended.languageOptions,
+   globals: {
+    ...globals.serviceworker,
+    ...globals.browser,
+   },
   },
  }
 )
  .renamePlugins({
   "jsx-a11y": "react-a11y",
+ })
+ .override("jsx-a11y/recommended", {
+  name: "@igorkowalczyk/eslint-config/react/jsx-a11y",
  })
  .overrideRules({
   "react/no-unescaped-entities": "off",

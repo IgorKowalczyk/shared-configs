@@ -24,6 +24,11 @@ export default [
     ...globals.nodeBuiltin,
    },
    sourceType: "module",
+   parserOptions: {
+    ecmaFeatures: {
+     jsx: true,
+    },
+   },
   },
   rules: {
    // Disallow lonely 'if' statements
@@ -194,4 +199,4 @@ export default [
   name: "@igorkowalczyk/eslint-config/base/prettier",
   ...prettierRecommendedConfig,
  },
-] as Linter.FlatConfig[];
+] as Linter.Config[];
