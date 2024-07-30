@@ -86,7 +86,15 @@ export default [
    camelcase: ["warn", { properties: "never", ignoreDestructuring: true }],
 
    // Warn about unused variables, ignoring variables starting with "_"
-   "no-unused-vars": ["warn", { argsIgnorePattern: "^_", ignoreRestSiblings: true }],
+   "no-unused-vars": [
+    "warn",
+    {
+     argsIgnorePattern: "^_",
+     varsIgnorePattern: "^_",
+     caughtErrorsIgnorePattern: "^_",
+     destructuredArrayIgnorePattern: "^_",
+    },
+   ],
 
    // Require const declarations for variables that are never reassigned after declared
    "prefer-const": "error",
