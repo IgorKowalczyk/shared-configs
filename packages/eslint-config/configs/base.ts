@@ -3,7 +3,6 @@ import stylistic from "@stylistic/eslint-plugin";
 import { type Linter } from "eslint";
 import gitignore from "eslint-config-flat-gitignore";
 import importPluginX from "eslint-plugin-import-x";
-import prettierRecommendedConfig from "eslint-plugin-prettier/recommended";
 import globals from "globals";
 
 export default [
@@ -202,9 +201,5 @@ export default [
    // Prefer double quotes for JSX attributes
    "@stylistic/jsx-quotes": ["error", "prefer-double"],
   },
- },
- {
-  name: "@igorkowalczyk/eslint-config/base/prettier",
-  ...prettierRecommendedConfig,
  },
 ] as Linter.Config[];

@@ -99,6 +99,23 @@ export default [
 ];
 ```
 
+#### [Prettier](https://prettier.io) configuration
+
+This configuration includes recommended rules for Prettier
+
+> [!WARNING]
+> This configuration should be placed at the end of the configuration file! Otherwise, it may lead to unexpected behavior.
+
+```js
+// eslint.config.js
+import eslintConfig from "@igorkowalczyk/eslint-config";
+
+export default [
+  /* Other configurations */
+ ...eslintConfig.prettier
+];
+```
+
 #### [Node.js](https://nodejs.org/) configuration
 
 Configuration includes recommended rules for Node.js projects.

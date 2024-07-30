@@ -9,4 +9,5 @@ export default [
  //...eslintConfig.react,
  //...eslintConfig.tailwindcss,
  ...eslintConfig.typescript,
+ ...eslintConfig.prettier,
 ];
