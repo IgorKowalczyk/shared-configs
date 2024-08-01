@@ -94,7 +94,7 @@
     "eslint-plugin-prettier": "5.2.1",
     "eslint-plugin-react": "7.35.0",
     "eslint-plugin-tailwindcss": "3.17.4",
-    "globals": "15.8.0",
+    "globals": "15.9.0",
     "typescript-eslint": "8.0.0"
   },
   "devDependencies": {
