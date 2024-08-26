@@ -24,7 +24,7 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "rollup": "4.21.0"
+    "rollup": "4.21.1"
   },
   "peerDependencies": {
     "prettier": "^3"
