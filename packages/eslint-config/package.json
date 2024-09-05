@@ -80,7 +80,7 @@
     "@eslint/compat": "1.1.1",
     "@eslint/eslintrc": "3.1.0",
     "@eslint/js": "9.9.1",
-    "@next/eslint-plugin-next": "14.2.7",
+    "@next/eslint-plugin-next": "14.2.8",
     "@stylistic/eslint-plugin": "2.7.2",
     "@types/eslint__eslintrc": "2.1.2",
     "@typescript-eslint/parser": "8.4.0",
