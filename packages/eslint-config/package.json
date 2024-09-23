@@ -99,7 +99,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "26.0.1",
-    "@rollup/plugin-node-resolve": "15.2.3",
+    "@rollup/plugin-node-resolve": "15.2.4",
     "@rollup/plugin-typescript": "12.1.0",
     "@types/eslint": "9.6.1",
     "@types/eslint__js": "8.42.3",
