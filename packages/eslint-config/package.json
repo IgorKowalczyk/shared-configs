@@ -103,7 +103,7 @@
     "@rollup/plugin-typescript": "12.1.0",
     "@types/eslint": "9.6.1",
     "@types/eslint__js": "8.42.3",
-    "@types/node": "22.7.4",
+    "@types/node": "22.7.5",
     "@types/rollup-plugin-auto-external": "2.0.5",
     "rollup": "4.24.0",
     "rollup-plugin-auto-external": "2.0.0"
