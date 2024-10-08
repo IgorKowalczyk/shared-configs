@@ -37,8 +37,8 @@ importers:
         specifier: 9.12.0
         version: 9.12.0
       '@next/eslint-plugin-next':
-        specifier: 14.2.14
-        version: 14.2.14
+        specifier: 14.2.15
+        version: 14.2.15
       '@stylistic/eslint-plugin':
         specifier: 2.9.0
         version: 2.9.0(eslint@9.8.0)(typescript@5.5.4)
@@ -265,8 +265,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@next/eslint-plugin-next@14.2.14':
-    resolution: {integrity: sha512-kV+OsZ56xhj0rnTn6HegyTGkoa16Mxjrpk7pjWumyB2P8JVQb8S9qtkjy/ye0GnTr4JWtWG4x/2qN40lKZ3iVQ==}
+  '@next/eslint-plugin-next@14.2.15':
+    resolution: {integrity: sha512-pKU0iqKRBlFB/ocOI1Ip2CkKePZpYpnw5bEItEkuZ/Nr9FQP1+p7VDWr4VfOdff4i9bFmrOaeaU1bFEyAcxiMQ==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -2283,7 +2283,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@next/eslint-plugin-next@14.2.14':
+  '@next/eslint-plugin-next@14.2.15':
     dependencies:
       glob: 10.3.10
 
