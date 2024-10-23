@@ -23,7 +23,7 @@
     "int-lint": "eslint --fix .",
     "int:check": "prettier --check .",
     "int-lint:check": "eslint .",
-    "generate-docs": "node src/generateDocs.mjs"
+    "generate-docs": "tsx src/generateDocs.ts"
   },
   "keywords": [
     "eslint",
@@ -34,14 +34,16 @@
     "config",
     "styleguide"
   ],
-  "prettier": "./packages/prettier-config/dist/esm/index.js",
   "dependencies": {
     "markdown-table": "3.0.4",
     "turbo": "2.2.3"
   },
   "devDependencies": {
+    "@igorkowalczyk/eslint-config": "workspace:*",
+    "@igorkowalczyk/prettier-config": "workspace:*",
     "eslint": "9.13.0",
-    "prettier": "3.3.3"
+    "prettier": "3.3.3",
+    "tsx": "4.19.1"
   },
   "packageManager": "pnpm@9.12.2"
 }
