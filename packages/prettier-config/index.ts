@@ -15,4 +15,4 @@ export default {
  tabWidth: 1,
  trailingComma: "es5",
  useTabs: false,
-} as Options;
+} satisfies Options;
