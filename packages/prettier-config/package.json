@@ -10,11 +10,11 @@
   "homepage": "https://github.com/igorkowalczyk/shared-configs/tree/main/packages/prettier-config#readme",
   "type": "module",
   "exports": {
-    "import": "./dist/mjs/index.js",
+    "import": "./dist/esm/index.js",
     "require": "./dist/cjs/index.cjs"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript",
     "publish-packages": "pnpm publish --access public --no-git-checks --provenance",
     "publish-packages:next": "pnpm publish --access public --no-git-checks --provenance --tag next",
     "test:publish-packages": "pnpm publish --access public --no-git-checks --provenance --dry-run",
@@ -43,5 +43,9 @@
     "javascript",
     "config",
     "styleguide"
-  ]
+  ],
+  "dependencies": {
+    "@rollup/plugin-commonjs": "28.0.1",
+    "@rollup/plugin-typescript": "12.1.1"
+  }
 }

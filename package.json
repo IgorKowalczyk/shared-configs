@@ -34,7 +34,7 @@
     "config",
     "styleguide"
   ],
-  "prettier": "./packages/prettier-config/index.js",
+  "prettier": "./packages/prettier-config/dist/esm/index.js",
   "dependencies": {
     "markdown-table": "3.0.4",
     "turbo": "2.2.3"

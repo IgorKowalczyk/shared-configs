@@ -1,3 +1,5 @@
+import type { Options } from "prettier";
+
 export default {
  arrowParens: "always",
  bracketSpacing: true,
@@ -13,4 +15,4 @@ export default {
  tabWidth: 1,
  trailingComma: "es5",
  useTabs: false,
-};
+} as Options;

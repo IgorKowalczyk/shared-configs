@@ -1,9 +1,8 @@
 import eslintReact from "@eslint-react/eslint-plugin";
-import { Linter } from "eslint";
+import type { Linter } from "eslint";
 import { composer, mergeConfigs } from "eslint-flat-config-utils";
 /* @ts-expect-error-next-line Waiting for types to be updated */
 import jsxa11y from "eslint-plugin-jsx-a11y";
-/* @ts-expect-error-next-line Waiting for types to be updated */
 import eslintReactOld from "eslint-plugin-react";
 import globals from "globals";
 
@@ -26,7 +25,7 @@ const mergedReactConfigs = mergeConfigs(
  },
  {
   plugins: {
-   react: eslintReactOld,
+   react: eslintReactOld as unknown as Plugin,
   },
   rules: {
    "react/jsx-no-undef": 2,
@@ -54,7 +53,7 @@ export default await composer(mergedReactConfigs, {
   "jsx-a11y": "react-a11y",
  })
  .override("jsx-a11y/recommended", {
-  name: "@igorkowalczyk/eslint-config/react/jsx-a11y",
+  name: "@igorkowalczyk/eslint-config/react/a11y",
  })
  .overrideRules({
   "@eslint-react/no-unstable-default-props": "off",
