@@ -3,8 +3,12 @@
  "tasks": {
   "lint": {},
   "lint:fix": {},
-  "format": {},
-  "format:check": {},
+  "format": {
+   "dependsOn": ["build"]
+  },
+  "format:check": {
+   "dependsOn": ["build"]
+  },
   "build": {},
   "publish-packages": {
    "dependsOn": ["build"]
