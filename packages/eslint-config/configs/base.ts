@@ -1,6 +1,6 @@
 import js from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
-import { type Linter } from "eslint";
+import type { Linter } from "eslint";
 import gitignore from "eslint-config-flat-gitignore";
 import importPluginX from "eslint-plugin-import-x";
 import globals from "globals";

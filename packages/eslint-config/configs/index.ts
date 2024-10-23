@@ -1,4 +1,4 @@
-import { type Linter } from "eslint";
+import type { Linter } from "eslint";
 import astroConfig from "./astro";
 import baseConfig from "./base";
 import nextConfig from "./next";
