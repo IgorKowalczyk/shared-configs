@@ -26,4 +26,4 @@ export default (await composer(mergedConfigs)
  .overrideRules({
   "@next/next/no-html-link-for-pages": "off",
   "@next/next/no-img-element": "error",
- })) as Linter.Config[];
+ })) satisfies Linter.Config[];

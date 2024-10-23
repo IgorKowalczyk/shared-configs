@@ -10,4 +10,4 @@ export default (await composer(mergedTypescriptConfig)
  })
  .override("typescript-eslint/recommended", {
   name: "@igorkowalczyk/eslint-config/typescript",
- })) as Linter.Config[];
+ })) satisfies Linter.Config[];

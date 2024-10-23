@@ -22,4 +22,4 @@ export default (await composer({
   "n/no-missing-import": "off",
   "n/no-extraneous-import": "off",
   "n/no-unpublished-import": "off",
- })) as Linter.Config[];
+ })) satisfies Linter.Config[];

@@ -12,4 +12,4 @@ export default (await composer(mergedTailwindConfig)
  .overrideRules({
   "tailwindcss/no-custom-classname": "off",
   "tailwindcss/migration-from-tailwind-2": "off",
- })) as Linter.Config[];
+ })) satisfies Linter.Config[];

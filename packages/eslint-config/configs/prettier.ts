@@ -5,4 +5,4 @@ import prettierRecommendedConfig from "eslint-plugin-prettier/recommended";
 export default (await composer({
  name: "@igorkowalczyk/eslint-config/base/prettier",
  ...prettierRecommendedConfig,
-})) as Linter.Config[];
+})) satisfies Linter.Config[];
