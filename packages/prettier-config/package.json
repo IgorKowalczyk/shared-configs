@@ -10,7 +10,7 @@
   "homepage": "https://github.com/igorkowalczyk/shared-configs/tree/main/packages/prettier-config#readme",
   "type": "module",
   "exports": {
-    "import": "./dist/mjs/index.js",
+    "import": "./dist/esm/index.js",
     "require": "./dist/cjs/index.cjs"
   },
   "scripts": {

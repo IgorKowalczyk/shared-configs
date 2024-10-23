@@ -6,7 +6,7 @@ const defaultConfig: Partial<RollupOptions> = {
  input: "index.ts",
  output: [
   {
-   file: "dist/mjs/index.js",
+   file: "dist/esm/index.js",
    format: "esm",
    compact: true,
   },
