@@ -92,7 +92,7 @@
     "eslint-plugin-jsx-a11y": "6.10.1",
     "eslint-plugin-n": "17.11.1",
     "eslint-plugin-prettier": "5.2.1",
-    "eslint-plugin-react": "7.37.1",
+    "eslint-plugin-react": "7.37.2",
     "eslint-plugin-tailwindcss": "3.17.5",
     "globals": "15.11.0",
     "typescript-eslint": "8.11.0"
