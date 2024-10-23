@@ -1,6 +1,6 @@
 {
  "name": "@igorkowalczyk/renovate-config",
- "version": "3.0.0-beta.13",
+ "version": "3.0.0-beta.12",
  "description": "☔ My sharable Renovate config",
  "private": true,
  "author": "Igor Kowalczyk",
