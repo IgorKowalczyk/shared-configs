@@ -10,4 +10,15 @@ export default (await composer(mergedTypescriptConfig)
  })
  .override("typescript-eslint/recommended", {
   name: "@igorkowalczyk/eslint-config/typescript",
+ })
+ .overrideRules({
+  "no-unused-vars": [
+   "error",
+   {
+    argsIgnorePattern: "^_",
+    varsIgnorePattern: "^_",
+    caughtErrorsIgnorePattern: "^_",
+    destructuredArrayIgnorePattern: "^_",
+   },
+  ],
  })) satisfies Linter.Config[];
