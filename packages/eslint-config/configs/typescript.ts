@@ -12,7 +12,7 @@ export default (await composer(mergedTypescriptConfig)
   name: "@igorkowalczyk/eslint-config/typescript",
  })
  .overrideRules({
-  "typescript/no-unused-vars": [
+  "@typescript-eslint/no-unused-vars": [
    "error",
    {
     argsIgnorePattern: "^_",
