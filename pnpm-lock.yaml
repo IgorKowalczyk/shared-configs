@@ -37,8 +37,8 @@ importers:
         specifier: 1.15.1
         version: 1.15.1(eslint@9.13.0(jiti@1.21.6))(typescript@5.5.4)
       '@eslint/compat':
-        specifier: 1.2.1
-        version: 1.2.1(eslint@9.13.0(jiti@1.21.6))
+        specifier: 1.2.2
+        version: 1.2.2(eslint@9.13.0(jiti@1.21.6))
       '@eslint/eslintrc':
         specifier: 3.1.0
         version: 3.1.0
@@ -341,8 +341,8 @@ packages:
   '@eslint-react/var@1.15.1':
     resolution: {integrity: sha512-9IRZoXHkYtesgYQzEi4Gz93yG3mkUWQeBb+FNv44CRiKQ0egbGfDJCe+nqGsD67OebI1JKnmTMqLRR8YWPxMnw==}
 
-  '@eslint/compat@1.2.1':
-    resolution: {integrity: sha512-JbHG2TWuCeNzh87fXo+/46Z1LEo9DBA9T188d0fZgGxAD+cNyS6sx9fdiyxjGPBMyQVRlCutTByZ6a5+YMkF7g==}
+  '@eslint/compat@1.2.2':
+    resolution: {integrity: sha512-jhgiIrsw+tRfcBQ4BFl2C3vCrIUw2trCY0cnDvGZpwTtKCEDmZhAtMfrEUP/KpnwM6PrO0T+Ltm+ccW74olG3Q==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^9.10.0
@@ -2422,7 +2422,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@eslint/compat@1.2.1(eslint@9.13.0(jiti@1.21.6))':
+  '@eslint/compat@1.2.2(eslint@9.13.0(jiti@1.21.6))':
     optionalDependencies:
       eslint: 9.13.0(jiti@1.21.6)
 
@@ -3293,7 +3293,7 @@ snapshots:
 
   eslint-config-flat-gitignore@0.3.0(eslint@9.13.0(jiti@1.21.6)):
     dependencies:
-      '@eslint/compat': 1.2.1(eslint@9.13.0(jiti@1.21.6))
+      '@eslint/compat': 1.2.2(eslint@9.13.0(jiti@1.21.6))
       eslint: 9.13.0(jiti@1.21.6)
       find-up-simple: 1.0.0
 
