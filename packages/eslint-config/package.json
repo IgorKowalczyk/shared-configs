@@ -85,7 +85,7 @@
     "@types/eslint": "^9.6.1",
     "@types/eslint__eslintrc": "^2.1.2",
     "@types/eslint__js": "^8.42.3",
-    "@typescript-eslint/parser": "8.12.1",
+    "@typescript-eslint/parser": "8.12.2",
     "eslint-config-flat-gitignore": "0.3.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-flat-config-utils": "0.4.0",
@@ -97,7 +97,7 @@
     "eslint-plugin-react": "7.37.2",
     "eslint-plugin-tailwindcss": "3.17.5",
     "globals": "15.11.0",
-    "typescript-eslint": "8.12.1"
+    "typescript-eslint": "8.12.2"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "28.0.1",
