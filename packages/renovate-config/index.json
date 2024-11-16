@@ -12,6 +12,10 @@
   {
    "matchPackagePatterns": ["contentlayer"],
    "groupName": "contentlayer"
+  },
+  {
+   "matchPackageNames": ["@udecode"],
+   "groupName": "@udecode/plate"
   }
  ]
 }
