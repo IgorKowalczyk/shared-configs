@@ -45,7 +45,7 @@
     "styleguide"
   ],
   "dependencies": {
-    "@rollup/plugin-commonjs": "28.0.1",
-    "@rollup/plugin-typescript": "12.1.1"
+    "@rollup/plugin-commonjs": "28.0.2",
+    "@rollup/plugin-typescript": "12.1.2"
   }
 }
