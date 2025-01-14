@@ -21,6 +21,9 @@ importers:
       '@igorkowalczyk/prettier-config':
         specifier: workspace:*
         version: link:packages/prettier-config
+      '@types/node':
+        specifier: 22.10.6
+        version: 22.10.6
       eslint:
         specifier: 9.18.0
         version: 9.18.0(jiti@1.21.6)
