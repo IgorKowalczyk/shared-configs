@@ -51,9 +51,13 @@ export default (await composer(mergedReactConfigs, {
 })
  .renamePlugins({
   "jsx-a11y": "react-a11y",
+  "@eslint-react": "react",
  })
  .override("jsx-a11y/recommended", {
   name: "@igorkowalczyk/eslint-config/react/a11y",
+ })
+ .override("@eslint-react/recommended", {
+  name: "@igorkowalczyk/eslint-config/react/recommended",
  })
  .overrideRules({
   "@eslint-react/no-unstable-default-props": "off",
