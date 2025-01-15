@@ -25,7 +25,7 @@ const mergedReactConfigs = mergeConfigs(
  },
  {
   plugins: {
-   react: eslintReactOld as unknown as Plugin,
+   react: eslintReactOld,
   },
   rules: {
    "react/jsx-no-undef": 2,
@@ -49,16 +49,6 @@ export default (await composer(mergedReactConfigs, {
   },
  },
 })
- .renamePlugins({
-  "jsx-a11y": "react-a11y",
-  "@eslint-react": "react",
- })
- .override("jsx-a11y/recommended", {
-  name: "@igorkowalczyk/eslint-config/react/a11y",
- })
- .override("@eslint-react/recommended", {
-  name: "@igorkowalczyk/eslint-config/react/recommended",
- })
  .overrideRules({
   "@eslint-react/no-unstable-default-props": "off",
   "@eslint-react/dom/no-dangerously-set-innerhtml": "off",
@@ -67,4 +57,14 @@ export default (await composer(mergedReactConfigs, {
   "jsx-a11y/click-events-have-key-events": "off",
   "jsx-a11y/no-noninteractive-element-interactions": "off",
   "jsx-a11y/no-static-element-interactions": "off",
+ })
+ .override("jsx-a11y/recommended", {
+  name: "@igorkowalczyk/eslint-config/react/a11y",
+ })
+ .override("@eslint-react/recommended", {
+  name: "@igorkowalczyk/eslint-config/react/recommended",
+ })
+ .renamePlugins({
+  "jsx-a11y": "react-a11y",
+  // "@eslint-react": "react",
  })) satisfies Linter.Config[];

@@ -20,10 +20,10 @@ const mergedConfigs = mergeConfigs(
 );
 
 export default (await composer(mergedConfigs)
- .renamePlugins({
-  "@next/next": "next",
- })
  .overrideRules({
   "@next/next/no-html-link-for-pages": "off",
   "@next/next/no-img-element": "error",
+ })
+ .renamePlugins({
+  "@next/next": "next",
  })) satisfies Linter.Config[];

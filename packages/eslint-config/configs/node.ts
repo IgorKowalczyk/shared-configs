@@ -14,12 +14,12 @@ export default (await composer({
   sourceType: "module",
  },
 })
- .renamePlugins({
-  n: "node",
- })
  .overrideRules({
   "n/no-unsupported-features/node-builtins": "off",
   "n/no-missing-import": "off",
   "n/no-extraneous-import": "off",
   "n/no-unpublished-import": "off",
+ })
+ .renamePlugins({
+  n: "node",
  })) satisfies Linter.Config[];
