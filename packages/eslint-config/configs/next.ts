@@ -4,7 +4,10 @@ import type { Linter } from "eslint";
 import { composer, mergeConfigs } from "eslint-flat-config-utils";
 import globals from "globals";
 
-const compat = new FlatCompat();
+const compat = new FlatCompat({
+ baseDirectory: import.meta.dirname,
+});
+
 const mergedConfigs = mergeConfigs(
  {
   name: "@igorkowalczyk/eslint-config/next",
@@ -16,7 +19,7 @@ const mergedConfigs = mergeConfigs(
    },
   },
  },
- ...fixupConfigRules(compat.extends("plugin:@next/next/core-web-vitals"))
+ ...fixupConfigRules(compat.extends("plugin:@next/next/core-web-vitals", "plugin:@next/next/recommended"))
 );
 
 export default (await composer(mergedConfigs)
