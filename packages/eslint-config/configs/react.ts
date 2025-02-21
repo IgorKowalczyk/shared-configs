@@ -1,7 +1,6 @@
 import eslintReact from "@eslint-react/eslint-plugin";
 import type { Linter } from "eslint";
 import { composer, mergeConfigs } from "eslint-flat-config-utils";
-/* @ts-expect-error-next-line Waiting for types to be updated */
 import jsxa11y from "eslint-plugin-jsx-a11y";
 import eslintReactOld from "eslint-plugin-react";
 import globals from "globals";
