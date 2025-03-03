@@ -91,8 +91,8 @@ importers:
         specifier: 6.10.2
         version: 6.10.2(eslint@9.20.1(jiti@1.21.6))
       eslint-plugin-n:
-        specifier: 17.15.1
-        version: 17.15.1(eslint@9.20.1(jiti@1.21.6))
+        specifier: 17.16.1
+        version: 17.16.1(eslint@9.20.1(jiti@1.21.6))(typescript@5.5.4)
       eslint-plugin-prettier:
         specifier: 5.2.3
         version: 5.2.3(@types/eslint@9.6.1)(eslint-config-prettier@10.0.1(eslint@9.20.1(jiti@1.21.6)))(eslint@9.20.1(jiti@1.21.6))(prettier@3.5.2)
@@ -1152,8 +1152,8 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9
 
-  eslint-plugin-n@17.15.1:
-    resolution: {integrity: sha512-KFw7x02hZZkBdbZEFQduRGH4VkIH4MW97ClsbAM4Y4E6KguBJWGfWG1P4HEIpZk2bkoWf0bojpnjNAhYQP8beA==}
+  eslint-plugin-n@17.16.1:
+    resolution: {integrity: sha512-/7FVAwjUrix9P5lycnsYRIQRwFo/DZROD+ZXWLpE+/EZWLyuLvyFaRdAPYJSz+nlAdZIZp+LAzlBerQSVYUNFg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.23.0'
@@ -3484,9 +3484,10 @@ snapshots:
       safe-regex-test: 1.0.3
       string.prototype.includes: 2.0.1
 
-  eslint-plugin-n@17.15.1(eslint@9.20.1(jiti@1.21.6)):
+  eslint-plugin-n@17.16.1(eslint@9.20.1(jiti@1.21.6))(typescript@5.5.4):
     dependencies:
       '@eslint-community/eslint-utils': 4.4.1(eslint@9.20.1(jiti@1.21.6))
+      '@typescript-eslint/utils': 8.25.0(eslint@9.20.1(jiti@1.21.6))(typescript@5.5.4)
       enhanced-resolve: 5.17.1
       eslint: 9.20.1(jiti@1.21.6)
       eslint-plugin-es-x: 7.8.0(eslint@9.20.1(jiti@1.21.6))
@@ -3495,6 +3496,10 @@ snapshots:
       ignore: 5.3.2
       minimatch: 9.0.5
       semver: 7.6.3
+      ts-declaration-location: 1.0.5(typescript@5.5.4)
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
 
   eslint-plugin-prettier@5.2.3(@types/eslint@9.6.1)(eslint-config-prettier@10.0.1(eslint@9.20.1(jiti@1.21.6)))(eslint@9.20.1(jiti@1.21.6))(prettier@3.5.2):
     dependencies:
