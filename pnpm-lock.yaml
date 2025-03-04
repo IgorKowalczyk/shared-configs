@@ -60,6 +60,9 @@ importers:
       '@types/eslint-plugin-tailwindcss':
         specifier: 3.17.0
         version: 3.17.0
+      '@types/eslint__eslintrc':
+        specifier: 3.3.0
+        version: 3.3.0
       '@typescript-eslint/parser':
         specifier: 8.26.0
         version: 8.26.0(eslint@9.21.0(jiti@1.21.7))(typescript@5.8.2)
@@ -596,6 +599,10 @@ packages:
 
   '@types/eslint@9.6.1':
     resolution: {integrity: sha512-FXx2pKgId/WyYo2jXw63kk7/+TY7u7AziEJxJAnSFzHlqTAS3Ync6SvgYAN/k4/PQpnnVuzoMuVnByKK2qp0ag==}
+
+  '@types/eslint__eslintrc@3.3.0':
+    resolution: {integrity: sha512-u9C5PHo8zhLBTEpWAV1YsP3ijj3GjM+4r2aGLbkT+vqtBubwgSI8KiRHXtC2QcxDGR0qM3Qapg7OtTB58JmoYQ==}
+    deprecated: This is a stub types definition. @eslint/eslintrc provides its own type definitions, so you do not need this installed.
 
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
@@ -2539,6 +2546,12 @@ snapshots:
     dependencies:
       '@types/estree': 1.0.6
       '@types/json-schema': 7.0.15
+
+  '@types/eslint__eslintrc@3.3.0':
+    dependencies:
+      '@eslint/eslintrc': 3.3.0
+    transitivePeerDependencies:
+      - supports-color
 
   '@types/estree@1.0.6': {}
 

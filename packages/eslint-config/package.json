@@ -80,6 +80,7 @@
     "@stylistic/eslint-plugin": "4.2.0",
     "@types/eslint-plugin-jsx-a11y": "6.10.0",
     "@types/eslint-plugin-tailwindcss": "3.17.0",
+    "@types/eslint__eslintrc": "3.3.0",
     "@typescript-eslint/parser": "8.26.0",
     "eslint-config-flat-gitignore": "2.1.0",
     "eslint-config-prettier": "10.0.2",
