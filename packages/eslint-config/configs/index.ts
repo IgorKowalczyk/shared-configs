@@ -5,7 +5,6 @@ import nextConfig from "./next";
 import nodeConfig from "./node";
 import prettierConfig from "./prettier";
 import reactConfig from "./react";
-import tailwindConfig from "./tailwindcss";
 import typescriptConfig from "./typescript";
 
 const configs: Record<string, Linter.Config[]> = {
@@ -15,7 +14,6 @@ const configs: Record<string, Linter.Config[]> = {
  next: nextConfig,
  react: reactConfig,
  typescript: typescriptConfig,
- tailwindcss: tailwindConfig,
  prettier: prettierConfig,
 };
 
