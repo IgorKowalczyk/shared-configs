@@ -4,10 +4,10 @@ import { composer, mergeConfigs } from "eslint-flat-config-utils";
 import jsxa11y from "eslint-plugin-jsx-a11y";
 import globals from "globals";
 
-export default (await composer({
+const mergedReactConfig = mergeConfigs({
   name: "@igorkowalczyk/eslint-config/react/base",
   files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
-  ...(eslintReact.configs.["recommended-typescript"] as unknown as Linter.Config[]),
+  ...(eslintReact.configs["recommended-typescript"] as unknown as Linter.Config[]),
   languageOptions: {
    globals: {
     ...globals.serviceworker,
@@ -31,7 +31,9 @@ export default (await composer({
    ...globals.browser,
   },
  },
-})
+});
+
+export default (await composer(mergedReactConfig)
  .overrideRules({
   "@eslint-react/no-unstable-default-props": "off",
   "@eslint-react/dom/no-dangerously-set-innerhtml": "off",
