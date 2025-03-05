@@ -5,6 +5,11 @@ import nodePluginRecommendedConfig from "eslint-plugin-n";
 export default (await composer({
  ...nodePluginRecommendedConfig.configs["flat/recommended-script"],
  name: "@igorkowalczyk/eslint-config/node",
+ languageOptions: {
+  parserOptions: {
+   sourceType: "module",
+  },
+ },
 })
  .overrideRules({
   "n/no-unsupported-features/node-builtins": "off",
