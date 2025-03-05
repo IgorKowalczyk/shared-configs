@@ -10,7 +10,6 @@ const defaultConfig = {
   exports: "default",
   dir: "dist",
   preserveModules: true,
-  preserveModulesRoot: "*",
  },
  treeshake: {
   annotations: true,
