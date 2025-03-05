@@ -9,42 +9,9 @@
   "bugs": "https://github.com/igorkowalczyk/shared-configs/issues",
   "homepage": "https://github.com/igorkowalczyk/shared-configs/tree/main/packages/eslint-config#readme",
   "type": "module",
-  "exports": {
-    ".": {
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.cjs"
-    },
-    "./base": {
-      "import": "./dist/esm/base.js",
-      "require": "./dist/cjs/base.cjs"
-    },
-    "./astro": {
-      "import": "./dist/esm/astro.js",
-      "require": "./dist/cjs/astro.cjs"
-    },
-    "./prettier": {
-      "import": "./dist/esm/prettier.js",
-      "require": "./dist/cjs/prettier.cjs"
-    },
-    "./next": {
-      "import": "./dist/esm/next.js",
-      "require": "./dist/cjs/next.cjs"
-    },
-    "./node": {
-      "import": "./dist/esm/node.js",
-      "require": "./dist/cjs/node.cjs"
-    },
-    "./react": {
-      "import": "./dist/esm/react.js",
-      "require": "./dist/cjs/react.cjs"
-    },
-    "./typescript": {
-      "import": "./dist/esm/typescript.js",
-      "require": "./dist/cjs/typescript.cjs"
-    }
-  },
   "scripts": {
-    "build": "rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "build": "pnpm run clean && rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "clean": "rimraf dist",
     "publish-packages": "pnpm publish --access public --no-git-checks --provenance",
     "publish-packages:next": "pnpm publish --access public --no-git-checks --provenance --tag next",
     "test:publish-packages": "pnpm publish --access public --no-git-checks --provenance --dry-run",
@@ -52,13 +19,57 @@
     "format:check": "prettier . --check --ignore-unknown",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "config-inspector": "pnpm run build && pnpx @eslint/config-inspector@latest build --files=false --config=./example.js",
+    "config-inspector": "pnpm run build && pnpx @eslint/config-inspector@latest build --files=false --config=./example.ts",
     "config-inspector:serve": "pnpm run config-inspector && pnpx serve .eslint-config-inspector",
-    "config-inspector:dev": "pnpm run build && pnpx @eslint/config-inspector@latest --config=./example.js"
+    "config-inspector:dev": "pnpm run build && pnpx @eslint/config-inspector@latest --config=./example.ts"
+  },
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./base": {
+      "import": "./dist/configs/base.js",
+      "types": "./dist/configs/base.d.ts"
+    },
+    "./astro": {
+      "import": "./dist/configs/astro.js",
+      "types": "./dist/configs/astro.d.ts"
+    },
+    "./prettier": {
+      "import": "./dist/configs/prettier.js",
+      "types": "./dist/configs/prettier.d.ts"
+    },
+    "./next": {
+      "import": "./dist/configs/next.js",
+      "types": "./dist/configs/next.d.ts"
+    },
+    "./node": {
+      "import": "./dist/configs/node.js",
+      "types": "./dist/configs/node.d.ts"
+    },
+    "./react": {
+      "import": "./dist/configs/react.js",
+      "types": "./dist/configs/react.d.ts"
+    },
+    "./typescript": {
+      "import": "./dist/configs/typescript.js",
+      "types": "./dist/configs/typescript.d.ts"
+    }
   },
   "publishConfig": {
     "access": "public",
     "provenance": true
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/index.d.ts"
+      ]
+    }
   },
   "files": [
     "dist",
@@ -89,7 +100,8 @@
     "eslint-plugin-prettier": "5.2.3",
     "eslint-plugin-tailwindcss": "3.18.0",
     "globals": "16.0.0",
-    "typescript-eslint": "8.26.0"
+    "typescript-eslint": "8.26.0",
+    "unbuild": "3.5.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "28.0.2",
@@ -100,6 +112,7 @@
     "@types/eslint__eslintrc": "2.1.2",
     "@types/node": "22.13.9",
     "@types/rollup-plugin-auto-external": "2.0.5",
+    "rimraf": "6.0.1",
     "rollup": "4.34.9",
     "rollup-plugin-auto-external": "2.0.0"
   },

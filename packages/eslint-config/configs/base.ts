@@ -5,6 +5,20 @@ import gitignore from "eslint-config-flat-gitignore";
 import importPluginX from "eslint-plugin-import-x";
 import globals from "globals";
 
+/**
+ * ESLint configuration for base JavaScript. Provides a base configuration for all JavaScript projects. If you are using a framework or library, you should use the appropriate configuration, such as `react`, `node`, or `astro`.
+ *
+ * @example
+ * ```js
+ * //
+ *
+ * import eslintConfig from "@igorkowalczyk/eslint-config";
+ *
+ * export default [
+ *  ...eslintConfig.base, // <- Base JavaScript configuration
+ * ];
+ * ```
+ */
 export default [
  gitignore({
   name: "@igorkowalczyk/eslint-config/gitignore",

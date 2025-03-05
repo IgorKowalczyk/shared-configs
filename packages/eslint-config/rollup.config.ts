@@ -1,15 +1,16 @@
-import { readdirSync } from "node:fs";
-import { basename } from "node:path";
+import { globSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import rollupPluginCommonjs from "@rollup/plugin-commonjs";
 import rollupPluginNodeResolve from "@rollup/plugin-node-resolve";
 import rollupPluginTypescript from "@rollup/plugin-typescript";
 import { RollupOptions } from "rollup";
 import rollupPluginAutoExternal from "rollup-plugin-auto-external";
 
-const configDir = "configs/";
-const files = readdirSync(configDir);
+const configFiles = globSync("configs/**/*.ts");
+const files = Object.fromEntries(configFiles.map((file) => [path.relative("configs", file.slice(0, file.length - path.extname(file).length)), fileURLToPath(new URL(file, import.meta.url))]));
 
-const defaultConfig: Partial<RollupOptions> = {
+const defaultConfig = {
  output: {
   sourcemap: false,
   exports: "default",
@@ -27,32 +28,45 @@ const defaultConfig: Partial<RollupOptions> = {
   rollupPluginCommonjs(),
   rollupPluginTypescript({
    tsconfig: "tsconfig.json",
+   include: ["configs/**/*.ts", "index.ts"],
+   declaration: true,
+   declarationDir: "dist/types",
+   outDir: "dist",
   }),
  ],
 
  // Due to the way the eslint-plugin-prettier/recommended config is structured, it needs to be included in the external array
  external: ["eslint-plugin-prettier/recommended"],
-};
+} satisfies Partial<RollupOptions>;
 
-function getConfig(filename: string): RollupOptions {
- const name = basename(filename, ".ts");
-
- return {
+const config = [
+ {
   ...defaultConfig,
-  input: `${configDir}${filename}`,
   output: [
    {
     ...defaultConfig.output,
-    entryFileNames: `esm/${name}.js`,
+    entryFileNames: "configs/[name].js",
     format: "esm",
    },
+
+   // Uncomment the following block if you need CommonJS output as well
    // {
    //  ...defaultConfig.output,
-   //  entryFileNames: `cjs/${name}.cjs`,
+   //  entryFileNames: "configs/[name].cjs",
    //  format: "cjs",
    // },
   ],
- };
-}
+  input: files,
+ },
+ {
+  ...defaultConfig,
+  output: {
+   ...defaultConfig.output,
+   entryFileNames: "index.js",
+   format: "esm",
+  },
+  input: "index.ts",
+ },
+];
 
-export default files.map(getConfig);
+export default config;

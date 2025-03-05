@@ -22,6 +22,22 @@ const mergedConfigs = mergeConfigs(
  ...fixupConfigRules(compat.extends("plugin:@next/next/core-web-vitals", "plugin:@next/next/recommended"))
 );
 
+/**
+ * ESLint configuration for Next.js - provides a ESLint configuration for Next.js projects, should be used with the react configuration.
+ * @example
+ * ```js
+ * //
+ *
+ * import eslintConfig from "@igorkowalczyk/eslint-config";
+ *
+ * export default [
+ *  ...eslintConfig.base,
+ *  ...eslintConfig.node,
+ * ...eslintConfig.react,
+ * ...eslintConfig.next, // <- Next.js configuration
+ * ];
+ * ```
+ */
 export default (await composer(mergedConfigs)
  .overrideRules({
   "@next/next/no-html-link-for-pages": "off",

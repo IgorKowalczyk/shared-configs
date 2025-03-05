@@ -37,6 +37,22 @@ const mergedReactConfig = [
  },
 ];
 
+/**
+ * ESLint configuration for React.
+ *
+ * @example
+ * ```js
+ * //
+ *
+ * import eslintConfig from "@igorkowalczyk/eslint-config";
+ *
+ * export default [
+ *  ...eslintConfig.base,
+ *  ...eslintConfig.react, // <- React configuration
+ *  ...eslintConfig.typescript,
+ * ];
+ * ```
+ */
 export default (await composer(mergedReactConfig)
  .overrideRules({
   "@eslint-react/no-unstable-default-props": "off",

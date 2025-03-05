@@ -5,7 +5,9 @@
   "lint:fix": {},
   "format": {},
   "format:check": {},
-  "build": {},
+  "build": {
+   "cache": false
+  },
   "publish-packages": {
    "dependsOn": ["build"]
   },

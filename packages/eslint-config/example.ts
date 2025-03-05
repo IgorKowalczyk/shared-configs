@@ -1,4 +1,4 @@
-import eslintConfig from "./dist/esm/index.js";
+import eslintConfig from "./index";
 
 export default [
  // Prettier
