@@ -1,10 +1,11 @@
 import eslintReact from "@eslint-react/eslint-plugin";
 import type { Linter } from "eslint";
-import { composer, mergeConfigs } from "eslint-flat-config-utils";
+import { composer } from "eslint-flat-config-utils";
 import jsxa11y from "eslint-plugin-jsx-a11y";
 import globals from "globals";
 
-const mergedReactConfig = mergeConfigs({
+const mergedReactConfig = [
+ {
   name: "@igorkowalczyk/eslint-config/react/base",
   files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
   ...(eslintReact.configs["recommended-typescript"] as unknown as Linter.Config[]),
@@ -19,19 +20,22 @@ const mergedReactConfig = mergeConfigs({
     },
    },
   },
- }, {
- plugins: {
-  "jsx-a11y": jsxa11y,
  },
- ...jsxa11y.flatConfigs.recommended,
- languageOptions: {
-  ...jsxa11y.flatConfigs.recommended.languageOptions,
-  globals: {
-   ...globals.serviceworker,
-   ...globals.browser,
+ {
+  name: "@igorkowalczyk/eslint-config/react/a11y",
+  plugins: {
+   "jsx-a11y": jsxa11y,
+  },
+  ...jsxa11y.flatConfigs.recommended,
+  languageOptions: {
+   ...jsxa11y.flatConfigs.recommended.languageOptions,
+   globals: {
+    ...globals.serviceworker,
+    ...globals.browser,
+   },
   },
  },
-});
+];
 
 export default (await composer(mergedReactConfig)
  .overrideRules({
@@ -46,10 +50,10 @@ export default (await composer(mergedReactConfig)
  .override("jsx-a11y/recommended", {
   name: "@igorkowalczyk/eslint-config/react/a11y",
  })
- .override("@eslint-react/recommended", {
+ .override("@eslint-react/recommended-typescript", {
   name: "@igorkowalczyk/eslint-config/react/recommended",
  })
  .renamePlugins({
   "jsx-a11y": "react-a11y",
   // "@eslint-react": "react",
- })) satisfies Linter.Config[];
+ })) as Linter.Config[];

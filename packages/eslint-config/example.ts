@@ -7,7 +7,6 @@ export default [
  ...eslintConfig.node,
  ...eslintConfig.next,
  ...eslintConfig.react,
- ...eslintConfig.tailwindcss,
  ...eslintConfig.typescript,
  ...eslintConfig.prettier,
 ];

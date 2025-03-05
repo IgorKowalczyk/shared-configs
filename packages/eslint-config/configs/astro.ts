@@ -7,4 +7,4 @@ const mergedAstroConfig = mergeConfigs(...eslintPluginAstro.configs.recommended)
 export default (await composer(mergedAstroConfig) //
  .override("astro/recommended", {
   name: "@igorkowalczyk/eslint-config/astro",
- })) satisfies Linter.Config[];
+ })) as Linter.Config[];

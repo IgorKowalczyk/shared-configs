@@ -1,18 +1,10 @@
 import type { Linter } from "eslint";
 import { composer } from "eslint-flat-config-utils";
 import nodePluginRecommendedConfig from "eslint-plugin-n";
-import globals from "globals";
 
 export default (await composer({
- ...nodePluginRecommendedConfig.configs["flat/recommended"],
+ ...nodePluginRecommendedConfig.configs["flat/recommended-script"],
  name: "@igorkowalczyk/eslint-config/node",
- languageOptions: {
-  globals: {
-   ...globals.node,
-   ...globals.nodeBuiltin,
-  },
-  sourceType: "module",
- },
 })
  .overrideRules({
   "n/no-unsupported-features/node-builtins": "off",
@@ -22,4 +14,4 @@ export default (await composer({
  })
  .renamePlugins({
   n: "node",
- })) satisfies Linter.Config[];
+ })) as Linter.Config[];
