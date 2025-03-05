@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/eslint-config",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "☔ My sharable ESLint config",
   "author": "Igor Kowalczyk",
   "license": "MIT",
@@ -98,7 +98,6 @@
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-n": "17.16.2",
     "eslint-plugin-prettier": "5.2.3",
-    "eslint-plugin-tailwindcss": "3.18.0",
     "globals": "16.0.0",
     "typescript-eslint": "8.26.0",
     "unbuild": "3.5.0"
@@ -108,7 +107,6 @@
     "@rollup/plugin-node-resolve": "16.0.0",
     "@rollup/plugin-typescript": "12.1.2",
     "@types/eslint-plugin-jsx-a11y": "6.10.0",
-    "@types/eslint-plugin-tailwindcss": "3.17.0",
     "@types/eslint__eslintrc": "2.1.2",
     "@types/node": "22.13.9",
     "@types/rollup-plugin-auto-external": "2.0.5",
