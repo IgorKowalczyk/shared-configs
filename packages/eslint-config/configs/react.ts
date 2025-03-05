@@ -2,14 +2,12 @@ import eslintReact from "@eslint-react/eslint-plugin";
 import type { Linter } from "eslint";
 import { composer, mergeConfigs } from "eslint-flat-config-utils";
 import jsxa11y from "eslint-plugin-jsx-a11y";
-import eslintReactOld from "eslint-plugin-react";
 import globals from "globals";
 
-const mergedReactConfigs = mergeConfigs(
- {
+export default (await composer({
   name: "@igorkowalczyk/eslint-config/react/base",
   files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
-  ...(eslintReact.configs.recommended as unknown as Linter.Config[]),
+  ...(eslintReact.configs.["recommended-typescript"] as unknown as Linter.Config[]),
   languageOptions: {
    globals: {
     ...globals.serviceworker,
@@ -21,21 +19,7 @@ const mergedReactConfigs = mergeConfigs(
     },
    },
   },
- },
- {
-  plugins: {
-   react: eslintReactOld,
-  },
-  rules: {
-   "react/jsx-no-undef": 2,
-   "react/jsx-uses-react": 2,
-   "react/jsx-uses-vars": 2,
-   "react/no-find-dom-node": 2,
-  },
- }
-);
-
-export default (await composer(mergedReactConfigs, {
+ }, {
  plugins: {
   "jsx-a11y": jsxa11y,
  },
