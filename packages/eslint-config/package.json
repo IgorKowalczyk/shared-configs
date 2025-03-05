@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/eslint-config",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "☔ My sharable ESLint config",
   "author": "Igor Kowalczyk",
   "license": "MIT",
@@ -23,9 +23,6 @@
     "config-inspector:serve": "pnpm run config-inspector && pnpx serve .eslint-config-inspector",
     "config-inspector:dev": "pnpm run build && pnpx @eslint/config-inspector@latest --config=./example.ts"
   },
-  "types": "./dist/types/index.d.ts",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
   "exports": {
     ".": {
       "import": "./dist/index.js",
