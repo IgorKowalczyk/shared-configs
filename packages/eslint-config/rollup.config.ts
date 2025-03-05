@@ -60,6 +60,16 @@ const config = [
  },
  {
   ...defaultConfig,
+  external: [
+   // prettier
+   "./configs/astro",
+   "./configs/base",
+   "./configs/next",
+   "./configs/node",
+   "./configs/prettier",
+   "./configs/react",
+   "./configs/typescript",
+  ],
   output: {
    ...defaultConfig.output,
    entryFileNames: "index.js",
