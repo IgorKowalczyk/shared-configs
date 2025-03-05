@@ -26,35 +26,35 @@
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "types": "./dist/types/index.d.ts"
+      "types": "./dist/index.d.ts"
     },
     "./base": {
       "import": "./dist/configs/base.js",
-      "types": "./dist/types/configs/base.d.ts"
+      "types": "./dist/configs/base.d.ts"
     },
     "./astro": {
       "import": "./dist/configs/astro.js",
-      "types": "./dist/types/configs/astro.d.ts"
+      "types": "./dist/configs/astro.d.ts"
     },
     "./prettier": {
       "import": "./dist/configs/prettier.js",
-      "types": "./dist/types/configs/prettier.d.ts"
+      "types": "./dist/configs/prettier.d.ts"
     },
     "./next": {
       "import": "./dist/configs/next.js",
-      "types": "./dist/types/configs/next.d.ts"
+      "types": "./dist/configs/next.d.ts"
     },
     "./node": {
       "import": "./dist/configs/node.js",
-      "types": "./dist/types/configs/node.d.ts"
+      "types": "./dist/configs/node.d.ts"
     },
     "./react": {
       "import": "./dist/configs/react.js",
-      "types": "./dist/types/configs/react.d.ts"
+      "types": "./dist/configs/react.d.ts"
     },
     "./typescript": {
       "import": "./dist/configs/typescript.js",
-      "types": "./dist/types/configs/typescript.d.ts"
+      "types": "./dist/configs/typescript.d.ts"
     }
   },
   "publishConfig": {

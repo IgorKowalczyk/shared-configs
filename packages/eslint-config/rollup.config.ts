@@ -25,7 +25,7 @@ const defaultConfig = {
    tsconfig: "tsconfig.json",
    include: ["configs/**/*.ts", "index.ts"],
    declaration: true,
-   declarationDir: "dist/types",
+   declarationDir: "dist",
    outDir: "dist",
   }),
  ],
