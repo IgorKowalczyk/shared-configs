@@ -2,7 +2,7 @@ import type { Linter } from "eslint";
 import { mergeConfigs, composer } from "eslint-flat-config-utils";
 import eslintPluginAstro from "eslint-plugin-astro";
 
-const mergedAstroConfig = mergeConfigs(...eslintPluginAstro.configs.recommended);
+const mergedAstroConfig = mergeConfigs(...eslintPluginAstro.configs["flat/recommended"]);
 
 /**
  * ESLint configuration for Astro. This configuration extends the base configuration and adds Astro-specific rules. Should be used in conjunction with the other configurations in this package.

@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/sharable-configs",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "description": "☔ My sharable ESLint and Prettier configs",
   "author": "Igor Kowalczyk",
   "license": "MIT",
