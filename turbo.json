@@ -6,7 +6,8 @@
   "format": {},
   "format:check": {},
   "build": {
-   "cache": false
+   "dependsOn": ["^build"],
+   "outputs": ["dist/**"]
   },
   "publish-packages": {
    "dependsOn": ["build"]
