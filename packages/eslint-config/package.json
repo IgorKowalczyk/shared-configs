@@ -100,7 +100,7 @@
     "unbuild": "3.5.0"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "28.0.2",
+    "@rollup/plugin-commonjs": "28.0.3",
     "@rollup/plugin-node-resolve": "16.0.0",
     "@rollup/plugin-typescript": "12.1.2",
     "@types/eslint-plugin-jsx-a11y": "6.10.0",
