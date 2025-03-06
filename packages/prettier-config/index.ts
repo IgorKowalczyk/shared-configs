@@ -1,6 +1,6 @@
 import type { Options } from "prettier";
 
-export default {
+const config: Options = {
  arrowParens: "always",
  bracketSpacing: true,
  embeddedLanguageFormatting: "auto",
@@ -16,3 +16,5 @@ export default {
  trailingComma: "es5",
  useTabs: false,
 } satisfies Options;
+
+export default config;
