@@ -211,7 +211,7 @@ export default [
 
 ### ⚙️ Rules overview
 
-You can find the full list of rules in the [ESLint config inspector](https://shared-configs.vercel.app/).
+You can find the full list of rules in the [ESLint config inspector](https://eslint.igorkowalczyk.dev/).
 
 ---
 
