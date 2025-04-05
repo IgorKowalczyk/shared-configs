@@ -108,7 +108,7 @@
     "@types/node": "22.13.16",
     "@types/rollup-plugin-auto-external": "2.0.5",
     "rimraf": "6.0.1",
-    "rollup": "4.38.0",
+    "rollup": "4.39.0",
     "rollup-plugin-auto-external": "2.0.0"
   },
   "peerDependencies": {
