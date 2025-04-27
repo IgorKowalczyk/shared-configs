@@ -3,9 +3,10 @@ name: Publish packages
 on:
  release:
   types: [created]
+ workflow_dispatch:
 
 jobs:
- publish:
+ setup:
   runs-on: ubuntu-latest
   permissions:
    contents: read
@@ -34,36 +35,56 @@ jobs:
       always-auth: true
       cache: "pnpm"
 
+ install:
+  runs-on: ubuntu-latest
+  needs: setup
+  steps:
+   # Checkout the repository
+   - name: 🧱 Checkout repository
+     uses: actions/checkout@v4
+
    # Install dependencies
    - name: 🚀 Install dependencies
      run: pnpm install
 
+ build:
+  runs-on: ubuntu-latest
+  needs: install
+  steps:
+   # Checkout the repository
+   - name: 🧱 Checkout repository
+     uses: actions/checkout@v4
+
    # Build the project
    - name: 🛠️ Build packages
      run: pnpm build
+
+ publish-github:
+  runs-on: ubuntu-latest
+  needs: build
+  steps:
+   # Checkout the repository
+   - name: 🧱 Checkout repository
+     uses: actions/checkout@v4
 
    # Publish to GitHub Package Registry
    - name: 📦 Publish to GitHub Package Registry
      env:
       NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
      run: |
-      npm config set registry https://npm.pkg.github.com
-      npm set //npm.pkg.github.com/:_authToken ${{ secrets.GH_TOKEN }}
-      if [ "${{ github.event.release.prerelease }}" = "false" ]; then
-        pnpm publish --filter "./packages/*" --access public --no-git-checks --provenance
-      else
-        pnpm publish --filter "./packages/*" --access public --no-git-checks --provenance --tag next
-      fi
+      echo "Simulating GitHub Package Registry publish..."
+
+ publish-npm:
+  runs-on: ubuntu-latest
+  needs: build
+  steps:
+   # Checkout the repository
+   - name: 🧱 Checkout repository
+     uses: actions/checkout@v4
 
    # Publish to NPM Registry
    - name: 📦 Publish to NPM Registry
      env:
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
      run: |
-      npm config set registry https://registry.npmjs.org
-      npm set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-      if [ "${{ github.event.release.prerelease }}" = "false" ]; then
-        pnpm publish --filter "./packages/*" --access public --no-git-checks --provenance
-      else
-        pnpm publish --filter "./packages/*" --access public --no-git-checks --provenance --tag next
-      fi
+      echo "Simulating NPM Registry publish..."
