@@ -7,7 +7,7 @@ import prettierConfig from "./configs/prettier";
 import reactConfig from "./configs/react";
 import typescriptConfig from "./configs/typescript";
 
-const configs: Record<string, Linter.Config[]> = {
+const configs: Record<"base" | "node" | "astro" | "next" | "react" | "typescript" | "prettier", Linter.Config[]> = {
  base: baseConfig,
  node: nodeConfig,
  astro: astroConfig,
