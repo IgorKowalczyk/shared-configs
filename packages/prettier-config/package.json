@@ -32,7 +32,7 @@
     "@rollup/plugin-commonjs": "28.0.3",
     "@rollup/plugin-typescript": "12.1.2",
     "rimraf": "6.0.1",
-    "rollup": "4.40.1"
+    "rollup": "4.40.2"
   },
   "peerDependencies": {
     "prettier": "^3"
