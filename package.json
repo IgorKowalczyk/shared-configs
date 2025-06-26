@@ -41,7 +41,7 @@
   "devDependencies": {
     "@igorkowalczyk/eslint-config": "workspace:*",
     "@igorkowalczyk/prettier-config": "workspace:*",
-    "@types/node": "22.15.32",
+    "@types/node": "22.15.33",
     "eslint": "9.29.0",
     "prettier": "3.6.1",
     "tsx": "4.20.3"
