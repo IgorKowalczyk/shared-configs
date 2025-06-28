@@ -9,7 +9,7 @@
   "resolveJsonModule": true,
   "moduleDetection": "force",
   "isolatedModules": true,
-  "incremental": true,
+  "incremental": false,
   "disableSourceOfProjectReferenceRedirect": true,
   "strict": false,
   "noUncheckedIndexedAccess": true,

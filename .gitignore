@@ -108,3 +108,6 @@ dist
 
 # Monorepo
 .turbo/
+
+# Rollup
+.rollup.*
