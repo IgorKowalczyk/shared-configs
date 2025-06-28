@@ -22,8 +22,8 @@ importers:
         specifier: workspace:*
         version: link:packages/prettier-config
       '@types/node':
-        specifier: 22.15.33
-        version: 22.15.33
+        specifier: 22.15.34
+        version: 22.15.34
       eslint:
         specifier: 9.29.0
         version: 9.29.0(jiti@2.4.2)
@@ -107,8 +107,8 @@ importers:
         specifier: 6.10.0
         version: 6.10.0
       '@types/node':
-        specifier: 22.15.33
-        version: 22.15.33
+        specifier: 22.15.34
+        version: 22.15.34
       '@types/rollup-plugin-auto-external':
         specifier: 2.0.5
         version: 2.0.5
@@ -610,8 +610,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@22.15.33':
-    resolution: {integrity: sha512-wzoocdnnpSxZ+6CjW4ADCK1jVmd1S/J3ArNWfn8FDDQtRm8dkDg7TA+mvek2wNrfCgwuZxqEOiB9B1XCJ6+dbw==}
+  '@types/node@22.15.34':
+    resolution: {integrity: sha512-8Y6E5WUupYy1Dd0II32BsWAx5MWdcnRd8L84Oys3veg1YrYtNtzgO4CFhiBg6MDSjk7Ay36HYOnU7/tuOzIzcw==}
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
@@ -2521,7 +2521,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@22.15.33':
+  '@types/node@22.15.34':
     dependencies:
       undici-types: 6.21.0
 
