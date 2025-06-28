@@ -72,4 +72,4 @@ export default (await composer(mergedReactConfig)
  .renamePlugins({
   "jsx-a11y": "react-a11y",
   // "@eslint-react": "react",
- })) as Linter.Config[];
+ })) as unknown as Linter.Config[];

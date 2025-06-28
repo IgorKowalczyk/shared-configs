@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/sharable-configs",
-  "version": "3.0.8",
+  "version": "3.1.0",
   "description": "☔ My sharable ESLint and Prettier configs",
   "author": "Igor Kowalczyk",
   "license": "MIT",
@@ -43,6 +43,7 @@
     "@igorkowalczyk/prettier-config": "workspace:*",
     "@types/node": "22.15.33",
     "eslint": "9.29.0",
+    "jiti": "2.4.2",
     "prettier": "3.6.2",
     "tsx": "4.20.3"
   },

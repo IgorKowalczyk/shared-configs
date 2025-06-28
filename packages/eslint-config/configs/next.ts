@@ -45,4 +45,4 @@ export default (await composer(mergedConfigs)
  })
  .renamePlugins({
   "@next/next": "next",
- })) as Linter.Config[];
+ })) as unknown as Linter.Config[];

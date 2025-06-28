@@ -6,7 +6,7 @@ const config: Options = {
  embeddedLanguageFormatting: "auto",
  htmlWhitespaceSensitivity: "css",
  jsxSingleQuote: false,
- printWidth: 200000,
+ printWidth: 180,
  proseWrap: "preserve",
  quoteProps: "as-needed",
  requirePragma: false,
@@ -17,4 +17,4 @@ const config: Options = {
  useTabs: false,
 } satisfies Options;
 
-export default config;
+export default config as Options;

@@ -27,4 +27,4 @@ export default (await composer({
  // prettier
  ...prettierRecommendedConfig,
  name: "@igorkowalczyk/eslint-config/prettier",
-})) as Linter.Config[];
+})) as unknown as Linter.Config[];

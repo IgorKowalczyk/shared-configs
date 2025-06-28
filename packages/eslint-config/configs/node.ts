@@ -34,4 +34,4 @@ export default (await composer({
  })
  .renamePlugins({
   n: "node",
- })) as Linter.Config[];
+ })) as unknown as Linter.Config[];
