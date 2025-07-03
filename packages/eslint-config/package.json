@@ -103,7 +103,7 @@
     "@rollup/plugin-node-resolve": "16.0.1",
     "@rollup/plugin-typescript": "12.1.4",
     "@types/eslint-plugin-jsx-a11y": "6.10.0",
-    "@types/node": "24.0.8",
+    "@types/node": "24.0.10",
     "@types/rollup-plugin-auto-external": "2.0.5",
     "rimraf": "6.0.1",
     "rollup": "4.44.1",
