@@ -43,8 +43,8 @@ importers:
         specifier: 1.52.6
         version: 1.52.6(eslint@9.30.0(jiti@2.5.1))(ts-api-utils@2.1.0(typescript@5.8.3))(typescript@5.8.3)
       '@eslint/compat':
-        specifier: 1.3.2
-        version: 1.3.2(eslint@9.30.0(jiti@2.5.1))
+        specifier: 1.4.0
+        version: 1.4.0(eslint@9.30.0(jiti@2.5.1))
       '@eslint/eslintrc':
         specifier: 3.3.1
         version: 3.3.1
@@ -363,8 +363,8 @@ packages:
     resolution: {integrity: sha512-oeAexe8FhImk3RstFvSSbVBFYRMPAVvuUscOrKBbhf9xc0/3drYpLXSPceA++2VaOk/M1mD91ceca9+V0UfNkw==}
     engines: {node: '>=18.18.0'}
 
-  '@eslint/compat@1.3.2':
-    resolution: {integrity: sha512-jRNwzTbd6p2Rw4sZ1CgWRS8YMtqG15YyZf7zvb6gY2rB2u6n+2Z+ELW0GtL0fQgyl0pr4Y/BzBfng/BdsereRA==}
+  '@eslint/compat@1.4.0':
+    resolution: {integrity: sha512-DEzm5dKeDBPm3r08Ixli/0cmxr8LkRdwxMRUIJBlSCpAwSrvFEJpVBzV+66JhDxiaqKxnRzCXhtiMiczF7Hglg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^8.40 || 9
@@ -390,6 +390,10 @@ packages:
 
   '@eslint/core@0.15.2':
     resolution: {integrity: sha512-78Md3/Rrxh83gCxoUc0EiciuOHsIITzLy53m3d9UyiW8y9Dj2D29FeETqyKA+BRK76tnTp6RXWb3pCay8Oyomg==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@eslint/core@0.16.0':
+    resolution: {integrity: sha512-nmC8/totwobIiFcGkDza3GIKfAw1+hLiYVrh3I1nIomQ8PEr5cxg34jnkmGawul/ep52wGRAcyeDCNtWKSOj4Q==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/eslintrc@3.3.1':
@@ -2449,7 +2453,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@eslint/compat@1.3.2(eslint@9.30.0(jiti@2.5.1))':
+  '@eslint/compat@1.4.0(eslint@9.30.0(jiti@2.5.1))':
+    dependencies:
+      '@eslint/core': 0.16.0
     optionalDependencies:
       eslint: 9.30.0(jiti@2.5.1)
 
@@ -2470,6 +2476,10 @@ snapshots:
       '@types/json-schema': 7.0.15
 
   '@eslint/core@0.15.2':
+    dependencies:
+      '@types/json-schema': 7.0.15
+
+  '@eslint/core@0.16.0':
     dependencies:
       '@types/json-schema': 7.0.15
 
@@ -3335,7 +3345,7 @@ snapshots:
 
   eslint-config-flat-gitignore@2.1.0(eslint@9.30.0(jiti@2.5.1)):
     dependencies:
-      '@eslint/compat': 1.3.2(eslint@9.30.0(jiti@2.5.1))
+      '@eslint/compat': 1.4.0(eslint@9.30.0(jiti@2.5.1))
       eslint: 9.30.0(jiti@2.5.1)
 
   eslint-config-prettier@10.1.8(eslint@9.30.0(jiti@2.5.1)):
