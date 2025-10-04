@@ -104,8 +104,8 @@ importers:
         specifier: 12.1.4
         version: 12.1.4(rollup@4.52.4)(tslib@2.8.1)(typescript@5.8.3)
       '@types/eslint-plugin-jsx-a11y':
-        specifier: 6.10.0
-        version: 6.10.0
+        specifier: 6.10.1
+        version: 6.10.1(jiti@2.5.1)
       '@types/node':
         specifier: 24.3.0
         version: 24.3.0
@@ -645,8 +645,8 @@ packages:
   '@tybys/wasm-util@0.9.0':
     resolution: {integrity: sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw==}
 
-  '@types/eslint-plugin-jsx-a11y@6.10.0':
-    resolution: {integrity: sha512-TGKmk2gO6DrvTVADNOGQMqn3SzqcFcJILFnXNllQA34us9uClS3/AsL/cERPz6jS9ePI3bx+1q8/d2GZsxPVYw==}
+  '@types/eslint-plugin-jsx-a11y@6.10.1':
+    resolution: {integrity: sha512-5RtuPVe0xz8BAhrkn2oww6Uw885atf962Q4fqZo48QdO3EQA7oCEDSXa6optgJ1ZMds3HD9ITK5bfm4AWuoXFQ==}
 
   '@types/eslint@9.6.1':
     resolution: {integrity: sha512-FXx2pKgId/WyYo2jXw63kk7/+TY7u7AziEJxJAnSFzHlqTAS3Ync6SvgYAN/k4/PQpnnVuzoMuVnByKK2qp0ag==}
@@ -2687,14 +2687,18 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@types/eslint-plugin-jsx-a11y@6.10.0':
+  '@types/eslint-plugin-jsx-a11y@6.10.1(jiti@2.5.1)':
     dependencies:
-      '@types/eslint': 9.6.1
+      eslint: 9.35.0(jiti@2.5.1)
+    transitivePeerDependencies:
+      - jiti
+      - supports-color
 
   '@types/eslint@9.6.1':
     dependencies:
       '@types/estree': 1.0.8
       '@types/json-schema': 7.0.15
+    optional: true
 
   '@types/estree@1.0.8': {}
 
