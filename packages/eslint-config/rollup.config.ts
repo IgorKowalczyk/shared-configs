@@ -7,9 +7,10 @@ import rollupPluginAutoExternal from "rollup-plugin-auto-external";
 const defaultConfig = {
  output: {
   sourcemap: false,
-  exports: "default",
+  exports: "auto",
   dir: "dist",
   preserveModules: true,
+  preserveModulesRoot: ".",
  },
  treeshake: {
   annotations: true,

@@ -1,8 +1,12 @@
 import type { Linter } from "eslint";
-import { mergeConfigs, composer } from "eslint-flat-config-utils";
+import { mergeConfigs, composer, defineFlatConfig } from "eslint-flat-config-utils";
 import eslintPluginAstro from "eslint-plugin-astro";
 
-const mergedAstroConfig = mergeConfigs(...eslintPluginAstro.configs["flat/recommended"]);
+const mergedAstroConfig = defineFlatConfig({
+ /* @ts-expect-error - Typing issues */
+ ...mergeConfigs(...eslintPluginAstro.configs["flat/recommended"]),
+ name: "@igorkowalczyk/eslint-config/astro",
+});
 
 /**
  * ESLint configuration for Astro. This configuration extends the base configuration and adds Astro-specific rules. Should be used in conjunction with the other configurations in this package.
@@ -21,7 +25,4 @@ const mergedAstroConfig = mergeConfigs(...eslintPluginAstro.configs["flat/recomm
  * ```
  */
 
-export default (await composer(mergedAstroConfig) //
- .override("astro/recommended", {
-  name: "@igorkowalczyk/eslint-config/astro",
- })) as unknown as Linter.Config[];
+export default (await composer(mergedAstroConfig)) as unknown as Linter.Config[];

@@ -1,41 +1,38 @@
 import eslintReact from "@eslint-react/eslint-plugin";
 import type { Linter } from "eslint";
-import { composer } from "eslint-flat-config-utils";
+import { composer, defineFlatConfig, mergeConfigs } from "eslint-flat-config-utils";
 import jsxa11y from "eslint-plugin-jsx-a11y";
 import globals from "globals";
 
-const mergedReactConfig = [
- {
-  name: "@igorkowalczyk/eslint-config/react/base",
-  files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
-  ...(eslintReact.configs["recommended-typescript"] as unknown as Linter.Config[]),
-  languageOptions: {
-   globals: {
-    ...globals.serviceworker,
-    ...globals.browser,
-   },
-   parserOptions: {
-    ecmaFeatures: {
-     jsx: true,
-    },
+const reactBaseConfig = defineFlatConfig({
+ name: "@igorkowalczyk/eslint-config/react/base",
+ files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+ ...eslintReact.configs["recommended-typescript"],
+ languageOptions: {
+  globals: {
+   ...globals.serviceworker,
+   ...globals.browser,
+  },
+  parserOptions: {
+   ecmaFeatures: {
+    jsx: true,
    },
   },
  },
- {
-  name: "@igorkowalczyk/eslint-config/react/a11y",
-  plugins: {
-   "jsx-a11y": jsxa11y,
-  },
-  ...jsxa11y.flatConfigs.recommended,
-  languageOptions: {
-   ...jsxa11y.flatConfigs.recommended.languageOptions,
-   globals: {
-    ...globals.serviceworker,
-    ...globals.browser,
-   },
+});
+
+/* @ts-expect-error - Typing issues */
+const reactA11yConfig = defineFlatConfig({
+ name: "@igorkowalczyk/eslint-config/react/a11y",
+ ...jsxa11y.flatConfigs.recommended,
+ languageOptions: {
+  ...jsxa11y.flatConfigs.recommended.languageOptions,
+  globals: {
+   ...globals.serviceworker,
+   ...globals.browser,
   },
  },
-];
+});
 
 /**
  * ESLint configuration for React.
@@ -53,7 +50,8 @@ const mergedReactConfig = [
  * ];
  * ```
  */
-export default (await composer(mergedReactConfig)
+
+export default (await composer(reactBaseConfig, reactA11yConfig) //
  .overrideRules({
   "@eslint-react/no-unstable-default-props": "off",
   "@eslint-react/dom/no-dangerously-set-innerhtml": "off",

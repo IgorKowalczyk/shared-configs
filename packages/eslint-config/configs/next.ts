@@ -19,6 +19,8 @@ const mergedConfigs = mergeConfigs(
    },
   },
  },
+
+ /* @ts-expect-error - Typing issues */
  ...fixupConfigRules(compat.extends("plugin:@next/next/core-web-vitals", "plugin:@next/next/recommended"))
 );
 

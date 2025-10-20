@@ -1,8 +1,11 @@
 import type { Linter } from "eslint";
-import { composer, mergeConfigs } from "eslint-flat-config-utils";
+import { composer, defineFlatConfig, mergeConfigs } from "eslint-flat-config-utils";
 import tseslint from "typescript-eslint";
 
-const mergedTypescriptConfig = mergeConfigs(...tseslint.config(tseslint.configs.recommended, tseslint.configs.eslintRecommended));
+const mergedTsConfig = defineFlatConfig({
+ ...mergeConfigs(...tseslint.configs.recommended),
+ name: "@igorkowalczyk/eslint-config/typescript",
+});
 
 /**
  * ESLint configuration for TypeScript. This configuration extends the base configuration and adds TypeScript-specific rules. Should be used in conjunction with the other configurations in this package.
@@ -20,10 +23,7 @@ const mergedTypescriptConfig = mergeConfigs(...tseslint.config(tseslint.configs.
  * ];
  * ```
  */
-export default (await composer(mergedTypescriptConfig)
- .override("typescript-eslint/eslint-recommended", {
-  name: "@igorkowalczyk/eslint-config/typescript",
- })
+export default (await composer(mergedTsConfig) //
  .overrideRules({
   "@typescript-eslint/no-unused-vars": [
    "error",
