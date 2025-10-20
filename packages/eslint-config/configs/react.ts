@@ -1,6 +1,6 @@
 import eslintReact from "@eslint-react/eslint-plugin";
 import type { Linter } from "eslint";
-import { composer, defineFlatConfig, mergeConfigs } from "eslint-flat-config-utils";
+import { composer, defineFlatConfig } from "eslint-flat-config-utils";
 import jsxa11y from "eslint-plugin-jsx-a11y";
 import globals from "globals";
 
