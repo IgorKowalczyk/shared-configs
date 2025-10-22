@@ -80,7 +80,7 @@
     "styleguide"
   ],
   "dependencies": {
-    "@eslint-react/eslint-plugin": "2.2.2",
+    "@eslint-react/eslint-plugin": "2.2.3",
     "@eslint/compat": "1.4.0",
     "@eslint/eslintrc": "3.3.1",
     "@eslint/js": "9.38.0",
