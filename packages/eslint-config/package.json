@@ -99,7 +99,7 @@
     "typescript-eslint": "8.46.2"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "28.0.8",
+    "@rollup/plugin-commonjs": "28.0.9",
     "@rollup/plugin-node-resolve": "16.0.3",
     "@rollup/plugin-typescript": "12.1.4",
     "@types/eslint-plugin-jsx-a11y": "6.10.1",
