@@ -3,8 +3,8 @@ import { mergeConfigs, composer, defineFlatConfig } from "eslint-flat-config-uti
 import eslintPluginAstro from "eslint-plugin-astro";
 
 const mergedAstroConfig = defineFlatConfig({
- ...mergeConfigs(...eslintPluginAstro.configs["flat/recommended"]),
- name: "@igorkowalczyk/eslint-config/astro",
+  ...mergeConfigs(...eslintPluginAstro.configs["flat/recommended"]),
+  name: "@igorkowalczyk/eslint-config/astro",
 });
 
 /**

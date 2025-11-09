@@ -3,8 +3,8 @@ import { composer, defineFlatConfig } from "eslint-flat-config-utils";
 import prettierRecommendedConfig from "eslint-plugin-prettier/recommended";
 
 const mergedPrettierConfig = defineFlatConfig({
- ...prettierRecommendedConfig,
- name: "@igorkowalczyk/eslint-config/prettier",
+  ...prettierRecommendedConfig,
+  name: "@igorkowalczyk/eslint-config/prettier",
 });
 
 /**

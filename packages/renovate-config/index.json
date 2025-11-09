@@ -1,21 +1,21 @@
 {
- "$schema": "https://docs.renovatebot.com/renovate-schema.json",
- "extends": ["config:base"],
- "dependencyDashboard": false,
- "labels": ["dependencies"],
- "reviewers": ["igorkowalczyk"],
- "prHourlyLimit": 0,
- "prConcurrentLimit": 0,
- "prFooter": "",
- "prBodyTemplate": "{{{table}}}{{{warnings}}}{{{notes}}}{{{changelogs}}}{{{controls}}}{{{footer}}}",
- "packageRules": [
-  {
-   "matchPackagePatterns": ["contentlayer"],
-   "groupName": "contentlayer"
-  },
-  {
-   "matchPackageNames": ["@udecode"],
-   "groupName": "@udecode/plate"
-  }
- ]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "dependencyDashboard": false,
+  "labels": ["dependencies"],
+  "reviewers": ["igorkowalczyk"],
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "prFooter": "",
+  "prBodyTemplate": "{{{table}}}{{{warnings}}}{{{notes}}}{{{changelogs}}}{{{controls}}}{{{footer}}}",
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["contentlayer"],
+      "groupName": "contentlayer"
+    },
+    {
+      "matchPackageNames": ["@udecode"],
+      "groupName": "@udecode/plate"
+    }
+  ]
 }

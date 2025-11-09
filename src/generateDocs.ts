@@ -4,21 +4,23 @@ import { Options } from "prettier";
 import PrettierConfig from "../packages/prettier-config/index";
 
 function generatePrettierTable(config: Options): string {
- return markdownTable([
-  ["Rule", "Style", "Documentation"],
-  ...Object.entries(config).map(([ruleName, ruleConfig]) => {
-   const description = ruleName.toString().includes("/") ? "-" : `[Documentation](https://prettier.io/docs/en/options.html#${ruleName.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase()})`;
+  return markdownTable([
+    ["Rule", "Style", "Documentation"],
+    ...Object.entries(config).map(([ruleName, ruleConfig]) => {
+      const description = ruleName.toString().includes("/")
+        ? "-"
+        : `[Documentation](https://prettier.io/docs/en/options.html#${ruleName.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase()})`;
 
-   return [`\`${ruleName}\``, `\`${ruleConfig}\``, description];
-  }),
- ]);
+      return [`\`${ruleName}\``, `\`${ruleConfig}\``, description];
+    }),
+  ]);
 }
 
 function updateDocs(readmeContent: string, startMarker: string, endMarker: string, table: string): string {
- const start = readmeContent.slice(0, readmeContent.indexOf(startMarker) + startMarker.length);
- const end = readmeContent.slice(readmeContent.indexOf(endMarker));
+  const start = readmeContent.slice(0, readmeContent.indexOf(startMarker) + startMarker.length);
+  const end = readmeContent.slice(readmeContent.indexOf(endMarker));
 
- return `${start}\n${table}\n${end}`;
+  return `${start}\n${table}\n${end}`;
 }
 
 console.log("Generating documentation...");

@@ -4,13 +4,13 @@ import { composer } from "eslint-flat-config-utils";
 import nodePluginRecommendedConfig from "eslint-plugin-n";
 
 const nodeRecommendedConfig = defineConfig({
- ...nodePluginRecommendedConfig.configs["flat/recommended-script"],
- name: "@igorkowalczyk/eslint-config/node",
- languageOptions: {
-  parserOptions: {
-   sourceType: "module",
+  ...nodePluginRecommendedConfig.configs["flat/recommended-script"],
+  name: "@igorkowalczyk/eslint-config/node",
+  languageOptions: {
+    parserOptions: {
+      sourceType: "module",
+    },
   },
- },
 });
 
 /**
@@ -30,12 +30,12 @@ const nodeRecommendedConfig = defineConfig({
  */
 
 export default (await composer(nodeRecommendedConfig)
- .overrideRules({
-  "n/no-unsupported-features/node-builtins": "off",
-  "n/no-missing-import": "off",
-  "n/no-extraneous-import": "off",
-  "n/no-unpublished-import": "off",
- })
- .renamePlugins({
-  n: "node",
- })) as unknown as Linter.Config[];
+  .overrideRules({
+    "n/no-unsupported-features/node-builtins": "off",
+    "n/no-missing-import": "off",
+    "n/no-extraneous-import": "off",
+    "n/no-unpublished-import": "off",
+  })
+  .renamePlugins({
+    n: "node",
+  })) as unknown as Linter.Config[];

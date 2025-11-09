@@ -5,32 +5,32 @@ import jsxa11y from "eslint-plugin-jsx-a11y";
 import globals from "globals";
 
 const reactBaseConfig = defineFlatConfig({
- name: "@igorkowalczyk/eslint-config/react/base",
- files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
- ...eslintReact.configs["recommended-typescript"],
- languageOptions: {
-  globals: {
-   ...globals.serviceworker,
-   ...globals.browser,
+  name: "@igorkowalczyk/eslint-config/react/base",
+  files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+  ...eslintReact.configs["recommended-typescript"],
+  languageOptions: {
+    globals: {
+      ...globals.serviceworker,
+      ...globals.browser,
+    },
+    parserOptions: {
+      ecmaFeatures: {
+        jsx: true,
+      },
+    },
   },
-  parserOptions: {
-   ecmaFeatures: {
-    jsx: true,
-   },
-  },
- },
 });
 
 const reactA11yConfig = defineFlatConfig({
- name: "@igorkowalczyk/eslint-config/react/a11y",
- ...jsxa11y.flatConfigs.recommended,
- languageOptions: {
-  ...jsxa11y.flatConfigs.recommended.languageOptions,
-  globals: {
-   ...globals.serviceworker,
-   ...globals.browser,
+  name: "@igorkowalczyk/eslint-config/react/a11y",
+  ...jsxa11y.flatConfigs.recommended,
+  languageOptions: {
+    ...jsxa11y.flatConfigs.recommended.languageOptions,
+    globals: {
+      ...globals.serviceworker,
+      ...globals.browser,
+    },
   },
- },
 });
 
 /**
@@ -51,22 +51,22 @@ const reactA11yConfig = defineFlatConfig({
  */
 
 export default (await composer(reactBaseConfig, reactA11yConfig) //
- .overrideRules({
-  "@eslint-react/no-unstable-default-props": "off",
-  "@eslint-react/dom/no-dangerously-set-innerhtml": "off",
-  "@eslint-react/no-nested-components": "off",
-  "@eslint-react/no-unstable-context-value": "off",
-  "jsx-a11y/click-events-have-key-events": "off",
-  "jsx-a11y/no-noninteractive-element-interactions": "off",
-  "jsx-a11y/no-static-element-interactions": "off",
- })
- .override("jsx-a11y/recommended", {
-  name: "@igorkowalczyk/eslint-config/react/a11y",
- })
- .override("@eslint-react/recommended-typescript", {
-  name: "@igorkowalczyk/eslint-config/react/recommended",
- })
- .renamePlugins({
-  "jsx-a11y": "react-a11y",
-  // "@eslint-react": "react",
- })) as unknown as Linter.Config[];
+  .overrideRules({
+    "@eslint-react/no-unstable-default-props": "off",
+    "@eslint-react/dom/no-dangerously-set-innerhtml": "off",
+    "@eslint-react/no-nested-components": "off",
+    "@eslint-react/no-unstable-context-value": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+  })
+  .override("jsx-a11y/recommended", {
+    name: "@igorkowalczyk/eslint-config/react/a11y",
+  })
+  .override("@eslint-react/recommended-typescript", {
+    name: "@igorkowalczyk/eslint-config/react/recommended",
+  })
+  .renamePlugins({
+    "jsx-a11y": "react-a11y",
+    // "@eslint-react": "react",
+  })) as unknown as Linter.Config[];

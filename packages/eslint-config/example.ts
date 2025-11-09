@@ -7,14 +7,14 @@ import reactConfig from "./configs/react";
 import typescriptConfig from "./configs/typescript";
 
 const config = [
- // Prettier
- ...baseConfig,
- ...astroConfig,
- ...nodeConfig,
- ...nextConfig,
- ...reactConfig,
- ...typescriptConfig,
- ...prettierConfig,
+  // Prettier
+  ...baseConfig,
+  ...astroConfig,
+  ...nodeConfig,
+  ...nextConfig,
+  ...reactConfig,
+  ...typescriptConfig,
+  ...prettierConfig,
 ];
 
 export default config;

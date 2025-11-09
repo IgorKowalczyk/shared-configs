@@ -3,8 +3,8 @@ import { composer, defineFlatConfig, mergeConfigs } from "eslint-flat-config-uti
 import tseslint from "typescript-eslint";
 
 const mergedTsConfig = defineFlatConfig({
- ...mergeConfigs(...tseslint.configs.recommended),
- name: "@igorkowalczyk/eslint-config/typescript",
+  ...mergeConfigs(...tseslint.configs.recommended),
+  name: "@igorkowalczyk/eslint-config/typescript",
 });
 
 /**
@@ -24,17 +24,17 @@ const mergedTsConfig = defineFlatConfig({
  * ```
  */
 export default (await composer(mergedTsConfig) //
- .overrideRules({
-  "@typescript-eslint/no-unused-vars": [
-   "error",
-   {
-    argsIgnorePattern: "^_",
-    varsIgnorePattern: "^_",
-    caughtErrorsIgnorePattern: "^_",
-    destructuredArrayIgnorePattern: "^_",
-   },
-  ],
- })
- .renamePlugins({
-  "@typescript-eslint": "typescript",
- })) as unknown as Linter.Config[];
+  .overrideRules({
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+        caughtErrorsIgnorePattern: "^_",
+        destructuredArrayIgnorePattern: "^_",
+      },
+    ],
+  })
+  .renamePlugins({
+    "@typescript-eslint": "typescript",
+  })) as unknown as Linter.Config[];
