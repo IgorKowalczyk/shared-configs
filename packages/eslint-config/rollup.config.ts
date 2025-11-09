@@ -31,7 +31,7 @@ const defaultConfig = {
   }),
  ],
 
- external: ["eslint-plugin-prettier/recommended"],
+ external: ["eslint-plugin-prettier/recommended", "eslint-config-next/core-web-vitals"],
 } satisfies Partial<RollupOptions>;
 
 const config = [

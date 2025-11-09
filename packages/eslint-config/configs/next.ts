@@ -1,28 +1,9 @@
-import { fixupConfigRules } from "@eslint/compat";
-import { FlatCompat } from "@eslint/eslintrc";
 import type { Linter } from "eslint";
-import { composer, mergeConfigs } from "eslint-flat-config-utils";
-import globals from "globals";
+import { defineFlatConfig } from "eslint-flat-config-utils";
+import nextVitals from "eslint-config-next/core-web-vitals";
+import { composer } from "eslint-flat-config-utils";
 
-const compat = new FlatCompat({
- baseDirectory: import.meta.dirname,
-});
-
-const mergedConfigs = mergeConfigs(
- {
-  name: "@igorkowalczyk/eslint-config/next",
-  files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
-  ignores: [".next/"],
-  languageOptions: {
-   globals: {
-    ...globals.browser,
-   },
-  },
- },
-
- /* @ts-expect-error - Typing issues */
- ...fixupConfigRules(compat.extends("plugin:@next/next/core-web-vitals", "plugin:@next/next/recommended"))
-);
+const nextConfig = defineFlatConfig(nextVitals);
 
 /**
  * ESLint configuration for Next.js - provides a ESLint configuration for Next.js projects, should be used with the react configuration.
@@ -40,7 +21,20 @@ const mergedConfigs = mergeConfigs(
  * ];
  * ```
  */
-export default (await composer(mergedConfigs)
+
+export default (await composer(nextConfig)
+ .override("next", {
+  name: "@igorkowalczyk/eslint-config/next",
+ })
+ .override("next/typescript", {
+  name: "@igorkowalczyk/eslint-config/next/typescript",
+ })
+ .override(2, {
+  name: "@igorkowalczyk/eslint-config/next/ignores",
+ })
+ .override("next/core-web-vitals", {
+  name: "@igorkowalczyk/eslint-config/next/core-web-vitals",
+ })
  .overrideRules({
   "@next/next/no-html-link-for-pages": "off",
   "@next/next/no-img-element": "error",

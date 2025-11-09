@@ -29,7 +29,6 @@ const nodeRecommendedConfig = defineConfig({
  * ```
  */
 
-/* @ts-expect-error - Typing issues */
 export default (await composer(nodeRecommendedConfig)
  .overrideRules({
   "n/no-unsupported-features/node-builtins": "off",
