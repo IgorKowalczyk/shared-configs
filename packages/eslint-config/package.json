@@ -59,13 +59,27 @@
   },
   "typesVersions": {
     "*": {
-      "base": ["./dist/configs/base.d.ts"],
-      "astro": ["./dist/configs/astro.d.ts"],
-      "prettier": ["./dist/configs/prettier.d.ts"],
-      "next": ["./dist/configs/next.d.ts"],
-      "node": ["./dist/configs/node.d.ts"],
-      "react": ["./dist/configs/react.d.ts"],
-      "typescript": ["./dist/configs/typescript.d.ts"]
+      "base": [
+        "./dist/configs/base.d.ts"
+      ],
+      "astro": [
+        "./dist/configs/astro.d.ts"
+      ],
+      "prettier": [
+        "./dist/configs/prettier.d.ts"
+      ],
+      "next": [
+        "./dist/configs/next.d.ts"
+      ],
+      "node": [
+        "./dist/configs/node.d.ts"
+      ],
+      "react": [
+        "./dist/configs/react.d.ts"
+      ],
+      "typescript": [
+        "./dist/configs/typescript.d.ts"
+      ]
     }
   },
   "files": [
@@ -105,6 +119,7 @@
     "@types/eslint-plugin-jsx-a11y": "6.10.1",
     "@types/node": "24.10.0",
     "@types/rollup-plugin-auto-external": "2.0.5",
+    "globby": "15.0.0",
     "next": "16.0.1",
     "rimraf": "6.1.0",
     "rollup": "4.52.5",
