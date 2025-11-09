@@ -20,11 +20,11 @@ const nodeRecommendedConfig = defineConfig({
  * ```js
  * //
  *
- * import eslintConfig from "@igorkowalczyk/eslint-config";
+ * import nodeConfig from "@igorkowalczyk/eslint-config";
  *
  * export default [
- *  ...eslintConfig.base,
- *  ...eslintConfig.node, // <- Node.js configuration
+ *  ...baseConfig,
+ *  ...nodeConfig, // <- Node.js configuration
  * ];
  * ```
  */

@@ -11,13 +11,13 @@ const nextConfig = defineFlatConfig(nextVitals);
  * ```js
  * //
  *
- * import eslintConfig from "@igorkowalczyk/eslint-config";
+ * import nextConfig from "@igorkowalczyk/eslint-config/next";
  *
  * export default [
- *  ...eslintConfig.base,
- *  ...eslintConfig.node,
- * ...eslintConfig.react,
- * ...eslintConfig.next, // <- Next.js configuration
+ *  ...baseConfig,
+ *  ...nodeConfig,
+ *  ...reactConfig,
+ *  ...nextConfig, // <- Next.js configuration
  * ];
  * ```
  */

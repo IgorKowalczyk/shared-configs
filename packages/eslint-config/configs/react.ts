@@ -40,12 +40,12 @@ const reactA11yConfig = defineFlatConfig({
  * ```js
  * //
  *
- * import eslintConfig from "@igorkowalczyk/eslint-config";
+ * import reactConfig from "@igorkowalczyk/eslint-config/react";
  *
  * export default [
- *  ...eslintConfig.base,
- *  ...eslintConfig.react, // <- React configuration
- *  ...eslintConfig.typescript,
+ *  ...baseConfig,
+ *  ...reactConfig, // <- React configuration
+ *  ...typescriptConfig,
  * ];
  * ```
  */

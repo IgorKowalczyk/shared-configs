@@ -18,13 +18,13 @@ const mergedPrettierConfig = defineFlatConfig({
  * ```js
  * //
  *
- * import eslintConfig from "@igorkowalczyk/eslint-config";
+ * import prettierConfig from "@igorkowalczyk/eslint-config/prettier";
  *
  * export default [
- *  ...eslintConfig.base,
- *  ...eslintConfig.react,
- *  ...eslintConfig.typescript,
- * ...eslintConfig.prettier, // <- Prettier configuration
+ *  ...baseConfig,
+ *  ...reactConfig,
+ *  ...typescriptConfig,
+ *  ...prettierConfig, // <- Prettier configuration
  * ];
  * ```
  */

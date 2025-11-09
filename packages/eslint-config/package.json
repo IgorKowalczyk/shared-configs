@@ -24,6 +24,10 @@
     "config-inspector:dev": "pnpm run build && pnpx @eslint/config-inspector@latest --config=./example.ts"
   },
   "exports": {
+    ".": {
+      "import": "./dist/configs/base.js",
+      "types": "./dist/configs/base.d.ts"
+    },
     "./base": {
       "import": "./dist/configs/base.js",
       "types": "./dist/configs/base.d.ts"
@@ -79,6 +83,9 @@
       ],
       "typescript": [
         "./dist/configs/typescript.d.ts"
+      ],
+      ".": [
+        "./dist/configs/base.d.ts"
       ]
     }
   },

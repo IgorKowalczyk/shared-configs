@@ -14,12 +14,12 @@ const mergedAstroConfig = defineFlatConfig({
  * ```js
  * //
  *
- * import eslintConfig from "@igorkowalczyk/eslint-config";
+ * import astroConfig from "@igorkowalczyk/eslint-config/astro";
  *
  * export default [
- * ...eslintConfig.base,
- * ...eslintConfig.typescript,
- * ...eslintConfig.astro, // <- Astro configuration
+ *  ...baseConfig,
+ *  ...reactConfig,
+ *  ...astroConfig, // <- Astro configuration
  * ];
  * ```
  */
