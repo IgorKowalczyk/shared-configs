@@ -141,8 +141,8 @@ importers:
         specifier: 28.0.8
         version: 28.0.8(rollup@4.52.5)
       '@rollup/plugin-typescript':
-        specifier: 12.1.4
-        version: 12.1.4(rollup@4.52.5)(tslib@2.8.1)(typescript@5.9.3)
+        specifier: 12.3.0
+        version: 12.3.0(rollup@4.52.5)(tslib@2.8.1)(typescript@5.9.3)
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -749,19 +749,6 @@ packages:
       rollup: ^2.78.0||^3.0.0||^4.0.0
     peerDependenciesMeta:
       rollup:
-        optional: true
-
-  '@rollup/plugin-typescript@12.1.4':
-    resolution: {integrity: sha512-s5Hx+EtN60LMlDBvl5f04bEiFZmAepk27Q+mr85L/00zPDn1jtzlTV6FWn81MaIwqfWzKxmOJrBWHU6vtQyedQ==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      rollup: ^2.14.0||^3.0.0||^4.0.0
-      tslib: '*'
-      typescript: '>=3.7.0'
-    peerDependenciesMeta:
-      rollup:
-        optional: true
-      tslib:
         optional: true
 
   '@rollup/plugin-typescript@12.3.0':
@@ -3249,15 +3236,6 @@ snapshots:
       resolve: 1.22.11
     optionalDependencies:
       rollup: 4.52.5
-
-  '@rollup/plugin-typescript@12.1.4(rollup@4.52.5)(tslib@2.8.1)(typescript@5.9.3)':
-    dependencies:
-      '@rollup/pluginutils': 5.3.0(rollup@4.52.5)
-      resolve: 1.22.11
-      typescript: 5.9.3
-    optionalDependencies:
-      rollup: 4.52.5
-      tslib: 2.8.1
 
   '@rollup/plugin-typescript@12.3.0(rollup@4.52.5)(tslib@2.8.1)(typescript@5.9.3)':
     dependencies:
