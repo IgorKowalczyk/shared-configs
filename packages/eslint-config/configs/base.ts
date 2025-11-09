@@ -12,10 +12,10 @@ import globals from "globals";
  * ```js
  * //
  *
- * import eslintConfig from "@igorkowalczyk/eslint-config";
+ * import baseConfig from "@igorkowalczyk/eslint-config"; // or "@igorkowalczyk/eslint-config/base"
  *
  * export default [
- *  ...eslintConfig.base, // <- Base JavaScript configuration
+ *  ...baseConfig, // <- Base JavaScript configuration
  * ];
  * ```
  */

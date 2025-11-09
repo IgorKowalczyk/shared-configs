@@ -14,12 +14,12 @@ const mergedTsConfig = defineFlatConfig({
  * ```js
  * //
  *
- * import eslintConfig from "@igorkowalczyk/eslint-config";
+ * import typescriptConfig from "@igorkowalczyk/eslint-config/typescript";
  *
  * export default [
- *  ...eslintConfig.base,
- *  ...eslintConfig.astro,
- *  ...eslintConfig.typescript, // <- TypeScript configuration
+ *  ...baseConfig,
+ *  ...reactConfig,
+ *  ...typescriptConfig, // <- TypeScript configuration
  * ];
  * ```
  */

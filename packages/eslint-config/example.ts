@@ -1,12 +1,20 @@
-import eslintConfig from "./index";
+import astroConfig from "./configs/astro";
+import baseConfig from "./configs/base";
+import nextConfig from "./configs/next";
+import nodeConfig from "./configs/node";
+import prettierConfig from "./configs/prettier";
+import reactConfig from "./configs/react";
+import typescriptConfig from "./configs/typescript";
 
-export default [
+const config = [
  // Prettier
- ...eslintConfig.base,
- ...eslintConfig.astro,
- ...eslintConfig.node,
- ...eslintConfig.next,
- ...eslintConfig.react,
- ...eslintConfig.typescript,
- ...eslintConfig.prettier,
+ ...baseConfig,
+ ...astroConfig,
+ ...nodeConfig,
+ ...nextConfig,
+ ...reactConfig,
+ ...typescriptConfig,
+ ...prettierConfig,
 ];
+
+export default config;

@@ -1,12 +1,10 @@
-import eslintConfig from "@igorkowalczyk/eslint-config";
+import baseConfig from "./packages/eslint-config/configs/base";
+import typescriptConfig from "./packages/eslint-config/configs/typescript";
+import prettierConfig from "./packages/eslint-config/configs/prettier";
 
 export default [
  // Prettier
- ...eslintConfig.base,
- ...eslintConfig.astro,
- ...eslintConfig.node,
- ...eslintConfig.next,
- ...eslintConfig.react,
- ...eslintConfig.typescript,
- ...eslintConfig.prettier,
+ ...baseConfig,
+ ...typescriptConfig,
+ ...prettierConfig,
 ];

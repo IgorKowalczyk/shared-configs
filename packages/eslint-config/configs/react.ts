@@ -21,7 +21,6 @@ const reactBaseConfig = defineFlatConfig({
  },
 });
 
-/* @ts-expect-error - Typing issues */
 const reactA11yConfig = defineFlatConfig({
  name: "@igorkowalczyk/eslint-config/react/a11y",
  ...jsxa11y.flatConfigs.recommended,
@@ -41,12 +40,12 @@ const reactA11yConfig = defineFlatConfig({
  * ```js
  * //
  *
- * import eslintConfig from "@igorkowalczyk/eslint-config";
+ * import reactConfig from "@igorkowalczyk/eslint-config/react";
  *
  * export default [
- *  ...eslintConfig.base,
- *  ...eslintConfig.react, // <- React configuration
- *  ...eslintConfig.typescript,
+ *  ...baseConfig,
+ *  ...reactConfig, // <- React configuration
+ *  ...typescriptConfig,
  * ];
  * ```
  */

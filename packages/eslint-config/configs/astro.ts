@@ -3,7 +3,6 @@ import { mergeConfigs, composer, defineFlatConfig } from "eslint-flat-config-uti
 import eslintPluginAstro from "eslint-plugin-astro";
 
 const mergedAstroConfig = defineFlatConfig({
- /* @ts-expect-error - Typing issues */
  ...mergeConfigs(...eslintPluginAstro.configs["flat/recommended"]),
  name: "@igorkowalczyk/eslint-config/astro",
 });
@@ -15,12 +14,12 @@ const mergedAstroConfig = defineFlatConfig({
  * ```js
  * //
  *
- * import eslintConfig from "@igorkowalczyk/eslint-config";
+ * import astroConfig from "@igorkowalczyk/eslint-config/astro";
  *
  * export default [
- * ...eslintConfig.base,
- * ...eslintConfig.typescript,
- * ...eslintConfig.astro, // <- Astro configuration
+ *  ...baseConfig,
+ *  ...reactConfig,
+ *  ...astroConfig, // <- Astro configuration
  * ];
  * ```
  */

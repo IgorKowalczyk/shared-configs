@@ -2,7 +2,6 @@ import type { Linter } from "eslint";
 import { composer, defineFlatConfig } from "eslint-flat-config-utils";
 import prettierRecommendedConfig from "eslint-plugin-prettier/recommended";
 
-/* @ts-expect-error - Typing issues */
 const mergedPrettierConfig = defineFlatConfig({
  ...prettierRecommendedConfig,
  name: "@igorkowalczyk/eslint-config/prettier",
@@ -19,13 +18,13 @@ const mergedPrettierConfig = defineFlatConfig({
  * ```js
  * //
  *
- * import eslintConfig from "@igorkowalczyk/eslint-config";
+ * import prettierConfig from "@igorkowalczyk/eslint-config/prettier";
  *
  * export default [
- *  ...eslintConfig.base,
- *  ...eslintConfig.react,
- *  ...eslintConfig.typescript,
- * ...eslintConfig.prettier, // <- Prettier configuration
+ *  ...baseConfig,
+ *  ...reactConfig,
+ *  ...typescriptConfig,
+ *  ...prettierConfig, // <- Prettier configuration
  * ];
  * ```
  */
