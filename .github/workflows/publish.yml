@@ -42,6 +42,16 @@ jobs:
       - name: 🛠️ Build packages
         run: pnpm build
 
+      # Publish to NPM Registry
+      - name: 📦 Publish to NPM Registry
+        run: |
+          npm config set registry https://registry.npmjs.org
+          if [ "${{ github.event.release.prerelease }}" = "false" ]; then
+            pnpm publish --filter "./packages/*" --access public --no-git-checks --provenance
+          else
+            pnpm publish --filter "./packages/*" --access public --no-git-checks --provenance --tag next
+          fi
+
       # Publish to GitHub Package Registry
       - name: 📦 Publish to GitHub Package Registry
         env:
@@ -49,17 +59,6 @@ jobs:
         run: |
           npm config set registry https://npm.pkg.github.com
           npm set //npm.pkg.github.com/:_authToken ${{ secrets.GITHUB_TOKEN }}
-          if [ "${{ github.event.release.prerelease }}" = "false" ]; then
-            pnpm publish --filter "./packages/*" --access public --no-git-checks --provenance
-          else
-            pnpm publish --filter "./packages/*" --access public --no-git-checks --provenance --tag next
-          fi
-
-      # Publish to NPM Registry
-      - name: 📦 Publish to NPM Registry
-        run: |
-          npm config set registry https://registry.npmjs.org
-          npm set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
           if [ "${{ github.event.release.prerelease }}" = "false" ]; then
             pnpm publish --filter "./packages/*" --access public --no-git-checks --provenance
           else
