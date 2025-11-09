@@ -88,14 +88,14 @@ pnpm install --save-dev @igorkowalczyk/eslint-config
 
 #### Basic configuration
 
-Basic configuration includes ESLint recommended rules, Prettier plugin and recommended rules for Prettier. 
+Basic configuration includes ESLint recommended rules, ignored patters and styling rules.
 
 ```js
 // eslint.config.js
-import eslintConfig from "@igorkowalczyk/eslint-config";
+import baseConfig from "@igorkowalczyk/eslint-config"; // or "@igorkowalczyk/eslint-config/base"
 
 export default [
- ...eslintConfig.base
+ ...baseConfig
 ];
 ```
 
@@ -108,11 +108,11 @@ This configuration includes recommended rules for Prettier
 
 ```js
 // eslint.config.js
-import eslintConfig from "@igorkowalczyk/eslint-config";
+import prettierConfig from "@igorkowalczyk/eslint-config/prettier";
 
 export default [
   /* Other configurations */
- ...eslintConfig.prettier
+ ...prettierConfig
 ];
 ```
 
@@ -122,10 +122,10 @@ Configuration includes recommended rules for Node.js projects.
 
 ```js
 // eslint.config.js
-import eslintConfig from "@igorkowalczyk/eslint-config";
+import nodeConfig from "@igorkowalczyk/eslint-config/node";
 
 export default [
- ...eslintConfig.node
+ ...nodeConfig
 ];
 ```
 
@@ -135,10 +135,10 @@ Configuration includes TypeScript parser and recommended rules for TypeScript pr
 
 ```js
 // eslint.config.js
-import eslintConfig from "@igorkowalczyk/eslint-config";
+import typescriptConfig from "@igorkowalczyk/eslint-config/typescript";
 
 export default [
- ...eslintConfig.typescript
+ ...typescriptConfig
 ];
 ```
 
@@ -148,10 +148,10 @@ Configuration includes recommended rules for React components.
 
 ```js
 // eslint.config.js
-import eslintConfig from "@igorkowalczyk/eslint-config";
+import reactConfig from "@igorkowalczyk/eslint-config/react";
 
 export default [
- ...eslintConfig.react
+ ...reactConfig
 ];
 ```
 
@@ -161,23 +161,10 @@ Configuration includes recommended rules for Next.js projects.
 
 ```js
 // eslint.config.js
-import eslintConfig from "@igorkowalczyk/eslint-config";
+import nextConfig from "@igorkowalczyk/eslint-config/next";
 
 export default [
- ...eslintConfig.next
-];
-```
-
-#### [Tailwind CSS](https://tailwindcss.com) configuration
-
-Configuration includes recommended rules for Tailwind CSS projects like sorting classes.
-
-```js
-// eslint.config.js
-import eslintConfig from "@igorkowalczyk/eslint-config";
-
-export default [
- ...eslintConfig.tailwindcss
+ ...nextConfig
 ];
 ```
 
@@ -187,10 +174,10 @@ Configuration includes Astro parser and recommended rules for Astro projects.
 
 ```js
 // eslint.config.js
-import eslintConfig from "@igorkowalczyk/eslint-config";
+import astroConfig from "@igorkowalczyk/eslint-config/astro";
 
 export default [
- ...eslintConfig.astro
+ ...astroConfig
 ];
 ```
 
@@ -200,12 +187,14 @@ You can also chain multiple configurations together, for example, to use TypeScr
 
 ```js
 // eslint.config.js
-import eslintConfig from "@igorkowalczyk/eslint-config";
+import baseConfig from "@igorkowalczyk/eslint-config";
+import reactConfig from "@igorkowalczyk/eslint-config/react";
+import typescriptConfig from "@igorkowalczyk/eslint-config/typescript";
 
 export default [
- ...eslintConfig.base,
- ...eslintConfig.typescript,
- ...eslintConfig.react
+  ...baseConfig,
+  ...reactConfig,
+  ...typescriptConfig,
 ];
 ```
 
