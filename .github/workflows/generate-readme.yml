@@ -30,13 +30,7 @@ jobs:
       - name: 🚀 Generate README
         run: pnpm run generate-docs
       - name: 📤 Commit changes
-        run: |
-          if [[ "$(git status --porcelain)" != "" ]]; then
-          git config user.name 'GitHub Actions'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add .
-          sanitized_message=$(echo "$BODY" | sed 's/[^A-Za-z0-9._-]/_/g' | sed 's/"/\\"/g')
-          commit_message="${sanitized_message} | Generated README.md docs"
-          git commit -m "$commit_message"
-          git push -f
-          fi
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "${{ env.BODY }} | Generated README.md docs"
+          push_options: --force
