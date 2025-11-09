@@ -1,6 +1,6 @@
 import type { Linter } from "eslint";
-import { defineFlatConfig } from "eslint-flat-config-utils";
 import nextVitals from "eslint-config-next/core-web-vitals";
+import { defineFlatConfig } from "eslint-flat-config-utils";
 import { composer } from "eslint-flat-config-utils";
 
 const nextConfig = defineFlatConfig(nextVitals);

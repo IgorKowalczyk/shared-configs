@@ -1,9 +1,9 @@
 import rollupPluginCommonjs from "@rollup/plugin-commonjs";
 import rollupPluginNodeResolve from "@rollup/plugin-node-resolve";
 import rollupPluginTypescript from "@rollup/plugin-typescript";
+import { globby } from "globby";
 import { RollupOptions } from "rollup";
 import rollupPluginAutoExternal from "rollup-plugin-auto-external";
-import { globby } from "globby";
 
 const config = [
  {
