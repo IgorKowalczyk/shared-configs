@@ -33,6 +33,7 @@ jobs:
           node-version: ${{ matrix.node }}
           always-auth: true
           cache: "pnpm"
+          registry-url: "https://registry.npmjs.org"
 
       # Install dependencies
       - name: 🚀 Install dependencies
@@ -45,7 +46,6 @@ jobs:
       # Publish to NPM Registry
       - name: 📦 Publish to NPM Registry
         run: |
-          npm config set registry https://registry.npmjs.org
           if [ "${{ github.event.release.prerelease }}" = "false" ]; then
             pnpm publish --filter "./packages/*" --access public --no-git-checks --provenance
           else
