@@ -59,6 +59,7 @@ jobs:
       - name: 📦 Publish to NPM Registry
         run: |
           npm config set registry https://registry.npmjs.org
+          npm set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
           if [ "${{ github.event.release.prerelease }}" = "false" ]; then
             pnpm publish --filter "./packages/*" --access public --no-git-checks --provenance
           else
