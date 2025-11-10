@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/eslint-config",
-  "version": "3.2.0-beta.4",
+  "version": "3.2.0",
   "description": "☔ My sharable ESLint config",
   "author": "Igor Kowalczyk",
   "license": "MIT",
@@ -106,7 +106,7 @@
     "@eslint/eslintrc": "3.3.1",
     "@eslint/js": "9.39.1",
     "@stylistic/eslint-plugin": "5.5.0",
-    "@typescript-eslint/parser": "8.46.3",
+    "@typescript-eslint/parser": "8.46.4",
     "eslint-config-flat-gitignore": "2.1.0",
     "eslint-config-next": "16.0.1",
     "eslint-config-prettier": "10.1.8",
@@ -117,7 +117,7 @@
     "eslint-plugin-n": "17.23.1",
     "eslint-plugin-prettier": "5.5.4",
     "globals": "16.5.0",
-    "typescript-eslint": "8.46.3"
+    "typescript-eslint": "8.46.4"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "29.0.0",
