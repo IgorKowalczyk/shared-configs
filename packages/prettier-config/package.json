@@ -1,6 +1,6 @@
 {
   "name": "@igorkowalczyk/prettier-config",
-  "version": "3.2.0-beta.3",
+  "version": "3.2.0-beta.4",
   "description": "☔ My sharable Prettier config",
   "author": "Igor Kowalczyk",
   "license": "MIT",
@@ -32,7 +32,7 @@
     "@rollup/plugin-commonjs": "29.0.0",
     "@rollup/plugin-typescript": "12.3.0",
     "rimraf": "6.1.0",
-    "rollup": "4.53.1",
+    "rollup": "4.53.2",
     "tslib": "2.8.1"
   },
   "peerDependencies": {
