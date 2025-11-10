@@ -16,6 +16,7 @@
 
 ## 📦 [`@igorkowalczyk/prettier-config`](https://www.npmjs.com/package/@igorkowalczyk/prettier-config)
 
+<!--START_SECTION:prettier-->
 ### 📥 Installation
 
 ```bash
@@ -29,7 +30,7 @@ pnpm install --save-dev @igorkowalczyk/prettier-config
 ```js
 // .prettierrc.js
 module.exports = {
-  ...require('@igorkowalczyk/prettier-config'),
+ ...require("@igorkowalczyk/prettier-config"),
 };
 ```
 
@@ -50,7 +51,7 @@ export default {
 
 ### ⚙️ Rules overview
 
-<!--START_SECTION:prettier-->
+<!--START_SECTION:prettier-table -->
 | Rule                         | Style       | Documentation                                                                          |
 | ---------------------------- | ----------- | -------------------------------------------------------------------------------------- |
 | `arrowParens`                | `always`    | [Documentation](https://prettier.io/docs/en/options.html#arrow-parens)                 |
@@ -67,12 +68,13 @@ export default {
 | `tabWidth`                   | `2`         | [Documentation](https://prettier.io/docs/en/options.html#tab-width)                    |
 | `trailingComma`              | `es5`       | [Documentation](https://prettier.io/docs/en/options.html#trailing-comma)               |
 | `useTabs`                    | `false`     | [Documentation](https://prettier.io/docs/en/options.html#use-tabs)                     |
+<!--END_SECTION:prettier-table -->
 <!--END_SECTION:prettier-->
-
 ---
 
 ## 📦 [`@igorkowalczyk/eslint-config`](https://www.npmjs.com/package/@igorkowalczyk/eslint-config)
 
+<!--START_SECTION:eslint-->
 ### 📥 Installation
 
 ```bash
@@ -201,18 +203,23 @@ export default [
 ### ⚙️ Rules overview
 
 You can find the full list of rules in the [ESLint config inspector](https://eslint.igorkowalczyk.dev/).
+<!--END_SECTION:eslint-->
 
 ---
 
 ## 📝 [`@igorkowalczyk/renovate-config`](/packages/renovate-config/)
 
+<!--START_SECTION:renovate-->
 > [!WARNING]
 > This is not a package - it is a configuration preset!
 
 ### 🔩 Usage
+
 In your `renovate.json` file, add the following:
+
 ```json
 {
  "extends": ["github>igorkowalczyk/shared-configs//packages/renovate-config/index.json"]
 }
 ```
+<!--END_SECTION:renovate-->

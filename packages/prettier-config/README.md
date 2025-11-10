@@ -1,5 +1,6 @@
 ![Prettier config](https://github.com/IgorKowalczyk/shared-configs/assets/49127376/323f15c6-83ac-4219-97ed-8fbbb502442c)
 
+<!--START_SECTION:prettier-->
 ### 📥 Installation
 
 ```bash
@@ -34,7 +35,7 @@ export default {
 
 ### ⚙️ Rules overview
 
-<!--START_SECTION:prettier-->
+<!--START_SECTION:prettier-table -->
 | Rule                         | Style       | Documentation                                                                          |
 | ---------------------------- | ----------- | -------------------------------------------------------------------------------------- |
 | `arrowParens`                | `always`    | [Documentation](https://prettier.io/docs/en/options.html#arrow-parens)                 |
@@ -51,4 +52,5 @@ export default {
 | `tabWidth`                   | `2`         | [Documentation](https://prettier.io/docs/en/options.html#tab-width)                    |
 | `trailingComma`              | `es5`       | [Documentation](https://prettier.io/docs/en/options.html#trailing-comma)               |
 | `useTabs`                    | `false`     | [Documentation](https://prettier.io/docs/en/options.html#use-tabs)                     |
+<!--END_SECTION:prettier-table -->
 <!--END_SECTION:prettier-->

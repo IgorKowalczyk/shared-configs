@@ -1,5 +1,6 @@
 ![ESLint config](https://github.com/IgorKowalczyk/shared-configs/assets/49127376/0455914b-4614-4f90-8348-d8229ab2d9f0)
 
+<!--START_SECTION:eslint-->
 ### 📥 Installation
 
 ```bash
@@ -128,3 +129,4 @@ export default [
 ### ⚙️ Rules overview
 
 You can find the full list of rules in the [ESLint config inspector](https://eslint.igorkowalczyk.dev/).
+<!--END_SECTION:eslint-->
