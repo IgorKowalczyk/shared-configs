@@ -45,7 +45,7 @@
     "eslint": "9.39.1",
     "jiti": "2.6.1",
     "prettier": "3.6.2",
-    "tsx": "4.20.6"
+    "tsx": "4.21.0"
   },
   "packageManager": "pnpm@10.21.0"
 }
