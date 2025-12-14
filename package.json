@@ -41,7 +41,7 @@
   "devDependencies": {
     "@igorkowalczyk/eslint-config": "workspace:*",
     "@igorkowalczyk/prettier-config": "workspace:*",
-    "@types/node": "24.10.0",
+    "@types/node": "24.10.4",
     "eslint": "9.39.1",
     "jiti": "2.6.1",
     "prettier": "3.6.2",
