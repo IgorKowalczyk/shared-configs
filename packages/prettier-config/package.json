@@ -29,11 +29,11 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "29.0.0",
-    "@rollup/plugin-typescript": "12.3.0",
-    "rimraf": "6.1.0",
-    "rollup": "4.53.2",
-    "tslib": "2.8.1"
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "rimraf": "^6.1.2",
+    "rollup": "^4.54.0",
+    "tslib": "^2.8.1"
   },
   "peerDependencies": {
     "prettier": "^3"
