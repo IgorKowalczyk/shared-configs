@@ -134,6 +134,6 @@
     "tslib": "^2.8.1"
   },
   "peerDependencies": {
-    "eslint": "^9"
+    "eslint": "^9 || ^10.0.0"
   }
 }
