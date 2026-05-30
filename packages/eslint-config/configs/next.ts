@@ -1,9 +1,6 @@
 import type { Linter } from "eslint";
 import nextVitals from "eslint-config-next/core-web-vitals";
-import { defineFlatConfig } from "eslint-flat-config-utils";
 import { composer } from "eslint-flat-config-utils";
-
-const nextConfig = defineFlatConfig(nextVitals);
 
 /**
  * ESLint configuration for Next.js - provides a ESLint configuration for Next.js projects, should be used with the react configuration.
@@ -22,7 +19,7 @@ const nextConfig = defineFlatConfig(nextVitals);
  * ```
  */
 
-export default (await composer(nextConfig)
+export default (await composer(nextVitals)
   .override("next", {
     name: "@igorkowalczyk/eslint-config/next",
   })
@@ -41,4 +38,4 @@ export default (await composer(nextConfig)
   })
   .renamePlugins({
     "@next/next": "next",
-  })) as unknown as Linter.Config[];
+  })) as Linter.Config[];

@@ -1,17 +1,17 @@
 import type { Linter } from "eslint";
 import { defineConfig } from "eslint/config";
-import { composer } from "eslint-flat-config-utils";
+import { composer, mergeConfigs } from "eslint-flat-config-utils";
 import nodePluginRecommendedConfig from "eslint-plugin-n";
 
-const nodeRecommendedConfig = defineConfig({
-  ...nodePluginRecommendedConfig.configs["flat/recommended-script"],
-  name: "@igorkowalczyk/eslint-config/node",
-  languageOptions: {
-    parserOptions: {
-      sourceType: "module",
+const nodeRecommendedConfig = defineConfig(
+  {
+    plugins: {
+      n: nodePluginRecommendedConfig
     },
+    extends: ["n/recommended-module"],
+    name: "@igorkowalczyk/eslint-config/node",
   },
-});
+);
 
 /**
  * ESLint configuration for Node.js. Provides a configuration for Node.js scripts and apps.
@@ -38,4 +38,9 @@ export default (await composer(nodeRecommendedConfig)
   })
   .renamePlugins({
     n: "node",
-  })) as unknown as Linter.Config[];
+  })
+  .override(0, {
+    name: "@igorkowalczyk/eslint-config/node/base",
+  })
+
+) as Linter.Config[];

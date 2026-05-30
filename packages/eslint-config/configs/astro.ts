@@ -24,4 +24,4 @@ const mergedAstroConfig = defineFlatConfig({
  * ```
  */
 
-export default (await composer(mergedAstroConfig)) as unknown as Linter.Config[];
+export default (await composer(mergedAstroConfig)) as Linter.Config[];

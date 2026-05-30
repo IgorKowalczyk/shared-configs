@@ -37,4 +37,4 @@ export default (await composer(mergedTsConfig) //
   })
   .renamePlugins({
     "@typescript-eslint": "typescript",
-  })) as unknown as Linter.Config[];
+  })) as Linter.Config[];

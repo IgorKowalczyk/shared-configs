@@ -36,16 +36,16 @@
   ],
   "dependencies": {
     "markdown-table": "^3.0.4",
-    "turbo": "^2.7.2"
+    "turbo": "^2.9.16"
   },
   "devDependencies": {
     "@igorkowalczyk/eslint-config": "workspace:*",
     "@igorkowalczyk/prettier-config": "workspace:*",
-    "@types/node": "^25.0.3",
-    "eslint": "^9.39.2",
-    "jiti": "^2.6.1",
-    "prettier": "^3.7.4",
-    "tsx": "^4.21.0"
+    "@types/node": "^25.9.1",
+    "eslint": "^10.4.1",
+    "jiti": "^2.7.0",
+    "prettier": "^3.8.3",
+    "tsx": "^4.22.3"
   },
   "packageManager": "pnpm@10.26.2"
 }

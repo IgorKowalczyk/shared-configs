@@ -17,7 +17,6 @@
     "module": "Preserve",
     "moduleResolution": "Bundler",
     "noEmit": true,
-    "baseUrl": "./",
     "paths": {
       "@/*": ["./*"]
     }

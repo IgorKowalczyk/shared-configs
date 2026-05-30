@@ -24,9 +24,9 @@ export default [
     name: "@igorkowalczyk/eslint-config/gitignore",
   }),
   {
-    name: "@igorkowalczyk/eslint-config/base",
     files: ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.mjs"],
     ...js.configs.recommended,
+    name: "@igorkowalczyk/eslint-config/base",
     languageOptions: {
       ecmaVersion: "latest",
       globals: {

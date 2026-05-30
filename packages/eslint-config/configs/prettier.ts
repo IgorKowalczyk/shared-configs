@@ -28,4 +28,4 @@ const mergedPrettierConfig = defineFlatConfig({
  * ];
  * ```
  */
-export default (await composer(mergedPrettierConfig)) as unknown as Linter.Config[];
+export default (await composer(mergedPrettierConfig)) as Linter.Config[];
