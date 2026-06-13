@@ -6,6 +6,7 @@
   "reviewers": ["igorkowalczyk"],
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
+  "mimimumReleaseAge": "1 day",
   "prFooter": "",
   "prBodyTemplate": "{{{table}}}{{{warnings}}}{{{notes}}}{{{changelogs}}}{{{controls}}}{{{footer}}}",
   "packageRules": [
