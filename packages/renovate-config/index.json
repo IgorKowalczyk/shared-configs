@@ -6,7 +6,7 @@
   "reviewers": ["igorkowalczyk"],
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
-  "mimimumReleaseAge": "1 day",
+  "minimumReleaseAge": "1 day",
   "prFooter": "",
   "prBodyTemplate": "{{{table}}}{{{warnings}}}{{{notes}}}{{{changelogs}}}{{{controls}}}{{{footer}}}",
   "packageRules": [
@@ -17,6 +17,16 @@
     {
       "matchPackageNames": ["@udecode"],
       "groupName": "@udecode/plate"
+    },
+    {
+      "description": "Disable non-major updates globally",
+      "matchUpdateTypes": ["minor", "patch", "pin", "pinDigest", "digest", "lockFileMaintenance", "rollback", "bump"],
+      "enabled": false
+    },
+    {
+      "description": "Allow major updates",
+      "matchUpdateTypes": ["major"],
+      "enabled": true
     }
   ]
 }
