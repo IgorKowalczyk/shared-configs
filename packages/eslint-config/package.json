@@ -126,6 +126,7 @@
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
     "@types/node": "^26.1.2",
     "@types/rollup-plugin-auto-external": "^2.0.5",
+    "eslint": "^10.14.0",
     "globby": "^16.2.2",
     "next": "^16.4.3",
     "rimraf": "^6.1.3",
